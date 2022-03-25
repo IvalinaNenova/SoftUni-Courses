@@ -1,0 +1,15 @@
+C:\Users\User\source\repos\ConditionalStatementsMore\T05.Firm\bin\Debug\net5.0\T05.Firm.exe
+C:\Users\User\source\repos\ConditionalStatementsMore\T05.Firm\bin\Debug\net5.0\T05.Firm.deps.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T05.Firm\bin\Debug\net5.0\T05.Firm.runtimeconfig.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T05.Firm\bin\Debug\net5.0\T05.Firm.runtimeconfig.dev.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T05.Firm\bin\Debug\net5.0\T05.Firm.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T05.Firm\bin\Debug\net5.0\ref\T05.Firm.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T05.Firm\bin\Debug\net5.0\T05.Firm.pdb
+C:\Users\User\source\repos\ConditionalStatementsMore\T05.Firm\obj\Debug\net5.0\T05.Firm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ConditionalStatementsMore\T05.Firm\obj\Debug\net5.0\T05.Firm.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T05.Firm\obj\Debug\net5.0\T05.Firm.AssemblyInfo.cs
+C:\Users\User\source\repos\ConditionalStatementsMore\T05.Firm\obj\Debug\net5.0\T05.Firm.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T05.Firm\obj\Debug\net5.0\T05.Firm.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T05.Firm\obj\Debug\net5.0\ref\T05.Firm.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T05.Firm\obj\Debug\net5.0\T05.Firm.pdb
+C:\Users\User\source\repos\ConditionalStatementsMore\T05.Firm\obj\Debug\net5.0\T05.Firm.genruntimeconfig.cache

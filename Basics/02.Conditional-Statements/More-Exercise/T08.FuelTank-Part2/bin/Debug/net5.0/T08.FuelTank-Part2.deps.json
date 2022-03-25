@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "T08.FuelTank-Part2/1.0.0": {
+        "runtime": {
+          "T08.FuelTank-Part2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "T08.FuelTank-Part2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

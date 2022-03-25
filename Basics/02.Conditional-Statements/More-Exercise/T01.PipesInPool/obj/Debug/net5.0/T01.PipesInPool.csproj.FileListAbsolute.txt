@@ -1,0 +1,16 @@
+C:\Users\User\source\repos\ConditionalStatementsMore\T01.PipesInPool\bin\Debug\net5.0\T01.PipesInPool.exe
+C:\Users\User\source\repos\ConditionalStatementsMore\T01.PipesInPool\bin\Debug\net5.0\T01.PipesInPool.deps.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T01.PipesInPool\bin\Debug\net5.0\T01.PipesInPool.runtimeconfig.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T01.PipesInPool\bin\Debug\net5.0\T01.PipesInPool.runtimeconfig.dev.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T01.PipesInPool\bin\Debug\net5.0\T01.PipesInPool.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T01.PipesInPool\bin\Debug\net5.0\ref\T01.PipesInPool.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T01.PipesInPool\bin\Debug\net5.0\T01.PipesInPool.pdb
+C:\Users\User\source\repos\ConditionalStatementsMore\T01.PipesInPool\obj\Debug\net5.0\T01.PipesInPool.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T01.PipesInPool\obj\Debug\net5.0\T01.PipesInPool.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ConditionalStatementsMore\T01.PipesInPool\obj\Debug\net5.0\T01.PipesInPool.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T01.PipesInPool\obj\Debug\net5.0\T01.PipesInPool.AssemblyInfo.cs
+C:\Users\User\source\repos\ConditionalStatementsMore\T01.PipesInPool\obj\Debug\net5.0\T01.PipesInPool.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T01.PipesInPool\obj\Debug\net5.0\T01.PipesInPool.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T01.PipesInPool\obj\Debug\net5.0\ref\T01.PipesInPool.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T01.PipesInPool\obj\Debug\net5.0\T01.PipesInPool.pdb
+C:\Users\User\source\repos\ConditionalStatementsMore\T01.PipesInPool\obj\Debug\net5.0\T01.PipesInPool.genruntimeconfig.cache

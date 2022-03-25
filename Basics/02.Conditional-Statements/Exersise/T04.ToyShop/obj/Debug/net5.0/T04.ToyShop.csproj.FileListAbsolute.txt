@@ -1,0 +1,15 @@
+C:\Users\User\source\repos\ConditionalStatementsExersise\T04.ToyShop\bin\Debug\net5.0\T04.ToyShop.exe
+C:\Users\User\source\repos\ConditionalStatementsExersise\T04.ToyShop\bin\Debug\net5.0\T04.ToyShop.deps.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T04.ToyShop\bin\Debug\net5.0\T04.ToyShop.runtimeconfig.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T04.ToyShop\bin\Debug\net5.0\T04.ToyShop.runtimeconfig.dev.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T04.ToyShop\bin\Debug\net5.0\T04.ToyShop.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T04.ToyShop\bin\Debug\net5.0\ref\T04.ToyShop.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T04.ToyShop\bin\Debug\net5.0\T04.ToyShop.pdb
+C:\Users\User\source\repos\ConditionalStatementsExersise\T04.ToyShop\obj\Debug\net5.0\T04.ToyShop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ConditionalStatementsExersise\T04.ToyShop\obj\Debug\net5.0\T04.ToyShop.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T04.ToyShop\obj\Debug\net5.0\T04.ToyShop.AssemblyInfo.cs
+C:\Users\User\source\repos\ConditionalStatementsExersise\T04.ToyShop\obj\Debug\net5.0\T04.ToyShop.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T04.ToyShop\obj\Debug\net5.0\T04.ToyShop.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T04.ToyShop\obj\Debug\net5.0\ref\T04.ToyShop.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T04.ToyShop\obj\Debug\net5.0\T04.ToyShop.pdb
+C:\Users\User\source\repos\ConditionalStatementsExersise\T04.ToyShop\obj\Debug\net5.0\T04.ToyShop.genruntimeconfig.cache

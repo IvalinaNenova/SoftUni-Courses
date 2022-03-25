@@ -1,0 +1,16 @@
+C:\Users\User\source\repos\ConditionalStatementsExersise\T07.Shopping\bin\Debug\net5.0\T07.Shopping.exe
+C:\Users\User\source\repos\ConditionalStatementsExersise\T07.Shopping\bin\Debug\net5.0\T07.Shopping.deps.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T07.Shopping\bin\Debug\net5.0\T07.Shopping.runtimeconfig.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T07.Shopping\bin\Debug\net5.0\T07.Shopping.runtimeconfig.dev.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T07.Shopping\bin\Debug\net5.0\T07.Shopping.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T07.Shopping\bin\Debug\net5.0\ref\T07.Shopping.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T07.Shopping\bin\Debug\net5.0\T07.Shopping.pdb
+C:\Users\User\source\repos\ConditionalStatementsExersise\T07.Shopping\obj\Debug\net5.0\T07.Shopping.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ConditionalStatementsExersise\T07.Shopping\obj\Debug\net5.0\T07.Shopping.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T07.Shopping\obj\Debug\net5.0\T07.Shopping.AssemblyInfo.cs
+C:\Users\User\source\repos\ConditionalStatementsExersise\T07.Shopping\obj\Debug\net5.0\T07.Shopping.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T07.Shopping\obj\Debug\net5.0\T07.Shopping.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T07.Shopping\obj\Debug\net5.0\ref\T07.Shopping.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T07.Shopping\obj\Debug\net5.0\T07.Shopping.pdb
+C:\Users\User\source\repos\ConditionalStatementsExersise\T07.Shopping\obj\Debug\net5.0\T07.Shopping.genruntimeconfig.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T07.Shopping\obj\Debug\net5.0\T07.Shopping.csproj.AssemblyReference.cache

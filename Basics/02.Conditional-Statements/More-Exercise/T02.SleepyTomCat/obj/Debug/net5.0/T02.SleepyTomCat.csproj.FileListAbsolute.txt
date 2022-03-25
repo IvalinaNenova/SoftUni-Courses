@@ -1,0 +1,16 @@
+C:\Users\User\source\repos\ConditionalStatementsMore\T02.SleepyTomCat\bin\Debug\net5.0\T02.SleepyTomCat.exe
+C:\Users\User\source\repos\ConditionalStatementsMore\T02.SleepyTomCat\bin\Debug\net5.0\T02.SleepyTomCat.deps.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T02.SleepyTomCat\bin\Debug\net5.0\T02.SleepyTomCat.runtimeconfig.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T02.SleepyTomCat\bin\Debug\net5.0\T02.SleepyTomCat.runtimeconfig.dev.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T02.SleepyTomCat\bin\Debug\net5.0\T02.SleepyTomCat.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T02.SleepyTomCat\bin\Debug\net5.0\ref\T02.SleepyTomCat.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T02.SleepyTomCat\bin\Debug\net5.0\T02.SleepyTomCat.pdb
+C:\Users\User\source\repos\ConditionalStatementsMore\T02.SleepyTomCat\obj\Debug\net5.0\T02.SleepyTomCat.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T02.SleepyTomCat\obj\Debug\net5.0\T02.SleepyTomCat.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ConditionalStatementsMore\T02.SleepyTomCat\obj\Debug\net5.0\T02.SleepyTomCat.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T02.SleepyTomCat\obj\Debug\net5.0\T02.SleepyTomCat.AssemblyInfo.cs
+C:\Users\User\source\repos\ConditionalStatementsMore\T02.SleepyTomCat\obj\Debug\net5.0\T02.SleepyTomCat.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T02.SleepyTomCat\obj\Debug\net5.0\T02.SleepyTomCat.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T02.SleepyTomCat\obj\Debug\net5.0\ref\T02.SleepyTomCat.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T02.SleepyTomCat\obj\Debug\net5.0\T02.SleepyTomCat.pdb
+C:\Users\User\source\repos\ConditionalStatementsMore\T02.SleepyTomCat\obj\Debug\net5.0\T02.SleepyTomCat.genruntimeconfig.cache

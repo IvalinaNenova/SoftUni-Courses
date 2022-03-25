@@ -1,0 +1,16 @@
+C:\Users\User\source\repos\ConditionalStatementsLab\T02.GreaterNumber\bin\Debug\net5.0\T02.GreaterNumber.exe
+C:\Users\User\source\repos\ConditionalStatementsLab\T02.GreaterNumber\bin\Debug\net5.0\T02.GreaterNumber.deps.json
+C:\Users\User\source\repos\ConditionalStatementsLab\T02.GreaterNumber\bin\Debug\net5.0\T02.GreaterNumber.runtimeconfig.json
+C:\Users\User\source\repos\ConditionalStatementsLab\T02.GreaterNumber\bin\Debug\net5.0\T02.GreaterNumber.runtimeconfig.dev.json
+C:\Users\User\source\repos\ConditionalStatementsLab\T02.GreaterNumber\bin\Debug\net5.0\T02.GreaterNumber.dll
+C:\Users\User\source\repos\ConditionalStatementsLab\T02.GreaterNumber\bin\Debug\net5.0\ref\T02.GreaterNumber.dll
+C:\Users\User\source\repos\ConditionalStatementsLab\T02.GreaterNumber\bin\Debug\net5.0\T02.GreaterNumber.pdb
+C:\Users\User\source\repos\ConditionalStatementsLab\T02.GreaterNumber\obj\Debug\net5.0\T02.GreaterNumber.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ConditionalStatementsLab\T02.GreaterNumber\obj\Debug\net5.0\T02.GreaterNumber.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ConditionalStatementsLab\T02.GreaterNumber\obj\Debug\net5.0\T02.GreaterNumber.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsLab\T02.GreaterNumber\obj\Debug\net5.0\T02.GreaterNumber.AssemblyInfo.cs
+C:\Users\User\source\repos\ConditionalStatementsLab\T02.GreaterNumber\obj\Debug\net5.0\T02.GreaterNumber.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsLab\T02.GreaterNumber\obj\Debug\net5.0\T02.GreaterNumber.dll
+C:\Users\User\source\repos\ConditionalStatementsLab\T02.GreaterNumber\obj\Debug\net5.0\ref\T02.GreaterNumber.dll
+C:\Users\User\source\repos\ConditionalStatementsLab\T02.GreaterNumber\obj\Debug\net5.0\T02.GreaterNumber.pdb
+C:\Users\User\source\repos\ConditionalStatementsLab\T02.GreaterNumber\obj\Debug\net5.0\T02.GreaterNumber.genruntimeconfig.cache

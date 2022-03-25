@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "T06.Pets/1.0.0": {
+        "runtime": {
+          "T06.Pets.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "T06.Pets/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

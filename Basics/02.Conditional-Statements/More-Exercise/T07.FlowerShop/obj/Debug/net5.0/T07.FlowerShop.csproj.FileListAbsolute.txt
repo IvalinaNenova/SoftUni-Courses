@@ -1,0 +1,15 @@
+C:\Users\User\source\repos\ConditionalStatementsMore\T07.FlowerShop\bin\Debug\net5.0\T07.FlowerShop.exe
+C:\Users\User\source\repos\ConditionalStatementsMore\T07.FlowerShop\bin\Debug\net5.0\T07.FlowerShop.deps.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T07.FlowerShop\bin\Debug\net5.0\T07.FlowerShop.runtimeconfig.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T07.FlowerShop\bin\Debug\net5.0\T07.FlowerShop.runtimeconfig.dev.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T07.FlowerShop\bin\Debug\net5.0\T07.FlowerShop.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T07.FlowerShop\bin\Debug\net5.0\ref\T07.FlowerShop.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T07.FlowerShop\bin\Debug\net5.0\T07.FlowerShop.pdb
+C:\Users\User\source\repos\ConditionalStatementsMore\T07.FlowerShop\obj\Debug\net5.0\T07.FlowerShop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ConditionalStatementsMore\T07.FlowerShop\obj\Debug\net5.0\T07.FlowerShop.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T07.FlowerShop\obj\Debug\net5.0\T07.FlowerShop.AssemblyInfo.cs
+C:\Users\User\source\repos\ConditionalStatementsMore\T07.FlowerShop\obj\Debug\net5.0\T07.FlowerShop.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T07.FlowerShop\obj\Debug\net5.0\T07.FlowerShop.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T07.FlowerShop\obj\Debug\net5.0\ref\T07.FlowerShop.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T07.FlowerShop\obj\Debug\net5.0\T07.FlowerShop.pdb
+C:\Users\User\source\repos\ConditionalStatementsMore\T07.FlowerShop\obj\Debug\net5.0\T07.FlowerShop.genruntimeconfig.cache

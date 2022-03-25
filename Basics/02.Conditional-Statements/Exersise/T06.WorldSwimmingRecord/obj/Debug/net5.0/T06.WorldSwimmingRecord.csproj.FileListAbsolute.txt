@@ -1,0 +1,16 @@
+C:\Users\User\source\repos\ConditionalStatementsExersise\T06.WorldSwimmingRecord\bin\Debug\net5.0\T06.WorldSwimmingRecord.exe
+C:\Users\User\source\repos\ConditionalStatementsExersise\T06.WorldSwimmingRecord\bin\Debug\net5.0\T06.WorldSwimmingRecord.deps.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T06.WorldSwimmingRecord\bin\Debug\net5.0\T06.WorldSwimmingRecord.runtimeconfig.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T06.WorldSwimmingRecord\bin\Debug\net5.0\T06.WorldSwimmingRecord.runtimeconfig.dev.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T06.WorldSwimmingRecord\bin\Debug\net5.0\T06.WorldSwimmingRecord.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T06.WorldSwimmingRecord\bin\Debug\net5.0\ref\T06.WorldSwimmingRecord.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T06.WorldSwimmingRecord\bin\Debug\net5.0\T06.WorldSwimmingRecord.pdb
+C:\Users\User\source\repos\ConditionalStatementsExersise\T06.WorldSwimmingRecord\obj\Debug\net5.0\T06.WorldSwimmingRecord.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T06.WorldSwimmingRecord\obj\Debug\net5.0\T06.WorldSwimmingRecord.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ConditionalStatementsExersise\T06.WorldSwimmingRecord\obj\Debug\net5.0\T06.WorldSwimmingRecord.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T06.WorldSwimmingRecord\obj\Debug\net5.0\T06.WorldSwimmingRecord.AssemblyInfo.cs
+C:\Users\User\source\repos\ConditionalStatementsExersise\T06.WorldSwimmingRecord\obj\Debug\net5.0\T06.WorldSwimmingRecord.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T06.WorldSwimmingRecord\obj\Debug\net5.0\T06.WorldSwimmingRecord.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T06.WorldSwimmingRecord\obj\Debug\net5.0\ref\T06.WorldSwimmingRecord.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T06.WorldSwimmingRecord\obj\Debug\net5.0\T06.WorldSwimmingRecord.pdb
+C:\Users\User\source\repos\ConditionalStatementsExersise\T06.WorldSwimmingRecord\obj\Debug\net5.0\T06.WorldSwimmingRecord.genruntimeconfig.cache

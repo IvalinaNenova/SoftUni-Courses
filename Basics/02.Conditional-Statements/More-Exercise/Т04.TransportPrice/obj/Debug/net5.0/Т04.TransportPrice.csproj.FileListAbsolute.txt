@@ -1,0 +1,16 @@
+C:\Users\User\source\repos\ConditionalStatementsMore\Т04.TransportPrice\bin\Debug\net5.0\Т04.TransportPrice.exe
+C:\Users\User\source\repos\ConditionalStatementsMore\Т04.TransportPrice\bin\Debug\net5.0\Т04.TransportPrice.deps.json
+C:\Users\User\source\repos\ConditionalStatementsMore\Т04.TransportPrice\bin\Debug\net5.0\Т04.TransportPrice.runtimeconfig.json
+C:\Users\User\source\repos\ConditionalStatementsMore\Т04.TransportPrice\bin\Debug\net5.0\Т04.TransportPrice.runtimeconfig.dev.json
+C:\Users\User\source\repos\ConditionalStatementsMore\Т04.TransportPrice\bin\Debug\net5.0\Т04.TransportPrice.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\Т04.TransportPrice\bin\Debug\net5.0\ref\Т04.TransportPrice.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\Т04.TransportPrice\bin\Debug\net5.0\Т04.TransportPrice.pdb
+C:\Users\User\source\repos\ConditionalStatementsMore\Т04.TransportPrice\obj\Debug\net5.0\Т04.TransportPrice.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\Т04.TransportPrice\obj\Debug\net5.0\Т04.TransportPrice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ConditionalStatementsMore\Т04.TransportPrice\obj\Debug\net5.0\Т04.TransportPrice.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\Т04.TransportPrice\obj\Debug\net5.0\Т04.TransportPrice.AssemblyInfo.cs
+C:\Users\User\source\repos\ConditionalStatementsMore\Т04.TransportPrice\obj\Debug\net5.0\Т04.TransportPrice.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\Т04.TransportPrice\obj\Debug\net5.0\Т04.TransportPrice.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\Т04.TransportPrice\obj\Debug\net5.0\ref\Т04.TransportPrice.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\Т04.TransportPrice\obj\Debug\net5.0\Т04.TransportPrice.pdb
+C:\Users\User\source\repos\ConditionalStatementsMore\Т04.TransportPrice\obj\Debug\net5.0\Т04.TransportPrice.genruntimeconfig.cache

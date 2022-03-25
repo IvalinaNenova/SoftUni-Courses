@@ -1,0 +1,15 @@
+C:\Users\User\source\repos\ConditionalStatementsMore\T06.Pets\bin\Debug\net5.0\T06.Pets.exe
+C:\Users\User\source\repos\ConditionalStatementsMore\T06.Pets\bin\Debug\net5.0\T06.Pets.deps.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T06.Pets\bin\Debug\net5.0\T06.Pets.runtimeconfig.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T06.Pets\bin\Debug\net5.0\T06.Pets.runtimeconfig.dev.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T06.Pets\bin\Debug\net5.0\T06.Pets.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T06.Pets\bin\Debug\net5.0\ref\T06.Pets.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T06.Pets\bin\Debug\net5.0\T06.Pets.pdb
+C:\Users\User\source\repos\ConditionalStatementsMore\T06.Pets\obj\Debug\net5.0\T06.Pets.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ConditionalStatementsMore\T06.Pets\obj\Debug\net5.0\T06.Pets.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T06.Pets\obj\Debug\net5.0\T06.Pets.AssemblyInfo.cs
+C:\Users\User\source\repos\ConditionalStatementsMore\T06.Pets\obj\Debug\net5.0\T06.Pets.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T06.Pets\obj\Debug\net5.0\T06.Pets.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T06.Pets\obj\Debug\net5.0\ref\T06.Pets.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T06.Pets\obj\Debug\net5.0\T06.Pets.pdb
+C:\Users\User\source\repos\ConditionalStatementsMore\T06.Pets\obj\Debug\net5.0\T06.Pets.genruntimeconfig.cache

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Т04.TransportPrice/1.0.0": {
+        "runtime": {
+          "Т04.TransportPrice.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Т04.TransportPrice/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

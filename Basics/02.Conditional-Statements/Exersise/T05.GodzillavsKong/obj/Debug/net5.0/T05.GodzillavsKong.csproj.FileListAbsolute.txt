@@ -1,0 +1,16 @@
+C:\Users\User\source\repos\ConditionalStatementsExersise\T05.GodzillavsKong\bin\Debug\net5.0\T05.GodzillavsKong.exe
+C:\Users\User\source\repos\ConditionalStatementsExersise\T05.GodzillavsKong\bin\Debug\net5.0\T05.GodzillavsKong.deps.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T05.GodzillavsKong\bin\Debug\net5.0\T05.GodzillavsKong.runtimeconfig.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T05.GodzillavsKong\bin\Debug\net5.0\T05.GodzillavsKong.runtimeconfig.dev.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T05.GodzillavsKong\bin\Debug\net5.0\T05.GodzillavsKong.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T05.GodzillavsKong\bin\Debug\net5.0\ref\T05.GodzillavsKong.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T05.GodzillavsKong\bin\Debug\net5.0\T05.GodzillavsKong.pdb
+C:\Users\User\source\repos\ConditionalStatementsExersise\T05.GodzillavsKong\obj\Debug\net5.0\T05.GodzillavsKong.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T05.GodzillavsKong\obj\Debug\net5.0\T05.GodzillavsKong.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ConditionalStatementsExersise\T05.GodzillavsKong\obj\Debug\net5.0\T05.GodzillavsKong.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T05.GodzillavsKong\obj\Debug\net5.0\T05.GodzillavsKong.AssemblyInfo.cs
+C:\Users\User\source\repos\ConditionalStatementsExersise\T05.GodzillavsKong\obj\Debug\net5.0\T05.GodzillavsKong.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T05.GodzillavsKong\obj\Debug\net5.0\T05.GodzillavsKong.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T05.GodzillavsKong\obj\Debug\net5.0\ref\T05.GodzillavsKong.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T05.GodzillavsKong\obj\Debug\net5.0\T05.GodzillavsKong.pdb
+C:\Users\User\source\repos\ConditionalStatementsExersise\T05.GodzillavsKong\obj\Debug\net5.0\T05.GodzillavsKong.genruntimeconfig.cache

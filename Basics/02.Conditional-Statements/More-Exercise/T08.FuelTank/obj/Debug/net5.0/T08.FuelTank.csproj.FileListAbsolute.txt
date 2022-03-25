@@ -1,0 +1,16 @@
+C:\Users\User\source\repos\ConditionalStatementsMore\T08.FuelTank\obj\Debug\net5.0\T08.FuelTank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ConditionalStatementsMore\T08.FuelTank\obj\Debug\net5.0\T08.FuelTank.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T08.FuelTank\obj\Debug\net5.0\T08.FuelTank.AssemblyInfo.cs
+C:\Users\User\source\repos\ConditionalStatementsMore\T08.FuelTank\obj\Debug\net5.0\T08.FuelTank.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T08.FuelTank\bin\Debug\net5.0\T08.FuelTank.exe
+C:\Users\User\source\repos\ConditionalStatementsMore\T08.FuelTank\bin\Debug\net5.0\T08.FuelTank.deps.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T08.FuelTank\bin\Debug\net5.0\T08.FuelTank.runtimeconfig.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T08.FuelTank\bin\Debug\net5.0\T08.FuelTank.runtimeconfig.dev.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T08.FuelTank\bin\Debug\net5.0\T08.FuelTank.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T08.FuelTank\bin\Debug\net5.0\ref\T08.FuelTank.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T08.FuelTank\bin\Debug\net5.0\T08.FuelTank.pdb
+C:\Users\User\source\repos\ConditionalStatementsMore\T08.FuelTank\obj\Debug\net5.0\T08.FuelTank.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T08.FuelTank\obj\Debug\net5.0\ref\T08.FuelTank.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T08.FuelTank\obj\Debug\net5.0\T08.FuelTank.pdb
+C:\Users\User\source\repos\ConditionalStatementsMore\T08.FuelTank\obj\Debug\net5.0\T08.FuelTank.genruntimeconfig.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T08.FuelTank\obj\Debug\net5.0\T08.FuelTank.csproj.AssemblyReference.cache

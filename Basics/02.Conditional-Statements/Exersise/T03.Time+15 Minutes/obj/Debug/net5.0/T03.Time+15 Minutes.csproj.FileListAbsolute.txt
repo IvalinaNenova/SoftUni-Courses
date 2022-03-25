@@ -1,0 +1,16 @@
+C:\Users\User\source\repos\ConditionalStatementsExersise\T03.Time+15 Minutes\bin\Debug\net5.0\T03.Time+15 Minutes.exe
+C:\Users\User\source\repos\ConditionalStatementsExersise\T03.Time+15 Minutes\bin\Debug\net5.0\T03.Time+15 Minutes.deps.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T03.Time+15 Minutes\bin\Debug\net5.0\T03.Time+15 Minutes.runtimeconfig.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T03.Time+15 Minutes\bin\Debug\net5.0\T03.Time+15 Minutes.runtimeconfig.dev.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T03.Time+15 Minutes\bin\Debug\net5.0\T03.Time+15 Minutes.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T03.Time+15 Minutes\bin\Debug\net5.0\ref\T03.Time+15 Minutes.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T03.Time+15 Minutes\bin\Debug\net5.0\T03.Time+15 Minutes.pdb
+C:\Users\User\source\repos\ConditionalStatementsExersise\T03.Time+15 Minutes\obj\Debug\net5.0\T03.Time+15 Minutes.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T03.Time+15 Minutes\obj\Debug\net5.0\T03.Time+15 Minutes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ConditionalStatementsExersise\T03.Time+15 Minutes\obj\Debug\net5.0\T03.Time+15 Minutes.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T03.Time+15 Minutes\obj\Debug\net5.0\T03.Time+15 Minutes.AssemblyInfo.cs
+C:\Users\User\source\repos\ConditionalStatementsExersise\T03.Time+15 Minutes\obj\Debug\net5.0\T03.Time+15 Minutes.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T03.Time+15 Minutes\obj\Debug\net5.0\T03.Time+15 Minutes.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T03.Time+15 Minutes\obj\Debug\net5.0\ref\T03.Time+15 Minutes.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T03.Time+15 Minutes\obj\Debug\net5.0\T03.Time+15 Minutes.pdb
+C:\Users\User\source\repos\ConditionalStatementsExersise\T03.Time+15 Minutes\obj\Debug\net5.0\T03.Time+15 Minutes.genruntimeconfig.cache

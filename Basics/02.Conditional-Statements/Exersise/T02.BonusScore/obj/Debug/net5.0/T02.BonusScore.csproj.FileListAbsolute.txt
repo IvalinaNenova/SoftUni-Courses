@@ -1,0 +1,16 @@
+C:\Users\User\source\repos\ConditionalStatementsExersise\T02.BonusScore\bin\Debug\net5.0\T02.BonusScore.exe
+C:\Users\User\source\repos\ConditionalStatementsExersise\T02.BonusScore\bin\Debug\net5.0\T02.BonusScore.deps.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T02.BonusScore\bin\Debug\net5.0\T02.BonusScore.runtimeconfig.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T02.BonusScore\bin\Debug\net5.0\T02.BonusScore.runtimeconfig.dev.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T02.BonusScore\bin\Debug\net5.0\T02.BonusScore.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T02.BonusScore\bin\Debug\net5.0\ref\T02.BonusScore.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T02.BonusScore\bin\Debug\net5.0\T02.BonusScore.pdb
+C:\Users\User\source\repos\ConditionalStatementsExersise\T02.BonusScore\obj\Debug\net5.0\T02.BonusScore.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T02.BonusScore\obj\Debug\net5.0\T02.BonusScore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ConditionalStatementsExersise\T02.BonusScore\obj\Debug\net5.0\T02.BonusScore.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T02.BonusScore\obj\Debug\net5.0\T02.BonusScore.AssemblyInfo.cs
+C:\Users\User\source\repos\ConditionalStatementsExersise\T02.BonusScore\obj\Debug\net5.0\T02.BonusScore.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T02.BonusScore\obj\Debug\net5.0\T02.BonusScore.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T02.BonusScore\obj\Debug\net5.0\ref\T02.BonusScore.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T02.BonusScore\obj\Debug\net5.0\T02.BonusScore.pdb
+C:\Users\User\source\repos\ConditionalStatementsExersise\T02.BonusScore\obj\Debug\net5.0\T02.BonusScore.genruntimeconfig.cache

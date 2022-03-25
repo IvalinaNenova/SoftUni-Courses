@@ -1,0 +1,16 @@
+C:\Users\User\source\repos\ConditionalStatementsMore\T03.Harvest\bin\Debug\net5.0\T03.Harvest.exe
+C:\Users\User\source\repos\ConditionalStatementsMore\T03.Harvest\bin\Debug\net5.0\T03.Harvest.deps.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T03.Harvest\bin\Debug\net5.0\T03.Harvest.runtimeconfig.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T03.Harvest\bin\Debug\net5.0\T03.Harvest.runtimeconfig.dev.json
+C:\Users\User\source\repos\ConditionalStatementsMore\T03.Harvest\bin\Debug\net5.0\T03.Harvest.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T03.Harvest\bin\Debug\net5.0\ref\T03.Harvest.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T03.Harvest\bin\Debug\net5.0\T03.Harvest.pdb
+C:\Users\User\source\repos\ConditionalStatementsMore\T03.Harvest\obj\Debug\net5.0\T03.Harvest.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T03.Harvest\obj\Debug\net5.0\T03.Harvest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ConditionalStatementsMore\T03.Harvest\obj\Debug\net5.0\T03.Harvest.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T03.Harvest\obj\Debug\net5.0\T03.Harvest.AssemblyInfo.cs
+C:\Users\User\source\repos\ConditionalStatementsMore\T03.Harvest\obj\Debug\net5.0\T03.Harvest.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsMore\T03.Harvest\obj\Debug\net5.0\T03.Harvest.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T03.Harvest\obj\Debug\net5.0\ref\T03.Harvest.dll
+C:\Users\User\source\repos\ConditionalStatementsMore\T03.Harvest\obj\Debug\net5.0\T03.Harvest.pdb
+C:\Users\User\source\repos\ConditionalStatementsMore\T03.Harvest\obj\Debug\net5.0\T03.Harvest.genruntimeconfig.cache

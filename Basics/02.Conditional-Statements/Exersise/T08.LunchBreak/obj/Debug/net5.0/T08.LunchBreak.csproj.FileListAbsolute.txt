@@ -1,0 +1,15 @@
+C:\Users\User\source\repos\ConditionalStatementsExersise\T08.LunchBreak\bin\Debug\net5.0\T08.LunchBreak.exe
+C:\Users\User\source\repos\ConditionalStatementsExersise\T08.LunchBreak\bin\Debug\net5.0\T08.LunchBreak.deps.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T08.LunchBreak\bin\Debug\net5.0\T08.LunchBreak.runtimeconfig.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T08.LunchBreak\bin\Debug\net5.0\T08.LunchBreak.runtimeconfig.dev.json
+C:\Users\User\source\repos\ConditionalStatementsExersise\T08.LunchBreak\bin\Debug\net5.0\T08.LunchBreak.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T08.LunchBreak\bin\Debug\net5.0\ref\T08.LunchBreak.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T08.LunchBreak\bin\Debug\net5.0\T08.LunchBreak.pdb
+C:\Users\User\source\repos\ConditionalStatementsExersise\T08.LunchBreak\obj\Debug\net5.0\T08.LunchBreak.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ConditionalStatementsExersise\T08.LunchBreak\obj\Debug\net5.0\T08.LunchBreak.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T08.LunchBreak\obj\Debug\net5.0\T08.LunchBreak.AssemblyInfo.cs
+C:\Users\User\source\repos\ConditionalStatementsExersise\T08.LunchBreak\obj\Debug\net5.0\T08.LunchBreak.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsExersise\T08.LunchBreak\obj\Debug\net5.0\T08.LunchBreak.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T08.LunchBreak\obj\Debug\net5.0\ref\T08.LunchBreak.dll
+C:\Users\User\source\repos\ConditionalStatementsExersise\T08.LunchBreak\obj\Debug\net5.0\T08.LunchBreak.pdb
+C:\Users\User\source\repos\ConditionalStatementsExersise\T08.LunchBreak\obj\Debug\net5.0\T08.LunchBreak.genruntimeconfig.cache

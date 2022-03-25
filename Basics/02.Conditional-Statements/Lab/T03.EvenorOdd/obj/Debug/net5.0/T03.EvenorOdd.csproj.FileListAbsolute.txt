@@ -1,0 +1,16 @@
+C:\Users\User\source\repos\ConditionalStatementsLab\T03.EvenorOdd\bin\Debug\net5.0\T03.EvenorOdd.exe
+C:\Users\User\source\repos\ConditionalStatementsLab\T03.EvenorOdd\bin\Debug\net5.0\T03.EvenorOdd.deps.json
+C:\Users\User\source\repos\ConditionalStatementsLab\T03.EvenorOdd\bin\Debug\net5.0\T03.EvenorOdd.runtimeconfig.json
+C:\Users\User\source\repos\ConditionalStatementsLab\T03.EvenorOdd\bin\Debug\net5.0\T03.EvenorOdd.runtimeconfig.dev.json
+C:\Users\User\source\repos\ConditionalStatementsLab\T03.EvenorOdd\bin\Debug\net5.0\T03.EvenorOdd.dll
+C:\Users\User\source\repos\ConditionalStatementsLab\T03.EvenorOdd\bin\Debug\net5.0\ref\T03.EvenorOdd.dll
+C:\Users\User\source\repos\ConditionalStatementsLab\T03.EvenorOdd\bin\Debug\net5.0\T03.EvenorOdd.pdb
+C:\Users\User\source\repos\ConditionalStatementsLab\T03.EvenorOdd\obj\Debug\net5.0\T03.EvenorOdd.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ConditionalStatementsLab\T03.EvenorOdd\obj\Debug\net5.0\T03.EvenorOdd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ConditionalStatementsLab\T03.EvenorOdd\obj\Debug\net5.0\T03.EvenorOdd.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsLab\T03.EvenorOdd\obj\Debug\net5.0\T03.EvenorOdd.AssemblyInfo.cs
+C:\Users\User\source\repos\ConditionalStatementsLab\T03.EvenorOdd\obj\Debug\net5.0\T03.EvenorOdd.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ConditionalStatementsLab\T03.EvenorOdd\obj\Debug\net5.0\T03.EvenorOdd.dll
+C:\Users\User\source\repos\ConditionalStatementsLab\T03.EvenorOdd\obj\Debug\net5.0\ref\T03.EvenorOdd.dll
+C:\Users\User\source\repos\ConditionalStatementsLab\T03.EvenorOdd\obj\Debug\net5.0\T03.EvenorOdd.pdb
+C:\Users\User\source\repos\ConditionalStatementsLab\T03.EvenorOdd\obj\Debug\net5.0\T03.EvenorOdd.genruntimeconfig.cache
