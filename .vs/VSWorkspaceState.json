@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Basics",
     "\\Basics\\04.For-Loop",
-    "\\Basics\\04.For-Loop\\Exercise"
+    "\\Basics\\04.For-Loop\\Exercise",
+    "\\Fundamentals"
   ],
-  "SelectedNode": "\\Basics\\04.For-Loop\\Exercise\\ForLoopExercise.sln",
+  "SelectedNode": "\\Basics",
   "PreviewInSolutionExplorer": false
 }
