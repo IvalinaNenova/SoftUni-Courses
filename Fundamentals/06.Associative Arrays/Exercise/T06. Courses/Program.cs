@@ -30,7 +30,7 @@ namespace T06._Courses
 
                 input = Console.ReadLine();
             }
-            courses.
+            
             foreach (var course in courses)
             {
                 int numberOfStudent = course.Value.Count;
