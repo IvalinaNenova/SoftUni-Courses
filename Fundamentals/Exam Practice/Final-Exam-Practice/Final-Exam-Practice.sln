@@ -9,11 +9,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "A02. Ad Astra", "A02. Ad As
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "A03. The Pianist", "A03. The Pianist\A03. The Pianist.csproj", "{5CECB3F6-3234-4E28-BEF1-BDE5434308E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B01. World Tour", "B01. World Tour\B01. World Tour.csproj", "{5335AB17-F2E6-481F-BBAE-DC551A82D6DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "B01. World Tour", "B01. World Tour\B01. World Tour.csproj", "{5335AB17-F2E6-481F-BBAE-DC551A82D6DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B02. Destination Mapper", "B02. Destination Mapper\B02. Destination Mapper.csproj", "{64CE2198-82E7-4312-8BF9-C58995D77D2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "B02. Destination Mapper", "B02. Destination Mapper\B02. Destination Mapper.csproj", "{64CE2198-82E7-4312-8BF9-C58995D77D2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B03. Plant Discovery", "B03. Plant Discovery\B03. Plant Discovery.csproj", "{62021D72-8B57-451A-98DC-38DF111A8580}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "B03. Plant Discovery", "B03. Plant Discovery\B03. Plant Discovery.csproj", "{62021D72-8B57-451A-98DC-38DF111A8580}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C01. Secret Chat", "C01. Secret Chat\C01. Secret Chat.csproj", "{6A6024BF-FE4D-448C-9CF5-465058C2D3AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C02. Mirror Words", "C02. Mirror Words\C02. Mirror Words.csproj", "{38916931-CB2A-48B5-BC3D-580F024C4B4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C03. Need for Speed III", "C03. Need for Speed III\C03. Need for Speed III.csproj", "{F347AD13-C417-4591-945A-3BE4C0768E76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,18 @@ Global
 		{62021D72-8B57-451A-98DC-38DF111A8580}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62021D72-8B57-451A-98DC-38DF111A8580}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62021D72-8B57-451A-98DC-38DF111A8580}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A6024BF-FE4D-448C-9CF5-465058C2D3AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A6024BF-FE4D-448C-9CF5-465058C2D3AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A6024BF-FE4D-448C-9CF5-465058C2D3AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A6024BF-FE4D-448C-9CF5-465058C2D3AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38916931-CB2A-48B5-BC3D-580F024C4B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38916931-CB2A-48B5-BC3D-580F024C4B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38916931-CB2A-48B5-BC3D-580F024C4B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38916931-CB2A-48B5-BC3D-580F024C4B4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F347AD13-C417-4591-945A-3BE4C0768E76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F347AD13-C417-4591-945A-3BE4C0768E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F347AD13-C417-4591-945A-3BE4C0768E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F347AD13-C417-4591-945A-3BE4C0768E76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
