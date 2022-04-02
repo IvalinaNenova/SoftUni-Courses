@@ -21,11 +21,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C02. Mirror Words", "C02. M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C03. Need for Speed III", "C03. Need for Speed III\C03. Need for Speed III.csproj", "{F347AD13-C417-4591-945A-3BE4C0768E76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D01. Password Reset", "D01. Password Reset\D01. Password Reset.csproj", "{67BD595F-A44C-4BBB-B71A-FF6C4471F23F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D01. Password Reset", "D01. Password Reset\D01. Password Reset.csproj", "{67BD595F-A44C-4BBB-B71A-FF6C4471F23F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D02. Fancy Barcodes", "D02. Fancy Barcodes\D02. Fancy Barcodes.csproj", "{5A1B5C3D-EF44-4D67-844F-D37B4CBCB549}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D02. Fancy Barcodes", "D02. Fancy Barcodes\D02. Fancy Barcodes.csproj", "{5A1B5C3D-EF44-4D67-844F-D37B4CBCB549}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D03. Heroes of Code and Logic VII", "D03. Heroes of Code and Logic VII\D03. Heroes of Code and Logic VII.csproj", "{C3100B17-506A-497E-9509-A7BC21EFDE22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D03. Heroes of Code and Logic VII", "D03. Heroes of Code and Logic VII\D03. Heroes of Code and Logic VII.csproj", "{C3100B17-506A-497E-9509-A7BC21EFDE22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E01. Activation Keys", "E01. Activation Keys\E01. Activation Keys.csproj", "{8213F429-22F8-4EA1-BB9B-177FE677A6E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E02. Emoji Detector", "E02. Emoji Detector\E02. Emoji Detector.csproj", "{F834A397-067A-4698-80AA-870E556C99A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E03. P!rates", "E03. P!rates\E03. P!rates.csproj", "{96728622-3ED9-492F-826F-A81BD9DE48EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +87,18 @@ Global
 		{C3100B17-506A-497E-9509-A7BC21EFDE22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3100B17-506A-497E-9509-A7BC21EFDE22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3100B17-506A-497E-9509-A7BC21EFDE22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8213F429-22F8-4EA1-BB9B-177FE677A6E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8213F429-22F8-4EA1-BB9B-177FE677A6E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8213F429-22F8-4EA1-BB9B-177FE677A6E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8213F429-22F8-4EA1-BB9B-177FE677A6E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F834A397-067A-4698-80AA-870E556C99A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F834A397-067A-4698-80AA-870E556C99A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F834A397-067A-4698-80AA-870E556C99A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F834A397-067A-4698-80AA-870E556C99A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96728622-3ED9-492F-826F-A81BD9DE48EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96728622-3ED9-492F-826F-A81BD9DE48EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96728622-3ED9-492F-826F-A81BD9DE48EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96728622-3ED9-492F-826F-A81BD9DE48EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
