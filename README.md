@@ -1,7 +1,7 @@
 # SoftUni-Courses
 Courses I've completed during my studies @ SoftUni
 ***
-Here you can find problem solutions from the following lectures:
+#Here you can find problem solutions from the following lectures:
 **Basics Carriculum List**
 
 1. [**First Steps In Coding**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/01.First-Steps-In-Coding)
@@ -12,6 +12,7 @@ Here you can find problem solutions from the following lectures:
 6. [**Nested Loops**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/06.Nested-Loops)
 ***
 **Fundamentals Carriculum List**
+
 1.[**Basic Syntax, Conditional Statements and Loops**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/01.Basic-Syntax)
 2.[**Data Types and Variables**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/02.Data-Types-And-Variables)
 3.[**Arrays**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/03.Arrays)
