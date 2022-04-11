@@ -24,7 +24,12 @@ Courses I've completed during my studies @ SoftUni
 8. [**Text Processing**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/08.Text%20Processing)
 9. [**Regular Expressions**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/09.Regular%20Expressions)
 ***
-**Exams**
+**Exams Practice**
 Here you can find exam problems I used for practice:
-1. [**Basics**]
-2. [**Fundamentals**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/Exam%20Practice)
+1. [**Basics**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/Exam-Practice)
+2. [**Fundamentals**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/Exam%20Practice) 
+***
+**Exams**
+ 1. [**Basics**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/Exam-Problems)
+ 2. [**Fundamentals**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/Exam)
+
