@@ -1,7 +1,7 @@
 # SoftUni-Courses
 Courses I've completed during my studies @ SoftUni
 ***
-#Here you can find problem solutions from the following lectures:
+Here you can find problem solutions from the following lectures:
 ***
 **Basics Carriculum List**
 
@@ -25,7 +25,8 @@ Courses I've completed during my studies @ SoftUni
 9. [**Regular Expressions**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/09.Regular%20Expressions)
 ***
 **Exams Practice**
-  Here you can find exam problems I used for practice:
+*
+Here you can find exam problems I used for practice:
 1. [**Basics**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/Exam-Practice)
 2. [**Fundamentals**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/Exam%20Practice) 
 ***
