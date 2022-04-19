@@ -32,7 +32,7 @@ namespace T01._Basic_Stack_Operations
 
             for (int i = 0; i < elementsToPop; i++)
             {
-                if (stack.Count>0)
+                if (stack.Count > 0)
                 {
                     stack.Pop();
                 }
@@ -42,26 +42,13 @@ namespace T01._Basic_Stack_Operations
             {
                 Console.WriteLine("true");
             }
+            else if (stack.Count == 0)
+            {
+                Console.WriteLine("0");
+            }
             else
             {
-                if (stack.Count == 0)
-                {
-                    Console.WriteLine("0");
-                }
-                else
-                {
-                    int smallestElement = int.MaxValue;
-                    while (stack.Count > 0)
-                    {
-                        int currentElement = stack.Pop();
-                        if (currentElement < smallestElement)
-                        {
-                            smallestElement = currentElement;
-                        }
-                    }
-
-                    Console.WriteLine(smallestElement);
-                }
+                Console.WriteLine(stack.Min());
             }
         }
     }

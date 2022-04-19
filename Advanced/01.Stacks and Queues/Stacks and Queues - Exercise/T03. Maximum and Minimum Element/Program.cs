@@ -31,52 +31,16 @@ namespace T03._Maximum_and_Minimum_Element
                 }
                 else if (queryType[0] == "3")
                 {
-                    int maxElement = int.MinValue;
-
-                    if (numbers.Count > 0)
+                    if (numbers.Any())
                     {
-                        while (numbers.Count > 0)
-                        {
-                            int currentElement = numbers.Pop();
-                            tempListOfElements.Add(currentElement);
-                            if (currentElement > maxElement)
-                            {
-                                maxElement = currentElement;
-                            }
-                        }
-
-                        Console.WriteLine(maxElement);
-
-                        for (int j = tempListOfElements.Count - 1; j >= 0; j--)
-                        {
-                            numbers.Push(tempListOfElements[j]);
-                        }
+                        Console.WriteLine(numbers.Max());
                     }
-
                 }
                 else if (queryType[0] == "4")
                 {
-                    int minElement = int.MaxValue;
-
-                    if (numbers.Count > 0)
+                    if (numbers.Any())
                     {
-                        while (numbers.Count > 0)
-                        {
-                            int currentElement = numbers.Pop();
-                            tempListOfElements.Add(currentElement);
-
-                            if (currentElement < minElement)
-                            {
-                                minElement = currentElement;
-                            }
-                        }
-
-                        Console.WriteLine(minElement);
-
-                        for (int j = tempListOfElements.Count-1; j >= 0; j--)
-                        {
-                            numbers.Push(tempListOfElements[j]);
-                        }
+                        Console.WriteLine(numbers.Min());
                     }
                 }
             }

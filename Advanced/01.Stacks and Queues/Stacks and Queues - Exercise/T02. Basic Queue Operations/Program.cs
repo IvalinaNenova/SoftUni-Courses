@@ -37,31 +37,17 @@ namespace T02._Basic_Queue_Operations
                 }
             }
 
-            if (queue.Count == 0)
+            if (queue.Contains(elementToLookFor))
+            {
+                Console.WriteLine("true");
+            }
+            else if (queue.Count == 0)
             {
                 Console.WriteLine("0");
             }
             else
             {
-                if (queue.Contains(elementToLookFor))
-                {
-                    Console.WriteLine("true");
-                }
-                else
-                {
-                    int smallestElement = int.MaxValue;
-                    while (queue.Count > 0)
-                    {
-                        int currentElement = queue.Dequeue();
-
-                        if (currentElement < smallestElement)
-                        {
-                            smallestElement = currentElement;
-                        }
-                    }
-
-                    Console.WriteLine(smallestElement);
-                }
+                Console.WriteLine(queue.Min());
             }
         }
     }
