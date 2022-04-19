@@ -24,6 +24,10 @@ Here you can find problem solutions from the following lectures:
 8. [**Text Processing**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/08.Text%20Processing)
 9. [**Regular Expressions**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/09.Regular%20Expressions)
 ***
+**Advanced Carriculum List**
+
+1.[**Stacks and Queues**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/01.Stacks%20and%20Queues)
+***
 **Exams Practice**
 
 Here you can find exam problems I used for practice:
