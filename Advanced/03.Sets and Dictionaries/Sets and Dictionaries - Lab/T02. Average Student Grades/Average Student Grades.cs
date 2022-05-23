@@ -27,19 +27,10 @@ namespace T02._Average_Student_Grades
             foreach (var student in students)
             {
                 decimal averageGrade = student.Value.Average();
+                string gradesAsString = string.Join(" ", student.Value.Select(grade => grade.ToString("f2")));
 
-                Console.Write($"{student.Key} -> ");
-                foreach (var grade in student.Value)
-                {
-                    string gradeAsString = averageGrade.ToString();
-                    Console.Write($"{grade:f2} ");
-                }
-
-                Console.Write($"(avg: {averageGrade:f2})");
-                Console.WriteLine();
-
+                Console.WriteLine($"{student.Key} -> {gradesAsString} (avg: {averageGrade:f2})");
             }
         }
     }
-
 }
