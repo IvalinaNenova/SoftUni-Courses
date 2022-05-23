@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace T02._Average_Student_Grades
 {
@@ -6,7 +8,38 @@ namespace T02._Average_Student_Grades
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int numberOfStudents = int.Parse(Console.ReadLine());
+            Dictionary<string, List<decimal>> students = new Dictionary<string, List<decimal>>();
+
+            for (int i = 0; i < numberOfStudents; i++)
+            {
+                string[] studentData = Console.ReadLine().Split(' ');
+                string studentName = studentData[0];
+                decimal studentGrade = decimal.Parse(studentData[1]);
+
+                if (!students.ContainsKey(studentName))
+                {
+                    students[studentName] = new List<decimal>();
+                }
+                students[studentName].Add(studentGrade);
+            }
+
+            foreach (var student in students)
+            {
+                decimal averageGrade = student.Value.Average();
+
+                Console.Write($"{student.Key} -> ");
+                foreach (var grade in student.Value)
+                {
+                    string gradeAsString = averageGrade.ToString();
+                    Console.Write($"{grade:f2} ");
+                }
+
+                Console.Write($"(avg: {averageGrade:f2})");
+                Console.WriteLine();
+
+            }
         }
     }
+
 }
