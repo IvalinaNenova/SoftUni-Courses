@@ -26,7 +26,9 @@ Here you can find problem solutions from the following lectures:
 ***
 **Advanced Carriculum List**
 
-1.[**Stacks and Queues**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/01.Stacks%20and%20Queues)
+1. [**Stacks and Queues**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/01.Stacks%20and%20Queues)
+2. [**Multidimentional Arrays**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/02.Multidimentional%20Arrays)
+3. [**Sets and Dictionaries**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/03.Sets%20and%20Dictionaries)
 ***
 **Exams Practice**
 
