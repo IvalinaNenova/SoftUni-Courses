@@ -9,7 +9,7 @@ namespace T07._The_V_Logger
         static void Main(string[] args)
         {
             string input = Console.ReadLine();
-            var users = new Dictionary<string, Dictionary<string, HashSet<string>>>();
+            var users = new Dictionary<string, Dictionary<string, SortedSet<string>>>();
 
             while (!input.Contains("Statistics"))
             {
@@ -20,10 +20,11 @@ namespace T07._The_V_Logger
                 {
                     if (!users.ContainsKey(vlogger))
                     {
-                        users[vlogger] = new Dictionary<string, HashSet<string>>();
+                        users[vlogger] = new Dictionary<string, SortedSet<string>>();
+                        users[vlogger]["followers"] = new SortedSet<string>();
+                        users[vlogger]["following"] = new SortedSet<string>();
                     }
-                    users[vlogger]["followers"] = new HashSet<string>();
-                    users[vlogger]["following"] = new HashSet<string>();
+
                 }
                 else if (input.Contains("followed"))
                 {
@@ -41,15 +42,18 @@ namespace T07._The_V_Logger
                 input = Console.ReadLine();
             }
 
-            Console.WriteLine($"The V - Logger has a total of {users.Count} vloggers in its logs");
-            var ordered = users.OrderByDescending(x => x.Value.OrderByDescending(y => y.Key == "followers").Count()).ThenBy(z=> z.Value.OrderByDescending(y => y.Key == "following").Count());
-           
+            Console.WriteLine($"The V-Logger has a total of {users.Count} vloggers in its logs.");
+            var ordered = users.OrderByDescending(x => x.Value["followers"].Count)
+                .ThenBy(y => y.Value["following"].Count);
+            int rank = 1;
+
             foreach (var (user, data) in ordered)
             {
-                int rank = 1;
+
                 int countFollowers = data["followers"].Count;
                 int countFollowing = data["following"].Count;
                 Console.WriteLine($"{rank}. {user} : {countFollowers} followers, {countFollowing} following");
+
                 if (rank == 1)
                 {
                     foreach (var follower in data["followers"])
@@ -57,19 +61,12 @@ namespace T07._The_V_Logger
                         Console.WriteLine($"*  {follower}");
                     }
                 }
-                else
-                {
-                    Console.WriteLine($"{rank}. {user} : {countFollowers} followers, {countFollowing} following");
-                }
 
                 rank++;
-
-
-
             }
         }
 
-        private static bool CheckIfValidUsers(Dictionary<string, Dictionary<string, HashSet<string>>> users, string firstVlogger, string secondVlogger)
+        private static bool CheckIfValidUsers(Dictionary<string, Dictionary<string, SortedSet<string>>> users, string firstVlogger, string secondVlogger)
         {
             return users.ContainsKey(firstVlogger) &&
                    users.ContainsKey(secondVlogger) &&
