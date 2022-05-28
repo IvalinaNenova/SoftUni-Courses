@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace LineNumbers
 {
@@ -15,32 +17,20 @@ namespace LineNumbers
 
         public static void ProcessLines(string inputFilePath, string outputFilePath)
         {
-            using StreamReader reader = new StreamReader(inputFilePath);
-            using StreamWriter writer = new StreamWriter(outputFilePath);
+            string[] allLines = File.ReadAllLines(inputFilePath);
+            List<string> outputLines = new List<string>();
 
             int rowNumber = 1;
-            while (!reader.EndOfStream)
+            foreach (var line in allLines)
             {
-                int countLetters = 0;
-                int countNonLetters = 0;
-                string line = reader.ReadLine();
-                foreach (var symbol in line)
-                {
-                    if (char.IsLetter(symbol))
-                    {
-                        countLetters++;
-                    }
-
-                    if (!char.IsLetterOrDigit(symbol) && symbol != ' ')
-                    {
-                        countNonLetters++;
-                    }
-                }
+                int countLetters = line.Count(char.IsLetter);
+                int countNonLetters = line.Count(char.IsPunctuation);
 
                 rowNumber++;
-
-                writer.WriteLine($"Line {rowNumber}: {line} ({countLetters})({countNonLetters})");
+                string modifiedLine = $"Line {rowNumber}: {line} ({countLetters})({countNonLetters})";
+                outputLines.Add(modifiedLine);
             }
+            File.WriteAllLines(outputFilePath, outputLines);
         }
     }
 }
