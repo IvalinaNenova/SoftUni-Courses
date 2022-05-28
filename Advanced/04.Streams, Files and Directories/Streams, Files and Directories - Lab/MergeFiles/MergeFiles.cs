@@ -19,12 +19,18 @@
             using StreamReader secondReader = new StreamReader(secondInputFilePath);
             using StreamWriter writer = new StreamWriter(outputFilePath);
 
-            while (!firstReader.EndOfStream)
+            while (!firstReader.EndOfStream || !secondReader.EndOfStream)
             {
-                writer.WriteLine(firstReader.ReadLine());
-                writer.WriteLine(secondReader.ReadLine());
+                if (!firstReader.EndOfStream)
+                {
+                    writer.WriteLine(firstReader.ReadLine());
+                }
+
+                if (!secondReader.EndOfStream)
+                {
+                    writer.WriteLine(secondReader.ReadLine());
+                }
             }
-            writer.WriteLine(secondReader.ReadLine());
         }
     }
 }
