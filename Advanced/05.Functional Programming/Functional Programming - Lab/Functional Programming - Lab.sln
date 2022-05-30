@@ -5,11 +5,13 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01. Sort Even Numbers", "T01. Sort Even Numbers\T01. Sort Even Numbers.csproj", "{EBF65F7A-CF5A-45B4-AFE5-4E8C3EE0621B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Т02. Sum Numbers", "Т02. Sum Numbers\Т02. Sum Numbers.csproj", "{E617C5E9-71BE-4E7B-9C83-215627995D8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02. Sum Numbers", "Т02. Sum Numbers\T02. Sum Numbers.csproj", "{E617C5E9-71BE-4E7B-9C83-215627995D8A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03. Count Uppercase Words", "T03. Count Uppercase Words\T03. Count Uppercase Words.csproj", "{432AA132-CC35-4146-A63B-9AD1488995E4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04. Add VAT", "T04. Add VAT\T04. Add VAT.csproj", "{940C0551-15C5-45D3-8D6F-496D5FD27111}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05. Filter By Age", "T05. Filter By Age\T05. Filter By Age.csproj", "{D0ABFF89-25F5-4ADC-B4F2-9969FB91D395}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{940C0551-15C5-45D3-8D6F-496D5FD27111}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{940C0551-15C5-45D3-8D6F-496D5FD27111}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{940C0551-15C5-45D3-8D6F-496D5FD27111}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0ABFF89-25F5-4ADC-B4F2-9969FB91D395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0ABFF89-25F5-4ADC-B4F2-9969FB91D395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0ABFF89-25F5-4ADC-B4F2-9969FB91D395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0ABFF89-25F5-4ADC-B4F2-9969FB91D395}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
