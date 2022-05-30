@@ -29,6 +29,7 @@ Here you can find problem solutions from the following lectures:
 1. [**Stacks and Queues**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/01.Stacks%20and%20Queues)
 2. [**Multidimentional Arrays**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/02.Multidimentional%20Arrays)
 3. [**Sets and Dictionaries**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/03.Sets%20and%20Dictionaries)
+4. [**Streams, Files and Directories**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/04.Streams%2C%20Files%20and%20Directories)
 ***
 **Exams Practice**
 
