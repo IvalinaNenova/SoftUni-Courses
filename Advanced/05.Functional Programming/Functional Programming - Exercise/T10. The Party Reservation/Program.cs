@@ -39,15 +39,16 @@ namespace T10._The_Party_Reservation
 
                 Filter currentFilter = new Filter(condition, target);
 
-                if (action == "Add filter")
+                switch (action)
                 {
-                    filters.Add(currentFilter);
-                }
-                else if (action == "Remove filter")
-                {
-                    filters.RemoveWhere(filter =>
-                        filter.Condition == condition &&
-                        filter.Target == target);
+                    case "Add filter":
+                        filters.Add(currentFilter);
+                        break;
+                    case "Remove filter":
+                        filters.RemoveWhere(filter =>
+                            filter.Condition == condition &&
+                            filter.Target == target);
+                        break;
                 }
 
                 input = Console.ReadLine();
@@ -59,19 +60,20 @@ namespace T10._The_Party_Reservation
 
             foreach (var filter in filters)
             {
-                if (filter.Condition == "Starts with")
+                switch (filter.Condition)
                 {
-                    names.RemoveAll(name => name.StartsWith(filter.Target));
-                }else if (filter.Condition == "Ends with")
-                {
-                    names.RemoveAll(name => name.EndsWith(filter.Target));
-                }
-                else if (filter.Condition == "Length")
-                {
-                    names.RemoveAll(name => name.Length == int.Parse(filter.Target));
-                }else if (filter.Condition == "Contains")
-                {
-                    names.RemoveAll(name => name.Contains(filter.Target));
+                    case "Starts with":
+                        names.RemoveAll(name => name.StartsWith(filter.Target));
+                        break;
+                    case "Ends with":
+                        names.RemoveAll(name => name.EndsWith(filter.Target));
+                        break;
+                    case "Length":
+                        names.RemoveAll(name => name.Length == int.Parse(filter.Target));
+                        break;
+                    case "Contains":
+                        names.RemoveAll(name => name.Contains(filter.Target));
+                        break;
                 }
             }
 
