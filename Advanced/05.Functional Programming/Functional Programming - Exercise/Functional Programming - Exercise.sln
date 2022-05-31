@@ -3,21 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01. Action Print", "T01. Action Print\T01. Action Print.csproj", "{5394DB76-93C0-4EC5-8A8D-0B02EC485289}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T01. Action Print", "T01. Action Print\T01. Action Print.csproj", "{5394DB76-93C0-4EC5-8A8D-0B02EC485289}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T02. Knights of Honor", "T02. Knights of Honor\T02. Knights of Honor.csproj", "{C2907A2D-2845-443A-A7FE-A1D0855B1F01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T02. Knights of Honor", "T02. Knights of Honor\T02. Knights of Honor.csproj", "{C2907A2D-2845-443A-A7FE-A1D0855B1F01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03. Custom Min Function", "Т03. Custom Min Function\T03. Custom Min Function.csproj", "{4A5E7C3A-58A4-4B24-AABD-3C72B6ABEB4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T03. Custom Min Function", "Т03. Custom Min Function\T03. Custom Min Function.csproj", "{4A5E7C3A-58A4-4B24-AABD-3C72B6ABEB4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04. Find Evens or Odds", "T04. Find Evens or Odds\T04. Find Evens or Odds.csproj", "{197957EB-A09D-453E-AF51-CEECC0C6F710}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T04. Find Evens or Odds", "T04. Find Evens or Odds\T04. Find Evens or Odds.csproj", "{197957EB-A09D-453E-AF51-CEECC0C6F710}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05. Applied Arithmetics", "T05. Applied Arithmetics\T05. Applied Arithmetics.csproj", "{716A3A7E-5C86-463D-A3AA-44A645EF054B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T05. Applied Arithmetics", "T05. Applied Arithmetics\T05. Applied Arithmetics.csproj", "{716A3A7E-5C86-463D-A3AA-44A645EF054B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T06. Reverse And Exclude", "T06. Reverse And Exclude\T06. Reverse And Exclude.csproj", "{EEF537AD-AC97-4FEA-8815-2836F1CF0807}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T06. Reverse And Exclude", "T06. Reverse And Exclude\T06. Reverse And Exclude.csproj", "{EEF537AD-AC97-4FEA-8815-2836F1CF0807}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T07. Predicate For Names", "T07. Predicate For Names\T07. Predicate For Names.csproj", "{54AA11D4-B575-4C0B-B512-C3D4970F9B93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T07. Predicate For Names", "T07. Predicate For Names\T07. Predicate For Names.csproj", "{54AA11D4-B575-4C0B-B512-C3D4970F9B93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T08. List Of Predicates", "T08. List Of Predicates\T08. List Of Predicates.csproj", "{BB20DFB9-71D3-4A9B-BAFF-E5EFEF4E0D97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T08. List Of Predicates", "T08. List Of Predicates\T08. List Of Predicates.csproj", "{BB20DFB9-71D3-4A9B-BAFF-E5EFEF4E0D97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T09. Predicate Party!", "T09. Predicate Party!\T09. Predicate Party!.csproj", "{59EA77B5-E20A-450E-AD36-391833CA03DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{BB20DFB9-71D3-4A9B-BAFF-E5EFEF4E0D97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB20DFB9-71D3-4A9B-BAFF-E5EFEF4E0D97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB20DFB9-71D3-4A9B-BAFF-E5EFEF4E0D97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59EA77B5-E20A-450E-AD36-391833CA03DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59EA77B5-E20A-450E-AD36-391833CA03DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59EA77B5-E20A-450E-AD36-391833CA03DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59EA77B5-E20A-450E-AD36-391833CA03DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
