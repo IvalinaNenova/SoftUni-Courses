@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace _01._Car
+﻿namespace _01._Car
 {
     internal class Car
     {
