@@ -17,6 +17,5 @@ namespace CarManufacturer
             Year = year;
             Pressure = pressure;
         }
-
     }
 }

@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Car", "01. Car\01. Car.csproj", "{4F889471-087A-476D-90A1-23485218DB87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Car", "01. Car\01. Car.csproj", "{4F889471-087A-476D-90A1-23485218DB87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Car Extension", "02. Car Extension\02. Car Extension.csproj", "{1EE96460-5F09-420A-9F3B-0A9E99A709A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Car Extension", "02. Car Extension\02. Car Extension.csproj", "{1EE96460-5F09-420A-9F3B-0A9E99A709A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Car Constructors", "03. Car Constructors\03. Car Constructors.csproj", "{D6F95189-E6D2-4642-AE76-FA391DAF1770}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Car Constructors", "03. Car Constructors\03. Car Constructors.csproj", "{D6F95189-E6D2-4642-AE76-FA391DAF1770}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Car Engine And Tires", "04. Car Engine And Tires\04. Car Engine And Tires.csproj", "{C3F92955-2269-4245-BF89-7C6F13823D3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Car Engine And Tires", "04. Car Engine And Tires\04. Car Engine And Tires.csproj", "{C3F92955-2269-4245-BF89-7C6F13823D3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Special Cars", "05. Special Cars\05. Special Cars.csproj", "{8A49C96D-2057-4935-8125-C3B29A32462A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C3F92955-2269-4245-BF89-7C6F13823D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3F92955-2269-4245-BF89-7C6F13823D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3F92955-2269-4245-BF89-7C6F13823D3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A49C96D-2057-4935-8125-C3B29A32462A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A49C96D-2057-4935-8125-C3B29A32462A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A49C96D-2057-4935-8125-C3B29A32462A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A49C96D-2057-4935-8125-C3B29A32462A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
