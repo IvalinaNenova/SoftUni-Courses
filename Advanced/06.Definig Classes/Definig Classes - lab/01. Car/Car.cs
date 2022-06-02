@@ -1,4 +1,8 @@
-﻿namespace _01._Car
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace _01._Car
 {
     internal class Car
     {
@@ -8,6 +12,6 @@
 
         public int Year { get; set; }
 
-        
+
     }
 }
