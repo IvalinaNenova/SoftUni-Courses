@@ -20,13 +20,10 @@ namespace CarManufacturer
                 car.Tires.Sum(x => x.Pressure) < 10)
                 .ToList();
 
+            specialCars.ForEach(x => x.DriveCar(20));
+            specialCars.ForEach(x => Console.WriteLine(x));
 
 
-            foreach (var specialCar in specialCars)
-            {
-                specialCar.DriveCar(20);
-                Console.WriteLine(specialCar.WhoAmI());
-            }
         }
 
 
