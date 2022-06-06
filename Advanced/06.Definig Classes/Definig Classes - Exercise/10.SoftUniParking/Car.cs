@@ -28,6 +28,5 @@ namespace SoftUniParking
             output.Append($"RegistrationNumber: {this.RegistrationNumber}");
             return output.ToString();
         }
-        
     }
 }
