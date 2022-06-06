@@ -25,7 +25,7 @@ namespace ImplementingDoublyLinkedList
             //1-2-3-4
             list.AddLast(5);
             //1-2-3-4-5
-
+            Console.WriteLine(list.Count);
             Console.WriteLine(string.Join(", ", list.ToArray()));
             list.ForEach(x=> Console.WriteLine($"--{x}"));
             //1, 2, 3, 4, 5

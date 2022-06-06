@@ -9,20 +9,39 @@ namespace ImplementingDoublyLinkedList
         private LinkedListItem _first;
         private LinkedListItem _last;
 
-        public int Count // (get only)
+        //public int Count // Read-only property (get only)
+        //{
+        //    get
+        //    {
+        //        var count = 0;
+        //        var current = _first;
+        //        while (current != null)
+        //        {
+        //            count++;
+        //            current = current.Next;
+        //        }
+        //        return count;
+        //    }
+
+        //}
+
+        public int Count // Get count with recursion
         {
             get
             {
-                var count = 0;
-                var current = _first;
-                while (current != null)
-                {
-                    count++;
-                    current = current.Next;
-                }
-                return count;
+                return GetCount(_first);
             }
-
+        }
+        public int GetCount(LinkedListItem current)
+        {
+            if (current == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1 + GetCount(current.Next);
+            }
         }
         //•	void AddFirst(int element) – adds an element at the beginning of the collection
         public void AddFirst(int element)
@@ -64,7 +83,7 @@ namespace ImplementingDoublyLinkedList
 
             if (_first == null) // 0 elements
             {
-                return 0;
+                throw new InvalidOperationException("Linked List empty!");
             }
             else if (_first == _last)// 1 element
             {
@@ -87,7 +106,7 @@ namespace ImplementingDoublyLinkedList
 
             if (_last == null)
             {
-                return 0;
+                throw new InvalidOperationException("Linked List empty!");
             }
             else if (_first == _last)
             {
