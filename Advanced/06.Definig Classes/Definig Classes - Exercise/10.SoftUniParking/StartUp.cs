@@ -23,7 +23,6 @@ namespace SoftUniParking
             Console.WriteLine(parking.AddCar(car4));
             Console.WriteLine(parking.AddCar(car5));
             Console.WriteLine(parking.AddCar(car6));
-            
             var removedCar = parking.RemoveCar("CC1224BG");
             Console.WriteLine(removedCar);
 
