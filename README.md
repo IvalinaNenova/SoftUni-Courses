@@ -43,4 +43,3 @@ Here you can find exam problems I used for practice:
  1. [**Basics**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/Exam-Problems)
  2. [**Fundamentals**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/Exam)
 
-`Queue`
