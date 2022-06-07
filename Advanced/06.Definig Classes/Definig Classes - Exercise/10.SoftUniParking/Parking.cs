@@ -7,10 +7,11 @@ namespace SoftUniParking
     public class Parking
     {
         private readonly int capacity;
-        private readonly List<Car> cars = new List<Car>();
+        private readonly List<Car> cars;
         public Parking(int capacity)
         {
             this.capacity = capacity;
+            cars = new List<Car>();
         }
         public int Count => cars.Count();
 
