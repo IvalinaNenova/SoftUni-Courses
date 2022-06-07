@@ -161,7 +161,11 @@ namespace ImplementingCustomList
                 sb.Append(items[i] + ", ");
             }
 
-            sb.Append(items[Count - 1]);
+            if (Count != 0)
+            {
+                sb.Append(items[Count - 1]);
+            }
+            
             return sb.ToString();
         }
     }
