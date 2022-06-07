@@ -17,13 +17,7 @@ namespace ImplementingCustomStack
             count = 0;
         }
 
-        public int Count
-        {
-            get
-            {
-                return count;
-            }
-        }
+        public int Count => count;
 
         public void Push(T element)
         {
