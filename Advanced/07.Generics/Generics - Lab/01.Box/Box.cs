@@ -7,9 +7,8 @@ namespace BoxOfT
     public class Box<T>
     {
         private List<T> internalList  = new List<T>();
-       
-        public int Count { get; }
-        private int count = 0;
+
+        public int Count => internalList.Count;
 
         public void Add(T element)
         {
@@ -24,3 +23,22 @@ namespace BoxOfT
         }
     }
 }
+//public class Box<T>
+//{
+//private List<T> internalList = new List<T>();
+
+//public void Add(T item)
+//{
+//    internalList.Add(item);
+//}
+
+//public T Remove()
+//{
+//    T removedItem = internalList[internalList.Count - 1];
+//    internalList.RemoveAt(internalList.Count - 1);
+//    return removedItem;
+//}
+
+//public int Count => internalList.Count;
+
+//}
