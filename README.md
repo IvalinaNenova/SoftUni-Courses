@@ -32,6 +32,7 @@ Here you can find problem solutions from the following lectures:
 4. [**Streams, Files and Directories**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/04.Streams%2C%20Files%20and%20Directories)
 5. [**Functional Programming**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/05.Functional%20Programming)
 6. [**Defining Classes**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/06.Definig%20Classes)
+7. [**Workshop - Implementing Custom Data Structures**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/Workshops/Implementing%20Linked%20List)
 ***
 **Exams Practice**
 
