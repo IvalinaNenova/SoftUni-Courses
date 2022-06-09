@@ -6,40 +6,45 @@ namespace CustomDoublyLinkedList
     {
         static void Main(string[] args)
         {
-            CustomDoublyLinkedList<int> list = new CustomDoublyLinkedList<int>();
-            list.AddFirst(3);
-            //3
-            list.AddFirst(2);
-            //2-3
-            list.AddFirst(1);
-            //1-2-3
-            list.AddLast(4);
-            //1-2-3-4
-            list.AddFirst(0);
-            //0-1-2-3-4
-            list.AddLast(100);
-            //0-1-2-3-4-100
-            list.RemoveFirst();
-            //1-2-3-4-100
-            list.RemoveLast();
-            //1-2-3-4
-            list.AddLast(5);
-            //1-2-3-4-5
-            Console.WriteLine(list.Count);
-            Console.WriteLine(string.Join(", ", list.ToArray()));
-            list.ForEach(x => Console.WriteLine($"--{x}"));
-            //1, 2, 3, 4, 5
+            DoublyLinkedList<int> intList = new DoublyLinkedList<int>();
 
-            CustomDoublyLinkedList<string> listOfStrings = new CustomDoublyLinkedList<string>();
-            listOfStrings.AddFirst("Marina");
-            listOfStrings.AddFirst("Ivalina");
-            listOfStrings.AddLast("Diana");
-            listOfStrings.AddLast("Todor");
-            Console.WriteLine(listOfStrings.RemoveFirst());
-            Console.WriteLine(listOfStrings.RemoveLast());
+            for (int i = 0; i < 5; i++)
+            {
+                intList.AddFirst(i + 1);
+            }
 
-            Console.WriteLine(string.Join("-", listOfStrings.ToArray()));
+            for (int i = 0; i < 5; i++)
+            {
+                intList.AddLast(i + 1);
+            }
 
+            intList.ForEach(x => Console.WriteLine(x + " "));
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(intList.RemoveFirst());
+            }
+
+            DoublyLinkedList<string> stringList = new DoublyLinkedList<string>();
+
+            for (int i = 0; i < 3; i++)
+            {
+                stringList.AddFirst($"Gosho {i + 2}");
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                stringList.AddLast($"Pesho {i + 1}");
+            }
+
+            stringList.ForEach(x => Console.WriteLine(x + " "));
+
+            Console.WriteLine(string.Join('|', stringList.ToArray()));
+            
+            for (int i = 0; i < 6; i++)
+            {
+                Console.WriteLine(stringList.RemoveFirst());
+            }
         }
     }
 }
