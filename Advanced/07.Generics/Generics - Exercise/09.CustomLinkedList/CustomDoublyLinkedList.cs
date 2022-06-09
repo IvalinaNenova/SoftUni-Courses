@@ -10,29 +10,24 @@ namespace CustomDoublyLinkedList
         private LinkedListItem<T> first;
         private LinkedListItem<T> last;
 
-        //public int Count // Read-only property (get only)
-        //{
-        //    get
-        //    {
-        //        var count = 0;
-        //        var current = first;
-        //        while (current != null)
-        //        {
-        //            count++;
-        //            current = current.Next;
-        //        }
-        //        return count;
-        //    }
-
-        //}
-
-        public int Count // Get count with recursion
+        public int Count // Read-only property (get only)
         {
             get
             {
-                return GetCount(first);
+                var count = 0;
+                var current = first;
+                while (current != null)
+                {
+                    count++;
+                    current = current.Next;
+                }
+                return count;
             }
+
         }
+
+        //public int Count => GetCount(first);  Get count with recursion
+
         public int GetCount(LinkedListItem<T> current)
         {
             if (current == null)
