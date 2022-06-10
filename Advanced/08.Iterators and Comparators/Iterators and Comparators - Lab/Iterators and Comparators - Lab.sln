@@ -5,6 +5,10 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Library", "01.Library\01.Library.csproj", "{26737B91-6CF1-45B7-B683-588883E834A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.ComparableBook", "03.ComparableBook\03.ComparableBook.csproj", "{509A7E62-158B-41FA-868E-E6CE8BDE6625}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. LibraryIterator", "02. LibraryIterator\02. LibraryIterator.csproj", "{7FBA17F7-D6CE-4AC6-8808-DDC1F9382DC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{26737B91-6CF1-45B7-B683-588883E834A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26737B91-6CF1-45B7-B683-588883E834A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26737B91-6CF1-45B7-B683-588883E834A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{509A7E62-158B-41FA-868E-E6CE8BDE6625}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{509A7E62-158B-41FA-868E-E6CE8BDE6625}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{509A7E62-158B-41FA-868E-E6CE8BDE6625}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{509A7E62-158B-41FA-868E-E6CE8BDE6625}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FBA17F7-D6CE-4AC6-8808-DDC1F9382DC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FBA17F7-D6CE-4AC6-8808-DDC1F9382DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FBA17F7-D6CE-4AC6-8808-DDC1F9382DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FBA17F7-D6CE-4AC6-8808-DDC1F9382DC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
