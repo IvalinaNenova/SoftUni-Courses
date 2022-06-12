@@ -33,7 +33,8 @@ Here you can find problem solutions from the following lectures:
 5. [**Functional Programming**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/05.Functional%20Programming)
 6. [**Defining Classes**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/06.Definig%20Classes)
 7. [**Generics**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/07.Generics)
-8. [**Workshop - Implementing Custom Data Structures**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/Workshops/Implementing%20Linked%20List)
+8. [**Iterators and Comparators**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/08.Iterators%20and%20Comparators)
+9. [**Workshop - Implementing Custom Data Structures**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/Workshops/Implementing%20Linked%20List)
 ***
 **Exams Practice**
 
