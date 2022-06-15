@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 namespace Drones
 {
@@ -50,11 +51,9 @@ namespace Drones
 
         public override string ToString()
         {
-            StringBuilder output = new StringBuilder();
-            output.AppendLine($"Drone: {name}");
-            output.AppendLine($"Manufactured by: {brand}");
-            output.Append($"Range: {range} kilometers");
-            return output.ToString();
+            return $"Drone: {name}" + Environment.NewLine +
+                   $"Manufactured by: {brand}" + Environment.NewLine +
+                   $"Range: {range} kilometers";
         }
         //The class should also have a method:
         //•	Override the ToString() method in the format:

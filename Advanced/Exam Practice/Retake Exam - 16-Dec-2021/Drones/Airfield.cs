@@ -47,8 +47,8 @@ namespace Drones
         {
             if (string.IsNullOrEmpty(drone.Name) ||
                 string.IsNullOrEmpty(drone.Brand) ||
-                drone.Range <= 5 ||
-                drone.Range >= 15)
+                drone.Range < 5 ||
+                drone.Range > 15)
             {
                 return "Invalid drone.";
             }
@@ -92,14 +92,9 @@ namespace Drones
         }
         public string Report()
         {
-            StringBuilder output = new StringBuilder();
-            output.AppendLine($"Drones available at {Name}:");
             var filtered = drones.Where(d => d.Available == true);
-            foreach (var drone in filtered)
-            {
-                output.AppendLine(drone.ToString());
-            }
-            return output.ToString();
+            return $"Drones available at {Name}:" + Environment.NewLine +
+                   string.Join(Environment.NewLine, filtered);;
         }
     }
 }
