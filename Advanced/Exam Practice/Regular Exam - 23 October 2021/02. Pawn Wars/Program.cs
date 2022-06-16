@@ -29,13 +29,14 @@ namespace _02._Pawn_Wars
                     }
                 }
             }
-            string firstPlayer = "White";
-            string secondPlayer = "Black";
             Dictionary<string, (int, int)> coordinates = new Dictionary<string, (int, int)>
             {
                 {"White", whiteCoordinates},
                 {"Black", blackCoordinates}
             };
+
+            string firstPlayer = "White";
+            string secondPlayer = "Black";
 
             while (true)
             {
