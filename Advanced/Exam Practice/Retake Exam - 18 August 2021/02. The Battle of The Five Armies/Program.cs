@@ -25,16 +25,17 @@ namespace _02._The_Battle_of_The_Five_Armies
                 field[int.Parse(input[1])][int.Parse(input[2])] = 'O';
 
                 (newRow, newCol) = MoveArmy(armyRow, armyCol, direction);
+                field[armyRow][armyCol] = '-';
                 armor--;
 
                 if (HasValidCoordinates(newRow, newCol, field))
                 {
-                    field[armyRow][armyCol] = '-';
                     (armyRow, armyCol) = (newRow, newCol);
 
                     if (field[armyRow][armyCol] == 'O')
                     {
                         armor -= 2;
+                        field[armyRow][armyCol] = '-';
                     }
                     else if (field[armyRow][armyCol] == 'M')
                     {
@@ -48,7 +49,7 @@ namespace _02._The_Battle_of_The_Five_Armies
                 {
                     field[armyRow][armyCol] = 'X';
                     Console.WriteLine($"The army was defeated at {armyRow};{armyCol}.");
-                    break;
+                    hasWon = true;
                 }
             }
 
@@ -64,7 +65,7 @@ namespace _02._The_Battle_of_The_Five_Armies
             {
                 string rowData = Console.ReadLine();
                 field[row] = new char[rowData.Length];
-                for (int col = 0; col < field[row].Length; col++)
+                for (int col = 0; col < rowData.Length; col++)
                 {
                     field[row][col] = rowData[col];
 
@@ -93,8 +94,8 @@ namespace _02._The_Battle_of_The_Five_Armies
 
         static bool HasValidCoordinates(int row, int col, char[][] field)
         {
-            return row >= 0 && row < field[row].Length &&
-                   col >= 0 && col < field[col].Length;
+            return row >= 0 && row < field.GetLength(0) &&
+                   col >= 0 && col < field[row].Length;
         }
         public static (int, int) MoveArmy(int row, int col, string direction)
         {
