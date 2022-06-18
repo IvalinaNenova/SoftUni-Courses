@@ -1,51 +1,108 @@
 ﻿using System;
+using System.Linq;
 
 namespace _02.Super_Mario
 {
     internal class Program
     {
-        private static int playerRow;
-        private static int playerCol;
-        private static char[,] field;
-        private static int size;
+        private static int marioRow;
+        private static int marioCol;
+
+        private static int newRow;
+        private static int newCol;
+
+        private static char[][] maze;
+
+        private const char MarioSymbol = 'M';
+        private const char DeadSymbol = 'X';
+        private const char PrincessSymbol = 'P';
+        private const char BowserSymbol = 'B';
+        private const char EmptySymbol = '-';
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-        }
-        public static void FillMatrix()
-        {
-            size = int.Parse(Console.ReadLine());
-            field = new char[size, size];
+            int numberOfLives = int.Parse(Console.ReadLine());
+            FillMaze();
 
-            for (int row = 0; row < size; row++)
+            string input = Console.ReadLine();
+            bool isOver = false;
+            while (!isOver)
+            {
+                string[] commands = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+                string direction = commands[0];
+                maze[int.Parse(commands[1])][int.Parse(commands[2])] = BowserSymbol;
+
+                numberOfLives--;
+                maze[marioRow][marioCol] = EmptySymbol;
+
+                (newRow, newCol) = MoveMario(marioRow, marioCol, direction);
+
+                if (HasValidCoordinates(newRow, newCol))
+                {
+                    (marioRow, marioCol) = (newRow, newCol);
+                    switch (maze[marioRow][marioCol])
+                    {
+                        case PrincessSymbol:
+                            isOver = true;
+                            Console.WriteLine($"Mario has successfully saved the princess! Lives left: {numberOfLives}");
+                            maze[marioRow][marioCol] = EmptySymbol;
+                            break;
+                        case BowserSymbol:
+                            numberOfLives -= 2;
+                            maze[marioRow][marioCol] = EmptySymbol;
+                            break;
+                    }
+                }
+
+                if (!isOver && numberOfLives <= 0)
+                {
+                    maze[marioRow][marioCol] = DeadSymbol;
+                    Console.WriteLine($"Mario died at {marioRow};{marioCol}.");
+                    isOver = true;
+                }
+
+                input = Console.ReadLine();
+            }
+
+            PrintOutput();
+        }
+        public static void FillMaze()
+        {
+            int rows = int.Parse(Console.ReadLine());
+            maze = new char[rows][];
+
+            for (int row = 0; row < rows; row++)
             {
                 string rowData = Console.ReadLine();
+                maze[row] = new char[rowData.Length];
 
-                for (int col = 0; col < size; col++)
+                for (int col = 0; col < rowData.Length; col++)
                 {
-                    field[row, col] = rowData[col];
-                    if (field[row, col] == ' ')
+                    maze[row][col] = rowData[col];
+
+                    if (maze[row][col] == MarioSymbol)
                     {
-                        playerRow = row;
-                        playerCol = col;
+                        (marioRow, marioCol) = (row, col);
                     }
                 }
             }
         }
-        public static (int, int) MoveArmy(int row, int col, string direction)
+
+        public static (int, int) MoveMario(int row, int col, string direction)
         {
             switch (direction)
             {
-                case "up":
+                case "W":
                     row--;
                     break;
-                case "down":
+                case "S":
                     row++;
                     break;
-                case "left":
+                case "A":
                     col--;
                     break;
-                case "right":
+                case "D":
                     col++;
                     break;
             }
@@ -55,20 +112,18 @@ namespace _02.Super_Mario
 
         public static void PrintOutput()
         {
-            for (int i = 0; i < field.GetLength(0); i++)
+            for (int row = 0; row < maze.GetLength(0); row++)
             {
-                for (int j = 0; j < field.GetLength(1); j++)
-                {
-                    Console.Write(field[i, j]);
-                }
-                Console.WriteLine();
+                Console.WriteLine(string.Join("", maze[row]));
             }
         }
+
         static bool HasValidCoordinates(int row, int col)
         {
-            return row >= 0 && row < field.GetLength(0) &&
-                   col >= 0 && col < field.GetLength(1);
+            return row >= 0 && row < maze.GetLength(0) &&
+                   col >= 0 && col < maze[row].Length;
         }
     }
-} 
-    
+}
+
+
