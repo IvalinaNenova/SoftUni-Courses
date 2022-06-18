@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Lootbox", "01. Lootbox\01.Lootbox.csproj", "{14C53646-B8CE-4863-A577-4CDE680882ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Re-Volt", "02. Re-Volt\02. Re-Volt.csproj", "{3D3D8795-27AF-4EBA-83A8-C6C979DD3AE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guild", "Guild\Guild.csproj", "{95EAAC72-FAE7-46BC-A26A-B6DBBAC2B004}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14C53646-B8CE-4863-A577-4CDE680882ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C53646-B8CE-4863-A577-4CDE680882ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C53646-B8CE-4863-A577-4CDE680882ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C53646-B8CE-4863-A577-4CDE680882ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D3D8795-27AF-4EBA-83A8-C6C979DD3AE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D3D8795-27AF-4EBA-83A8-C6C979DD3AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D3D8795-27AF-4EBA-83A8-C6C979DD3AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D3D8795-27AF-4EBA-83A8-C6C979DD3AE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95EAAC72-FAE7-46BC-A26A-B6DBBAC2B004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95EAAC72-FAE7-46BC-A26A-B6DBBAC2B004}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95EAAC72-FAE7-46BC-A26A-B6DBBAC2B004}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95EAAC72-FAE7-46BC-A26A-B6DBBAC2B004}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {072FD552-00FA-42C2-A5ED-D20A723314B3}
+	EndGlobalSection
+EndGlobal
