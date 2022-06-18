@@ -76,23 +76,9 @@ namespace _01._Bakery_Shop
                 Console.WriteLine($"{pastry}: {amount}");
             }
 
-            if (water.Any())
-            {
-                Console.WriteLine($"Water left: {string.Join(", ", water)}");
-            }
-            else
-            {
-                Console.WriteLine("Water left: None");
-            }
+            Console.WriteLine(water.Any() ? $"Water left: {string.Join(", ", water)}" : "Water left: None");
 
-            if (flour.Any())
-            {
-                Console.WriteLine($"Flour left: {string.Join(", ", flour)}");
-            }
-            else
-            {
-                Console.WriteLine("Flour left: None");
-            }
+            Console.WriteLine(flour.Any() ? $"Flour left: {string.Join(", ", flour)}" : "Flour left: None");
         }
     }
 }
