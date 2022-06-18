@@ -102,11 +102,7 @@ namespace _02.Survivor
             for (int row = 0; row < rows; row++)
             {
                 char[] rowData = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(char.Parse).ToArray();
-                beach[row] = new char[rowData.Length];
-                for (int col = 0; col < rowData.Length; col++)
-                {
-                    beach[row][col] = rowData[col];
-                }
+                beach[row] = rowData;
             }
         }
 
