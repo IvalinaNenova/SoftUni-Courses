@@ -41,6 +41,7 @@ Here you can find problem solutions from the following lectures:
 Here you can find exam problems I used for practice:
 1. [**Basics**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/Exam-Practice)
 2. [**Fundamentals**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/Exam%20Practice) 
+3. [**Advanced**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/Exam%20Practice)
 ***
 **Exams**
  1. [**Basics**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/Exam-Problems)
