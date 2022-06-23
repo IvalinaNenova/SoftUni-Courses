@@ -38,6 +38,10 @@ namespace _02._Re_Volt
                         continue;
                     case BonusSymbol:
                         (playerRow, playerCol) = MovePlayer(direction);
+                        if (field[playerRow, playerCol] == FinishSymbol)
+                        {
+                            hasWon = true;
+                        }
                         break;
                     case FinishSymbol:
                         hasWon = true;
@@ -51,9 +55,7 @@ namespace _02._Re_Volt
                     break;
                 }
             }
-
-            Console.WriteLine(hasWon ? "Player won!" : "Player lost!");
-            PrintOutput();
+            PrintOutput(hasWon);
         }
 
         public static void FillMatrix()
@@ -95,8 +97,9 @@ namespace _02._Re_Volt
             }
             return (playerRow, playerCol);
         }
-        public static void PrintOutput()
+        public static void PrintOutput(bool hasWon)
         {
+            Console.WriteLine(hasWon ? "Player won!" : "Player lost!");
             for (int i = 0; i < size; i++)
             {
                 for (int j = 0; j < size; j++)
