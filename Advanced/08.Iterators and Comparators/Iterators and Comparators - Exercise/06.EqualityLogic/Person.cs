@@ -3,52 +3,45 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace _06.EqualityLogic 
+namespace _06.EqualityLogic
 {
     public class Person : IComparable<Person>
     {
-        private string name;
-        private int age;
-
         public Person(string name, int age)
         {
-            this.name = name.ToLower();
-            this.age = age;
+            Name = name;
+            Age = age;
         }
 
-        public string Name
-        {
-            get => name;
-            set => name = value;
-        }
-        public int Age
-        {
-            get => age;
-            set => age = value;
-        }
+        public string Name { get; set; }
+
+        public int Age { get; set; }
 
         public int CompareTo(Person other)
         {
-            var comparison = String.Compare(this.Name, other.Name, StringComparison.Ordinal);
+            if (this.Name.CompareTo(other.Name) != 0)
+            {
+                return this.Name.CompareTo(other.Name);
+            }
 
-            return comparison == 0
-                ? this.Age.CompareTo(other.Age)
-                : comparison;
+            if (this.Age.CompareTo(other.Age) != 0)
+            {
+                return this.Age.CompareTo(other.Age);
+            }
+
+            return 0;
         }
 
-        public override bool Equals(object other)
+        public override bool Equals(object obj)
         {
-            var y = other as Person;
-            return this.Name == y.Name && this.Age == y.Age;
+            Person person = obj as Person;
+
+            return this.Name == person.Name && this.Age == person.Age;
         }
 
         public override int GetHashCode()
         {
-            var hashCode = this.Name.Length * 10000;
-            hashCode = this.Name.Aggregate(hashCode, (current, letter) => current + letter);
-            hashCode += this.Age * 10000;
-
-            return hashCode;
+            return this.Name.GetHashCode() + this.Age.GetHashCode();
         }
     }
 }
