@@ -58,8 +58,13 @@ namespace Renovators
         }
         public 	Renovator HireRenovator(string name) 
         {
-            return renovators.FirstOrDefault(r => r.Name == name);
-           
+            var renovatorToHire = renovators.FirstOrDefault(r => r.Name == name);
+            if (renovatorToHire != null)
+            {
+                renovatorToHire.Hired = true;
+            }
+
+            return renovatorToHire;
         }
 
         public List<Renovator> PayRenovators(int days)
