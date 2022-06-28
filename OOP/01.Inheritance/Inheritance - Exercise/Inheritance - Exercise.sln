@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Person", "T01. Person\Person.csproj", "{6D332175-3CF8-4E14-89DE-98BBF598ADBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Person", "T01. Person\Person.csproj", "{6D332175-3CF8-4E14-89DE-98BBF598ADBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zoo", "Zoo\Zoo.csproj", "{CDE70EE2-DCEF-4477-90EA-ACE200CA375A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zoo", "Zoo\Zoo.csproj", "{CDE70EE2-DCEF-4477-90EA-ACE200CA375A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayersAndMonsters", "Players and Monsters\PlayersAndMonsters.csproj", "{858F1F57-605C-4DAA-A4CF-30FFA6C79BBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{CDE70EE2-DCEF-4477-90EA-ACE200CA375A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDE70EE2-DCEF-4477-90EA-ACE200CA375A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDE70EE2-DCEF-4477-90EA-ACE200CA375A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{858F1F57-605C-4DAA-A4CF-30FFA6C79BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{858F1F57-605C-4DAA-A4CF-30FFA6C79BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{858F1F57-605C-4DAA-A4CF-30FFA6C79BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{858F1F57-605C-4DAA-A4CF-30FFA6C79BBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
