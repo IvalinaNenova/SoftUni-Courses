@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonsInfo", "Persons\PersonsInfo.csproj", "{E1A4917C-55C6-459B-B54D-D6465355377A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Salary", "Salary\Salary.csproj", "{66E33A93-C74B-4C06-928E-1E1C9CC35816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation", "Validation\Validation.csproj", "{46AA87E7-1E4D-4B10-AB8B-81529D0DE67E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1A4917C-55C6-459B-B54D-D6465355377A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1A4917C-55C6-459B-B54D-D6465355377A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1A4917C-55C6-459B-B54D-D6465355377A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1A4917C-55C6-459B-B54D-D6465355377A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66E33A93-C74B-4C06-928E-1E1C9CC35816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66E33A93-C74B-4C06-928E-1E1C9CC35816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66E33A93-C74B-4C06-928E-1E1C9CC35816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66E33A93-C74B-4C06-928E-1E1C9CC35816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46AA87E7-1E4D-4B10-AB8B-81529D0DE67E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46AA87E7-1E4D-4B10-AB8B-81529D0DE67E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46AA87E7-1E4D-4B10-AB8B-81529D0DE67E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46AA87E7-1E4D-4B10-AB8B-81529D0DE67E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {342C4EFB-997B-40A4-8D8E-C5F03F18F524}
+	EndGlobalSection
+EndGlobal
