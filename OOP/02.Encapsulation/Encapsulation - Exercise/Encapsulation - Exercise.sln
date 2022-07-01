@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassBoxData", "ClassBoxData\ClassBoxData.csproj", "{DDF1422B-2682-4F0D-908A-CAF9502BFC88}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalFarm", "AnimalFarm\AnimalFarm.csproj", "{685CB648-1F37-4230-912A-231F49935F08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DDF1422B-2682-4F0D-908A-CAF9502BFC88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDF1422B-2682-4F0D-908A-CAF9502BFC88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDF1422B-2682-4F0D-908A-CAF9502BFC88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{685CB648-1F37-4230-912A-231F49935F08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{685CB648-1F37-4230-912A-231F49935F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{685CB648-1F37-4230-912A-231F49935F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{685CB648-1F37-4230-912A-231F49935F08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
