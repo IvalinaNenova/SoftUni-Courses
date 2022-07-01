@@ -44,7 +44,7 @@ namespace ShoppingSpree
                     Person shopper = peopleList.Find(p => p.Name == shoppingList[0]);
                     Product productToBuy = products.Find(p => p.Name == shoppingList[1]);
 
-                    shopper.AddProductsToBag(shopper, productToBuy);
+                    shopper.AddProductsToBag(productToBuy);
 
                     input = Console.ReadLine();
                 }

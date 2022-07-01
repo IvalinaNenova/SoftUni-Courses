@@ -19,7 +19,7 @@ namespace ShoppingSpree
         }
 
         public IReadOnlyCollection<Product> Products => products;
-        
+
         public string Name
         {
             get => name;
@@ -48,24 +48,24 @@ namespace ShoppingSpree
             }
         }
 
-        public void AddProductsToBag(Person person, Product product)
+        public void AddProductsToBag(Product product)
         {
-            if (person.Money >= product.Cost)
+            if (this.Money >= product.Cost)
             {
-                person.products.Add(product);
-                person.Money -= product.Cost;
-                Console.WriteLine($"{person.Name} bought {product.Name}");
+                this.products.Add(product);
+                this.Money -= product.Cost;
+                Console.WriteLine($"{this.Name} bought {product.Name}");
             }
             else
             {
-                Console.WriteLine($"{person.Name} can't afford {product.Name}");
+                Console.WriteLine($"{this.Name} can't afford {product.Name}");
             }
         }
 
         public override string ToString()
         {
-            return this.Products.Count > 0 
-                ? $"{this.Name} - {string.Join(", ", products.Select(p=> p.Name))}" 
+            return this.Products.Count > 0
+                ? $"{this.Name} - {string.Join(", ", products.Select(p => p.Name))}"
                 : $"{this.Name} - Nothing bought";
         }
     }
