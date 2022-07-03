@@ -36,6 +36,11 @@ Here you can find problem solutions from the following lectures:
 8. [**Iterators and Comparators**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/08.Iterators%20and%20Comparators)
 9. [**Workshop - Implementing Custom Data Structures**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/Workshops/Implementing%20Linked%20List)
 ***
+**OOP Carriculum List**
+
+1. [**Inheritance**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/01.Inheritance)
+2. [**Encapsulation**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/02.Encapsulation)
+***
 **Exams Practice**
 
 Here you can find exam problems I used for practice:
@@ -46,4 +51,5 @@ Here you can find exam problems I used for practice:
 **Exams**
  1. [**Basics**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/Exam-Problems)
  2. [**Fundamentals**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/Exam)
+ 3. [**Advanced**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/Exam/Exam%20-%2025%20June%202022)
 
