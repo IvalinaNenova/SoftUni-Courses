@@ -26,39 +26,38 @@ namespace FootballTeamGenerator
                             teams.Add(new Team(teamName));
                             break;
                         case "Add":
-                        {
-                            Team targetTeam = ValidateTargetTeam(teams, teamName);
+                            {
+                                Team targetTeam = ValidateTargetTeam(teams, teamName);
 
-                            Player player = new Player(commands[2],
-                                int.Parse(commands[3]),
-                                int.Parse(commands[4]),
-                                int.Parse(commands[5]),
-                                int.Parse(commands[6]),
-                                int.Parse(commands[7]));
+                                Player player = new Player(commands[2],
+                                    int.Parse(commands[3]),
+                                    int.Parse(commands[4]),
+                                    int.Parse(commands[5]),
+                                    int.Parse(commands[6]),
+                                    int.Parse(commands[7]));
 
-                            targetTeam.AddPlayer(player);
-                            break;
-                        }
+                                targetTeam.AddPlayer(player);
+                                break;
+                            }
                         case "Remove":
-                        {
-                            string playerName = commands[2];
-                            Team targetTeam = ValidateTargetTeam(teams, teamName);
-                            targetTeam.RemovePlayer(playerName);
-                            break;
-                        }
+                            {
+                                string playerName = commands[2];
+                                Team targetTeam = ValidateTargetTeam(teams, teamName);
+                                targetTeam.RemovePlayer(playerName);
+                                break;
+                            }
                         case "Rating":
-                        {
-                            Team targetTeam = ValidateTargetTeam(teams, teamName);
-                            Console.WriteLine($"{teamName} - {targetTeam.Rating}");
-                            break;
-                        }
+                            {
+                                Team targetTeam = ValidateTargetTeam(teams, teamName);
+                                Console.WriteLine($"{teamName} - {targetTeam.Rating}");
+                                break;
+                            }
                     }
                 }
                 catch (Exception exception)
                 {
                     Console.WriteLine(exception.Message);
                 }
-               
 
                 line = Console.ReadLine();
             }

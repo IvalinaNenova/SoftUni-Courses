@@ -17,17 +17,10 @@ namespace FootballTeamGenerator
         public string Name { get; set; }
 
         public double Rating
-        {
-            get
-            {
-                if (players.Count == 0)
-                {
-                    return 0;
-                }
-
-                return Math.Round(players.Sum(p => p.SkillLevel) / players.Count);
-            }
-        }
+            => players.Count == 0 
+                ? 0 
+                : Math.Round(players.Average(p => p.SkillLevel));
+       
 
         public void AddPlayer(Player player)
         {
@@ -36,12 +29,14 @@ namespace FootballTeamGenerator
 
         public void RemovePlayer(string playerName)
         {
-            if (players.Find(p => p.Name == playerName) == null)
+            Player player = players.FirstOrDefault(p => p.Name == playerName);
+
+            if (player == null)
             {
                 throw new ArgumentException($"Player {playerName} is not in {this.Name} team.");
             }
 
-            players.Remove(players.Find(p => p.Name == playerName));
+            players.Remove(player);
         }
     }
 }
