@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace PizzaCalories
 {
@@ -19,9 +20,8 @@ namespace PizzaCalories
             Dough = dough;
             toppings = new List<Topping>();
         }
-        
-        public int CountOfToppings => toppings.Count;
 
+        public IReadOnlyCollection<Topping> Toppings => toppings; 
         public Dough Dough
         {
             get => dough;

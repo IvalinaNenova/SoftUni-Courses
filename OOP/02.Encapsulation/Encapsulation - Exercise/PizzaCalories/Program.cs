@@ -8,10 +8,11 @@ namespace PizzaCalories
         {
             try
             {
-                string pizzaName = Console.ReadLine().Split(' ')[1];
+                string[] pizzaInfo = Console.ReadLine().Split(' ');
                 string[] doughInfo = Console.ReadLine().Split(' ');
 
                 Dough dough = new Dough(doughInfo[1], doughInfo[2], double.Parse(doughInfo[3]));
+                string pizzaName = pizzaInfo[1];
                 Pizza pizza = new Pizza(pizzaName, dough);
 
                 string line = Console.ReadLine();
@@ -25,7 +26,7 @@ namespace PizzaCalories
 
                     line = Console.ReadLine();
                 }
-
+                
                 Console.WriteLine($"{pizzaName} - {pizza.GetTotalCalories():f2} Calories.");
             }
             catch (Exception exception)

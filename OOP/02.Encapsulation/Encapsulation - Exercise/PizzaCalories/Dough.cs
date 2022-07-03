@@ -22,7 +22,7 @@ namespace PizzaCalories
         private string flourType;
         private string bakingTechnique;
         private double weight;
-        
+
         public Dough(string flourType, string bakingTechnique, double weight)
         {
             FlourType = flourType;
