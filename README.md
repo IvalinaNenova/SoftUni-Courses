@@ -40,6 +40,7 @@ Here you can find problem solutions from the following lectures:
 
 1. [**Inheritance**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/01.Inheritance)
 2. [**Encapsulation**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/02.Encapsulation)
+3. [**Interfaces And Abstraction**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/03.Interfaces%20And%20Abstraction)
 ***
 **Exams Practice**
 
