@@ -7,7 +7,7 @@
 
         public virtual string Draw()
         {
-            return string.Empty;
+            return $"Drawing ";
         }
     }
 }

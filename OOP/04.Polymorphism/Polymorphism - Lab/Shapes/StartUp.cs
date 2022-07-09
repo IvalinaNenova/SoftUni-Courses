@@ -6,24 +6,22 @@ namespace Shapes
     {
         static void Main(string[] args)
         {
-            int height = int.Parse(Console.ReadLine());
-            int width = int.Parse(Console.ReadLine());
+            double height = int.Parse(Console.ReadLine());
+            double width = int.Parse(Console.ReadLine());
 
-            Rectangle rectangle = new Rectangle(width, height);
+            Shape shape = new Rectangle(width, height);
 
-            Console.WriteLine(rectangle.CalculatePerimeter());
-            Console.WriteLine(rectangle.CalculateArea());
+            Console.WriteLine(shape.CalculateArea());
+            Console.WriteLine(shape.CalculatePerimeter());
+            Console.WriteLine(shape.Draw());
 
 
-            int radius = int.Parse(Console.ReadLine());
+            double radius = double.Parse(Console.ReadLine());
+            shape = new Circle(radius);
 
-            Circle circle = new Circle(radius);
-
-            Console.WriteLine(circle.CalculatePerimeter());
-            Console.WriteLine(circle.CalculateArea());
-
-            Console.WriteLine(rectangle.Draw());
-            Console.WriteLine(circle.Draw());
+            Console.WriteLine(shape.CalculateArea());
+            Console.WriteLine(shape.CalculatePerimeter());
+            Console.WriteLine(shape.Draw());
         }
     }
 }

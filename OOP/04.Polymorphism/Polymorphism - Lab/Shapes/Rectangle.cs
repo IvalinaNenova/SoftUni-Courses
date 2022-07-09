@@ -1,25 +1,23 @@
-﻿using System.Text;
-
-namespace Shapes
+﻿namespace Shapes
 {
     public class Rectangle : Shape
     {
-        private int height;
-        private int width;
+        private double height;
+        private double width;
 
-        public Rectangle(int width, int height)
+        public Rectangle(double height, double width)
         {
             Height = height;
             Width = width;
         }
 
-        public int Width
+        public double Width
         {
             get => width;
             private set => width = value;
         }
 
-        public int Height
+        public double Height
         {
             get => height;
             private set => height = value;
@@ -27,28 +25,17 @@ namespace Shapes
 
         public override double CalculatePerimeter() //(h + w)*2
         {
-            return 2 * height + 2 * width;
+            return 2 * Height + 2 * Width;
         }
 
         public override double CalculateArea() // height * width
         {
-            return height * width;
+            return Height * Width;
         }
 
-        public override string Draw()
+        public sealed override string Draw()
         {
-            StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine(new string('*', width));
-
-            for (int i = 1; i < height - 1; i++)
-            {
-                sb.AppendLine('*' + new string(' ', width - 2) + '*');
-            }
-
-            sb.AppendLine(new string('*', width));
-
-            return sb.ToString().TrimEnd();
+            return base.Draw() + $"{this.GetType().Name}";
         }
     }
 }
