@@ -1,12 +1,12 @@
-﻿namespace Vehicles
+﻿namespace VehiclesExtension
 {
     public class Truck : Vehicle
     {
         private const double ConsumptionIncrease = 1.6;
-        private const double PercentageOfFuelRefueled = 0.95;
+        private const double PercentageOfFuelDecrease = 0.5;
 
-        public Truck(double fuelQuantity, double fuelConsumption)
-            : base(fuelQuantity, fuelConsumption)
+        public Truck(double fuelQuantity, double fuelConsumption, double tankCapacity)
+            : base(fuelQuantity, fuelConsumption, tankCapacity)
         {
         }
 
@@ -14,8 +14,8 @@
 
         public override void Refuel(double fuel)
         {
-            fuel *= PercentageOfFuelRefueled;
             base.Refuel(fuel);
+            FuelQuantity -= fuel * PercentageOfFuelDecrease;
         }
     }
 }
