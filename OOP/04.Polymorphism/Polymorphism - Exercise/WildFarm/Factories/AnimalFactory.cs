@@ -2,7 +2,7 @@
 
 namespace WildFarm.Factories
 {
-    static class AnimalFactory
+    public static class AnimalFactory
     {
         public static Animal CreateAnimal(params string[] data)
         {

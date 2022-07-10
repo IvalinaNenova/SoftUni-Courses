@@ -22,6 +22,7 @@ namespace WildFarm
                 Food.Food food = FoodFactory.CreateFood(foodData[0], int.Parse(foodData[1]));
 
                 Console.WriteLine(animal.ProduceSound());
+
                 try
                 {
                     animal.Feed(food);

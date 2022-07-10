@@ -12,7 +12,7 @@
 
         public override string ToString()
         {
-            return $"{GetType().Name} [{Name}, {WingSize}, {Weight:0.##}, {FoodEaten}]";
+            return $"{GetType().Name} [{Name}, {WingSize}, {Weight}, {FoodEaten}]";
         }
     }
 }
