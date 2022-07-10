@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace VehiclesExtension
+﻿namespace VehiclesExtension
 {
     public enum AirConditionerMode
     {
-        On, 
+        On,
         Off
     }
 }
