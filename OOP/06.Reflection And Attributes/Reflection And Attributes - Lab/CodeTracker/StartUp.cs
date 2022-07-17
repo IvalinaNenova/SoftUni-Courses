@@ -1,7 +1,8 @@
-﻿namespace AuthorProblem
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace AuthorProblem
 {
     using System;
-    [Author("Ivalina")]
     public class StartUp
     {
         [Author("Marina")]
@@ -10,6 +11,17 @@
             Tracker tracker = new Tracker();
 
             tracker.PrintMethodsByAuthor();
+        }
+
+        [Author("Vanya")]
+        public void BlahBlah()
+        {
+
+        }
+        [Author("Ivalina")]
+        public static void Something()
+        {
+
         }
     }
 }

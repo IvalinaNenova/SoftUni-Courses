@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Reflection;
 
 namespace AuthorProblem
@@ -13,11 +14,14 @@ namespace AuthorProblem
 
             foreach (var method in methods)
             {
-                var attributes = method.GetCustomAttributes<AuthorAttribute>();
-
-                foreach (AuthorAttribute authorAttribute in attributes)
+                if (method.CustomAttributes.Any(t => t.AttributeType == typeof(AuthorAttribute)))
                 {
-                    Console.WriteLine($"{method.Name} is written by {authorAttribute.Name}");
+                    var attributes = method.GetCustomAttributes(false);
+
+                    foreach (AuthorAttribute authorAttribute in attributes)
+                    {
+                        Console.WriteLine($"{method.Name} is written by {authorAttribute.Name}");
+                    }
                 }
             }
         }
