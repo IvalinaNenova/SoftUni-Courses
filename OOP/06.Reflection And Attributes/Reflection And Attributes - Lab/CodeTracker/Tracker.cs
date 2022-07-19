@@ -6,6 +6,10 @@ namespace AuthorProblem
 {
     public class Tracker
     {
+        public Tracker()
+        {
+            
+        }
         public void PrintMethodsByAuthor()
         {
             Type type = typeof(StartUp);

@@ -1,13 +1,15 @@
 ﻿namespace AuthorProblem
 {
-
+    using System;
     [Author("Ivalina")]
+    [Author("Diana")]
     public class StartUp
     {
-
         [Author("Marina")]
-        static void Main(string[] args)
+        [Author("Vanya")]
+        static void Main()
         {
+
         }
     }
 }
