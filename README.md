@@ -41,6 +41,9 @@ Here you can find problem solutions from the following lectures:
 1. [**Inheritance**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/01.Inheritance)
 2. [**Encapsulation**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/02.Encapsulation)
 3. [**Interfaces And Abstraction**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/03.Interfaces%20And%20Abstraction)
+4. [**Polymorphism**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/04.Polymorphism)
+5. [**Exceptions and Error Handling**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/05.Exceptions%20and%20Error%20Handling/Exceptions%20and%20Error%20Handling%20-%20Lab)
+6. [**Reflection And Attributes**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/06.Reflection%20And%20Attributes)
 ***
 **Exams Practice**
 
