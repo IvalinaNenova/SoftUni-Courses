@@ -6,40 +6,7 @@ namespace SmartphoneShop.Tests
     [TestFixture]
     public class SmartphoneShopTests
     {
-        private Shop fullShop;
-        private Shop shopWithTwoPhones;
-        private Smartphone smartphoneNotInShop;
-        private Smartphone existingSmartphone;
-        [SetUp]
-        public void Init()
-        {
-            fullShop = new Shop(10);
-
-            for (int i = 0; i < 10; i++)
-            {
-                StringBuilder sb = new StringBuilder();
-                sb.Append("Apple");
-                sb.Append(i.ToString());
-                Smartphone smartphone = new Smartphone(sb.ToString(), 100);
-
-                fullShop.Add(smartphone);
-            }
-            
-            shopWithTwoPhones = new Shop(10);
-
-            for (int i = 0; i < 2; i++)
-            {
-                StringBuilder sb = new StringBuilder();
-                sb.Append("Apple");
-                sb.Append(i.ToString());
-                Smartphone smartphone = new Smartphone(sb.ToString(), 100);
-
-                shopWithTwoPhones.Add(smartphone);
-            }
-
-            smartphoneNotInShop = new Smartphone("Apple18", 100);
-            existingSmartphone = new Smartphone("Apple0", 100);
-        }
+        
         [Test]
         public void ShopConstructorShouldThrowExceptionIfNegativeCapacityProvided()
         {
@@ -57,50 +24,84 @@ namespace SmartphoneShop.Tests
         [Test]
         public void AddMethodShouldThrowExceptionIfPhoneAlreadyInShop()
         {
-            Assert.That(() => shopWithTwoPhones.Add(existingSmartphone), Throws.InvalidOperationException);
+            var shop = new Shop(2);
+            Smartphone smartphone = new Smartphone("Apple0", 100);
+            shop.Add(smartphone);
+            Assert.That(() => shop.Add(smartphone), Throws.InvalidOperationException);
         }
 
         [Test]
         public void AddMethodShouldThrowExceptionIfShopIsAlreadyFull()
         {
-            Assert.That(() => fullShop.Add(smartphoneNotInShop), Throws.InvalidOperationException);
+            var shop = new Shop(2);
+            Smartphone smartphone1 = new Smartphone("Apple0", 100);
+            Smartphone smartphone2 = new Smartphone("Apple1", 100);
+            Smartphone smartphone3 = new Smartphone("Apple2", 100);
+
+            shop.Add(smartphone1);
+            shop.Add(smartphone2);
+
+            Assert.That(() => shop.Add(smartphone3), Throws.InvalidOperationException);
         }
 
         [Test]
         public void AddMethodShouldIncreaseCount()
         {
-            shopWithTwoPhones.Add(smartphoneNotInShop);
-            Assert.AreEqual(3, shopWithTwoPhones.Count);
-            Assert.AreEqual(10, fullShop.Capacity);
+            var shop = new Shop(2);
+
+            Smartphone smartphone = new Smartphone("Apple0", 100);
+            shop.Add(smartphone);
+            Assert.AreEqual(1, shop.Count);
+            Assert.AreEqual(2, shop.Capacity);
         }
 
         [Test]
         public void RemoveMethodShouldThrowExceptionIfPhoneToRemoveDoesNotExist()
         {
-            Assert.That(()=> shopWithTwoPhones.Remove("Apple18"), Throws.InvalidOperationException);
+            var shop = new Shop(2);
+
+            Smartphone smartphone = new Smartphone("Apple0", 100);
+            shop.Add(smartphone);
+
+            Assert.That(()=> shop.Remove("Apple18"), Throws.InvalidOperationException);
         }
 
         [Test]
         public void RemoveMethodShouldRemovePhoneAndReduceCount()
         {
-            shopWithTwoPhones.Remove("Apple0");
-            Assert.AreEqual(1, shopWithTwoPhones.Count);
+            var shop = new Shop(2);
+            Smartphone smartphone1 = new Smartphone("Apple0", 100);
+            Smartphone smartphone2 = new Smartphone("Apple1", 100);
+
+            shop.Add(smartphone1);
+            shop.Add(smartphone2);
+            shop.Remove("Apple0");
+            Assert.AreEqual(1, shop.Count);
         }
 
         [Test]
         public void TestPhoneMethodShouldThrowExceptionIfPhoneDoesNotExist()
         {
-            string modelName = "Apple18";
-            Assert.That(()=> shopWithTwoPhones.TestPhone(modelName, 50), Throws.InvalidOperationException);
+            var shop = new Shop(2);
+            Smartphone smartphone1 = new Smartphone("Apple0", 100);
+            Smartphone smartphone2 = new Smartphone("Apple1", 100);
+
+            shop.Add(smartphone1);
+            shop.Add(smartphone2);
+
+            Assert.That(()=> shop.TestPhone("Apple18", 50), Throws.InvalidOperationException);
         }
 
         [Test]
         public void TestPhoneMethodShouldThrowExceptionIfBatteryChargeIsLessThanBatteryUsage()
         {
-            shopWithTwoPhones.TestPhone(existingSmartphone.ModelName, 40);
-            shopWithTwoPhones.TestPhone(existingSmartphone.ModelName, 40);
+            var shop = new Shop(2);
+            Smartphone smartphone1 = new Smartphone("Apple0", 100);
+            shop.Add(smartphone1);
+            shop.TestPhone("Apple0", 40);
+            shop.TestPhone("Apple0", 40);
 
-            Assert.That(() => shopWithTwoPhones.TestPhone(existingSmartphone.ModelName, 40), Throws.InvalidOperationException);
+            Assert.That(() => shop.TestPhone("Apple0", 40), Throws.InvalidOperationException);
         }
 
         [Test]
@@ -108,32 +109,45 @@ namespace SmartphoneShop.Tests
         [TestCase(100)]
         public void TestMethodShouldReducePhoneCurrentBatteryCharge(int batteryUsage)
         {
-            Smartphone smartphone = new Smartphone("Apple2", 100);
-            int initialBatteryCharge = smartphone.CurrentBateryCharge;
+            var shop = new Shop(2);
+            Smartphone smartphone1 = new Smartphone("Apple0", 100);
+            shop.Add(smartphone1);
+            int initialBatteryCharge = smartphone1.CurrentBateryCharge;
 
-            shopWithTwoPhones.Add(smartphone);
-            shopWithTwoPhones.TestPhone("Apple2", batteryUsage);
+            shop.TestPhone("Apple0", batteryUsage);
 
-            Assert.AreEqual(initialBatteryCharge-batteryUsage, smartphone.CurrentBateryCharge );
+            Assert.AreEqual(initialBatteryCharge-batteryUsage, smartphone1.CurrentBateryCharge );
         }
 
         [Test]
         public void ChargePhoneMethodShouldThrowExceptionIfPhoneDoesNotExist()
         {
-            Assert.That(() => shopWithTwoPhones.ChargePhone(smartphoneNotInShop.ModelName), Throws.InvalidOperationException);
+
+            var shop = new Shop(2);
+
+            Smartphone smartphone1 = new Smartphone("Apple0", 100);
+            Smartphone smartphone2 = new Smartphone("Apple1", 100);
+
+            shop.Add(smartphone1);
+            shop.Add(smartphone2);
+
+            Assert.That(() => shop.ChargePhone("Apple18"), Throws.InvalidOperationException);
         }
 
         [Test]
         public void ChargePhoneMethodShouldChargePhoneToMaximumCharge()
         {
+            var shop = new Shop(2);
             Smartphone smartphone = new Smartphone("Apple2", 100);
-            shopWithTwoPhones.Add(smartphone);
-            shopWithTwoPhones.TestPhone("Apple2", 40);
 
-            shopWithTwoPhones.ChargePhone("Apple2");
+            shop.Add(smartphone);
+            shop.TestPhone("Apple2", 40);
+
+            Assert.AreEqual(60, smartphone.CurrentBateryCharge);
+
+            shop.ChargePhone("Apple2");
 
             Assert.AreEqual(100, smartphone.CurrentBateryCharge);
         }
-        
     }
 }
