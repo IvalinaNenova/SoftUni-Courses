@@ -2,7 +2,7 @@
 {
     public static class ExceptionMessages
     {
-         public const string InvalidAthleteName = "Athlete name cannot be null or empty.";
+        public const string InvalidAthleteName = "Athlete name cannot be null or empty.";
 
         public const string InvalidAthleteMotivation = "The motivation cannot be null or empty.";
 
