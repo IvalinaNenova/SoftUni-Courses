@@ -44,6 +44,7 @@ Here you can find problem solutions from the following lectures:
 4. [**Polymorphism**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/04.Polymorphism)
 5. [**Exceptions and Error Handling**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/05.Exceptions%20and%20Error%20Handling/Exceptions%20and%20Error%20Handling%20-%20Lab)
 6. [**Reflection And Attributes**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/06.Reflection%20And%20Attributes)
+7. [**Unit Testing**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/07.Unit%20Testing)
 ***
 **Exams Practice**
 
@@ -51,6 +52,7 @@ Here you can find exam problems I used for practice:
 1. [**Basics**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/Exam-Practice)
 2. [**Fundamentals**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/Exam%20Practice) 
 3. [**Advanced**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/Exam%20Practice)
+4. [**OOP**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/Exam%20Practice)
 ***
 **Exams**
  1. [**Basics**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/Exam-Problems)
