@@ -6,7 +6,7 @@ namespace CarRacing.Models.Cars
 {
     public class TunedCar : Car
     {
-        public TunedCar(string make, string model, string VIN ,int horsePower) 
+        public TunedCar(string make, string model, string VIN, int horsePower)
             : base(make, model, VIN, horsePower, 65, 7.5)
         {
         }
@@ -14,6 +14,7 @@ namespace CarRacing.Models.Cars
         public override void Drive()
         {
             base.Drive();
+            this.HorsePower = (int)(HorsePower * 0.97);
         }
     }
 }

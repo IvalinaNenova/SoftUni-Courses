@@ -7,9 +7,15 @@ namespace CarRacing.Models.Racers
 {
     public class StreetRacer : Racer
     {
-        public StreetRacer(string username, ICar car) 
+        public StreetRacer(string username, ICar car)
             : base(username, "aggressive", 10, car)
         {
+        }
+
+        public override void Race()
+        {
+            base.Race();
+            DrivingExperience += 5;
         }
     }
 }

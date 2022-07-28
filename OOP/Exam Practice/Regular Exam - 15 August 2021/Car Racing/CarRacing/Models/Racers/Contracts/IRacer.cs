@@ -10,7 +10,7 @@
 
         int DrivingExperience { get; }
 
-        ICar Car { get; }
+        ICar Car { get; set; }
 
         void Race();
 
