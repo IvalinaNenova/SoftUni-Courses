@@ -13,7 +13,7 @@ namespace Easter.Models.Bunnies
 
         public override void Work()
         {
-            throw new NotImplementedException();
+            this.Energy -= 10;
         }
     }
 }

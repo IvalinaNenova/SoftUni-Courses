@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Easter.Models.Eggs.Contracts;
 using Easter.Repositories.Contracts;
@@ -8,21 +9,27 @@ namespace Easter.Repositories
 {
     public class EggRepository : IRepository<IEgg>
     {
-        public IReadOnlyCollection<IEgg> Models => throw new NotImplementedException();
+        private List<IEgg> models;
+
+        public EggRepository()
+        {
+            models = new List<IEgg>();
+        }
+        public IReadOnlyCollection<IEgg> Models => models;
 
         public void Add(IEgg model)
         {
-            throw new NotImplementedException();
+            models.Add(model);
         }
 
         public bool Remove(IEgg model)
         {
-            throw new NotImplementedException();
+            return models.Remove(model);
         }
 
         public IEgg FindByName(string name)
         {
-            throw new NotImplementedException();
+            return models.FirstOrDefault(e => e.Name == name);
         }
     }
 }
