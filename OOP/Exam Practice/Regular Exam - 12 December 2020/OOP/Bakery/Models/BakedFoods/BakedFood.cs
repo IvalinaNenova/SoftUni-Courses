@@ -26,7 +26,7 @@ namespace Bakery.Models.BakedFoods
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentNullException(ExceptionMessages.InvalidName);
+                    throw new ArgumentException(ExceptionMessages.InvalidName);
                 }
 
                 name = value;

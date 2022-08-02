@@ -36,7 +36,7 @@ namespace Bakery.Models.Tables
             get => capacity;
             private set
             {
-                if (value <= 0)
+                if (value < 0)
                 {
                     throw new ArgumentException(ExceptionMessages.InvalidTableCapacity);
                 }
@@ -80,7 +80,6 @@ namespace Bakery.Models.Tables
         public void OrderDrink(IDrink drink) => drinkOrders.Add(drink);
 
         public decimal GetBill() => foodOrders.Sum(f=> f.Price) + drinkOrders.Sum(d=> d.Price) + Price;
-        //TODO
         public void Clear()
         {
             foodOrders.Clear();
