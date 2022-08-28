@@ -12,7 +12,7 @@ function solve(input) {
         if (i % 2 == 0) {
             return x;
         }
-    })
+    });
 
     return elementsAtEvenIndex.join(' ');
 }
