@@ -8,9 +8,9 @@ function solve(n, k) {
         ? 0 
         : finalArray.length - k;
 
-        let nextNUmber = finalArray.slice(start).reduce(((acc, num) => acc + num), 0);
+        let nextNumber = finalArray.slice(start).reduce(((acc, num) => acc + num), 0);
         //let nextNUmber = sumLastK(lastKElements);
-        finalArray.push(nextNUmber);
+        finalArray.push(nextNumber);
     }
 
     // function sumLastK(array) {
