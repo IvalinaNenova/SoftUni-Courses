@@ -1,6 +1,6 @@
 function solve(nestedArray) {
 
-    let biggestNum = -10000000;
+    let biggestNum = Number.MIN_SAFE_INTEGER;
     for (let row = 0; row < nestedArray.length; row++) {
 
         let currentBiggest = Math.max(...nestedArray[row]);
