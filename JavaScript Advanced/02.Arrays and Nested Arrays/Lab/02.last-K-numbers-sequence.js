@@ -7,17 +7,12 @@ function solve(n, k) {
         let start = i - k < 0 
         ? 0 
         : i - k;
-
-        let nextNumber = finalArray.slice(start).reduce(((acc, num) => acc + num), 0);
-        //let nextNUmber = sumLastK(lastKElements);
-        finalArray.push(nextNumber);
+        finalArray.push(finalArray.slice(start).reduce((acc, num) => acc + num));
     }
 
     // function sumLastK(array) {
 
-    //     let nextNum = array.reduce(((acc, num) => acc + num), 0);
-
-    //     return Number(nextNum);
+    //     return array.reduce((acc, num) => acc + num);
     // }
 
     return finalArray;
