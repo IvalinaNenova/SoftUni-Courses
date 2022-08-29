@@ -4,9 +4,9 @@ function solve(n, k) {
 
     for (let i = 1; i < n; i++) {
         
-        let start = finalArray.length - k < 0 
+        let start = i - k < 0 
         ? 0 
-        : finalArray.length - k;
+        : i - k;
 
         let nextNumber = finalArray.slice(start).reduce(((acc, num) => acc + num), 0);
         //let nextNUmber = sumLastK(lastKElements);
