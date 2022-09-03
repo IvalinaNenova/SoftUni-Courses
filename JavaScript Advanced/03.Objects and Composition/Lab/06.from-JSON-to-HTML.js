@@ -5,7 +5,7 @@ function solve(input) {
 
 
     htmlText.push(makeHeaderRowFromKeys(singleObject));
-    htmlText.push(makeRowsFromValues(data));
+    data.forEach(obj => htmlText.push(makeRowsFromValues(obj)));
     htmlText.push('</table>')
 
     function makeHeaderRowFromKeys(array) {
@@ -16,23 +16,22 @@ function solve(input) {
 
         return '<tr>' + keys.join('') + '</tr>';
     }
-    function makeRowsFromValues(arr) {
+    function makeRowsFromValues(obj) {
         let rows = [];
-        for (const obj of arr) {
-            Object.values(obj).forEach(value =>{
-                rows.push(`<td>${escapeHTML(value)}</td>`);
-            })
-        }
+        Object.values(obj).forEach(value => {
+            rows.push(`<td>${escapeHTML(value)}</td>`);
+        })
+
         return '<tr>' + rows.join('') + '</tr>';
     }
-    function escapeHTML(value){
+    function escapeHTML(value) {
         return value
-        .toString()
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;');
+            .toString()
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
     }
 
     return htmlText.join('\r\n')

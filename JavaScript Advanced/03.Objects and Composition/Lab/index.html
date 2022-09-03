@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FromJSONToHTMLTable</title>
+    <style>
+        table,
+        th {
+            border: groove;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+
+        td,
+        th {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+    </div>
+    <script>
+        function fromJSONToHTMLTable(input) {
+            //Write your code here
+            let data = JSON.parse(input);
+            let htmlText = ['<table>'];
+            let singleObject = data[0];
+
+
+            htmlText.push(makeHeaderRowFromKeys(singleObject));
+            data.forEach(obj => htmlText.push(makeRowsFromValues(obj)));
+            htmlText.push('</table>')
+
+            function makeHeaderRowFromKeys(array) {
+                let keys = [];
+                Object.keys(array).forEach(key => {
+                    keys.push(`<th>${escapeHTML(key)}</th>`);
+                })
+
+                return '<tr>' + keys.join('') + '</tr>';
+            }
+            function makeRowsFromValues(obj) {
+                let rows = [];
+                Object.values(obj).forEach(value => {
+                    rows.push(`<td>${escapeHTML(value)}</td>`);
+                })
+
+                return '<tr>' + rows.join('') + '</tr>';
+            }
+            function escapeHTML(value) {
+                return value
+                    .toString()
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#39;');
+            }
+
+            return htmlText.join('\r\n')
+        }
+        window.onload = function () {
+            let container = document.getElementById('wrapper');
+            container.innerHTML = fromJSONToHTMLTable(['[{"Name":"Stamat","Price":5.5},{"Name":"Rumen","Price":6}]']);
+        };
+    </script>
+</body>
+
+</html>
