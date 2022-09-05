@@ -1,9 +1,9 @@
 function solve(arr) {
     let result = [];
-    const properties = arr[0].split(/\s*\|\s*/mg).filter(e=> e.trim());
+    const properties = arr[0].split(/\s*\|\s*/mg).filter(e => e.trim());
 
     for (let i = 1; i < arr.length; i++) {
-        let data = arr[i].split(/\s*\|\s*/mg).filter(e=> e.trim());
+        let data = arr[i].split(/\s*\|\s*/mg).filter(e => e.trim());
 
         let name = data[0];
         let latitude = Number(data[1]).toFixed(2);
@@ -22,6 +22,6 @@ function solve(arr) {
 }
 
 console.log(solve(['| Town | Latitude | Longitude |',
-'| Sofia | 42.696552 | 23.32601 |',
-'| Beijing | 39.913818 | 116.363625 |']
+    '| Sofia | 42.696552 | 23.32601 |',
+    '| Beijing | 39.913818 | 116.363625 |']
 ));
