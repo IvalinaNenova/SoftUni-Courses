@@ -1,7 +1,6 @@
 # SoftUni-Courses
-Courses I've completed during my studies @ SoftUni
-***
-Here you can find problem solutions from the following lectures:
+## Courses I've completed during my studies @ SoftUni
+<em>Here you can find problem solutions from the following lectures:</em>
 ***
 <details>
 <summary><h3>Basics Carriculum List</summary>
