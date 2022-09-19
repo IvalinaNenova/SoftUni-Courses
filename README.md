@@ -1,9 +1,9 @@
 # SoftUni-Courses
-Courses I've completed during my studies @ SoftUni
+## Courses I've completed during my studies @ SoftUni
+<em>Here you can find problem solutions from the following lectures:</em>
 ***
-Here you can find problem solutions from the following lectures:
-***
-**Basics Carriculum List**
+<details>
+<summary><h3>Basics Carriculum List</summary>
 
 1. [**First Steps In Coding**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/01.First-Steps-In-Coding)
 2. [**Conditional Statements**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/02.Conditional-Statements)
@@ -11,8 +11,11 @@ Here you can find problem solutions from the following lectures:
 4. [**For Loop**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/04.For-Loop)
 5. [**While Loop**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/05.While-Loop)
 6. [**Nested Loops**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/06.Nested-Loops)
+ </details>
+ 
 ***
-**Fundamentals Carriculum List**
+ <details>
+ <summary><h3>Fundamentals Carriculum List</summary>
 
 1. [**Basic Syntax, Conditional Statements and Loops**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/01.Basic-Syntax)
 2. [**Data Types and Variables**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/02.Data-Types-And-Variables)
@@ -23,8 +26,11 @@ Here you can find problem solutions from the following lectures:
 7. [**Objects and Classes**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/07.Objects%20and%20Classes)
 8. [**Text Processing**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/08.Text%20Processing)
 9. [**Regular Expressions**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/09.Regular%20Expressions)
+  </details>
+  
 ***
-**Advanced Carriculum List**
+ <details>
+ <summary><h3>Advanced Carriculum List</summary>
 
 1. [**Stacks and Queues**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/01.Stacks%20and%20Queues)
 2. [**Multidimentional Arrays**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/02.Multidimentional%20Arrays)
@@ -35,8 +41,11 @@ Here you can find problem solutions from the following lectures:
 7. [**Generics**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/07.Generics)
 8. [**Iterators and Comparators**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/08.Iterators%20and%20Comparators)
 9. [**Workshop - Implementing Custom Data Structures**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/Workshops/Implementing%20Linked%20List)
+  </details>
+  
 ***
-**OOP Carriculum List**
+ <details>
+ <summary><h3>OOP Carriculum List</summary>
 
 1. [**Inheritance**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/01.Inheritance)
 2. [**Encapsulation**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/02.Encapsulation)
@@ -45,22 +54,36 @@ Here you can find problem solutions from the following lectures:
 5. [**Exceptions and Error Handling**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/05.Exceptions%20and%20Error%20Handling/Exceptions%20and%20Error%20Handling%20-%20Lab)
 6. [**Reflection And Attributes**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/06.Reflection%20And%20Attributes)
 7. [**Unit Testing**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/07.Unit%20Testing)
+  </details>
+  
 ***
-**Javascript Advanced Carriculum List**
-
+ <details>
+ <summary><h3>Javascript Advanced Carriculum List</summary>
+  
 1. [**Syntax, Functions and Statements**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Advanced/01.Syntax%2C%20Functions%20and%20Statements)
+2. [**Arrays and Nested Arrays**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Advanced/02.Arrays%20and%20Nested%20Arrays)
+3. [**Objects and Composition**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Advanced/03.Objects%20and%20Composition)
+4. [**DOM Introduction**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Advanced/04.DOM%20Introduction)
+  </details>
+  
 ***
-**Exams Practice**
-
+ <details>
+ <summary><h3>Exam Practice Problems</summary>
+  
 Here you can find exam problems I used for practice:
 1. [**Basics**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/Exam-Practice)
 2. [**Fundamentals**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/Exam%20Practice) 
 3. [**Advanced**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/Exam%20Practice)
 4. [**OOP**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/Exam%20Practice)
+  </details>
+  
 ***
-**Exams**
+ <details>
+ <summary><h3>Exams</summary>
+
  1. [**Basics**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Basics/Exam-Problems)
  2. [**Fundamentals**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/Exam)
  3. [**Advanced**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/Exam/Exam%20-%2025%20June%202022)
  4. [**OOP**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/Exam)
+ </details>
 
