@@ -49,6 +49,9 @@ Here you can find problem solutions from the following lectures:
 **Javascript Advanced Carriculum List**
 
 1. [**Syntax, Functions and Statements**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Advanced/01.Syntax%2C%20Functions%20and%20Statements)
+2. [**Arrays and Nested Arrays**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Advanced/02.Arrays%20and%20Nested%20Arrays)
+3. [**Objects and Composition**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Advanced/03.Objects%20and%20Composition)
+4. [**DOM Introduction**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Advanced/04.DOM%20Introduction)
 ***
 **Exams Practice**
 
