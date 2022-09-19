@@ -8,9 +8,9 @@ function solve() {
       let bestAverageSalary = 0;
       let bestRestaurantName = '';
 
-      for (let i = 0; i < input.length; i++) {
+      for (let line of input) {
 
-         let [restaurantName, workers] = input[i].split(' - ');
+         let [restaurantName, workers] = line.split(' - ');
          let individualWorkers = workers.split(', ');
 
          for (let worker of individualWorkers) {
@@ -40,14 +40,12 @@ function solve() {
             }
          }
       }
+
       let workersOrdered = Object.entries(allRestaurants[bestRestaurantName]).sort((a, b) => b[1] - a[1]);
-      let workersFormatedArray = [];
-      workersOrdered.reduce((result, worker) => {
-         result.push(`Name: ${worker[0]} With Salary: ${worker[1]}`);
-         return result;
-      }, workersFormatedArray);
+      let workersAsString = '';
+      workersOrdered.forEach(w => workersAsString += `Name: ${w[0]} With Salary: ${w[1]} `);
 
       document.querySelector('#bestRestaurant p').textContent = `Name: ${bestRestaurantName} Average Salary: ${bestAverageSalary.toFixed(2)} Best Salary: ${workersOrdered[0][1].toFixed(2)}`;
-      document.querySelector('#workers p').textContent = workersFormatedArray.join(' ');
+      document.querySelector('#workers p').textContent = workersAsString;
    }
 }
