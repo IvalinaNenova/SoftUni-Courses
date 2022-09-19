@@ -1,12 +1,14 @@
 function generateReport() {
     let checkedBoxesIndices = [];
     let checkedBoxes = document.querySelectorAll('input');
-
-    // checkedBoxes.forEach((el, index) => {
-    //     if (el.checked) {
-    //         checkedBoxesIndices.push(index);
-    // };
+    let checkedBoxesArray = Array.from(checkedBoxes);
     
+    checkedBoxesArray.forEach((el, index) => {
+        if (el.checked) {
+            checkedBoxesIndices.push(index);
+        };
+    });
+
     for (let i = 0; i < checkedBoxes.length; i++) {
         const element = checkedBoxes[i];
 
