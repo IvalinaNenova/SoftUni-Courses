@@ -1,5 +1,7 @@
-# SoftUni-Courses
-## Courses I've completed during my studies @ SoftUni
+<h1>SoftUni-Courses</h1>
+
+<h2>Courses I've completed during my studies @ SoftUni</h2>
+
 <em>Here you can find problem solutions from the following lectures:</em>
 ***
 <details>
