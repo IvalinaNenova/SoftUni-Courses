@@ -4,6 +4,7 @@ function addItem() {
 
     let newItemElement = document.createElement('li');
     newItemElement.textContent = inputElement.value;
+
     itemElements.appendChild(newItemElement);
     inputElement.value = '';
 }
