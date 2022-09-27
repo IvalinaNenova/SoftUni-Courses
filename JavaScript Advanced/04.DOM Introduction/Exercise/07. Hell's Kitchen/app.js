@@ -20,6 +20,7 @@ function solve() {
                allRestaurants[restaurantName] = {};
             }
             allRestaurants[restaurantName][workerName] = Number(salary);
+            console.log(allRestaurants);
          }
 
          let entries = Object.entries(allRestaurants);
@@ -28,7 +29,7 @@ function solve() {
             let salaries = Object.values(workers);
             let totalSalariesPaid = 0;
 
-            for (const salary of salaries) {
+            for (let salary of salaries) {
                totalSalariesPaid += salary;
             }
 
