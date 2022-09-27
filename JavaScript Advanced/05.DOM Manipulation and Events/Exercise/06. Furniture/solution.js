@@ -3,7 +3,7 @@ function solve() {
   let [inputElement, outputElement] = document.getElementsByTagName('textarea');
   let [generateButton, buyButton] = document.getElementsByTagName('button');
 
-  let generate = function (e) {
+  let generate = function () {
     let input = JSON.parse(inputElement.value);
 
     for (const data of input) {
@@ -16,8 +16,6 @@ function solve() {
       row.appendChild(createCell('input', { type: 'checkbox' }));
 
       tableElement.appendChild(row);
-      console.log(tableElement);
-
     }
   };
 
@@ -27,7 +25,6 @@ function solve() {
 
     for (const attribute in nestedData) {
       nestedElement.setAttribute(attribute, nestedData[attribute]);
-      console.log(nestedElement);
     }
 
     if (text) {
@@ -41,6 +38,11 @@ function solve() {
   let buy = function () {
     let bought = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
       .map(b => b.parentNode.parentNode);
+      // .map(r => ({
+      //   name: r.children[1].textContent,
+      //   price: Number(r.children[2].textContent),
+      //   decFactor: Number(r.children[3].textContent),
+      // }));
 
     let names = [];
     let totalPrice = 0;
