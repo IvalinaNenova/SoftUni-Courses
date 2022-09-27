@@ -7,14 +7,13 @@ function create(words) {
    }
    words.forEach(el => {
       divElement = document.createElement('div');
-      paragraphElement = document.createElement('p');
+      divElement.addEventListener('click', displayParagraph);
 
+      paragraphElement = document.createElement('p');
       paragraphElement.textContent = el;
       paragraphElement.style.display = 'none';
 
       divElement.appendChild(paragraphElement);
       contentElement.appendChild(divElement);
-      
-      divElement.addEventListener('click', displayParagraph);
    });
 }
