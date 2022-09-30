@@ -20,7 +20,6 @@ function solve() {
                allRestaurants[restaurantName] = {};
             }
             allRestaurants[restaurantName][workerName] = Number(salary);
-            console.log(allRestaurants);
          }
 
          let entries = Object.entries(allRestaurants);
