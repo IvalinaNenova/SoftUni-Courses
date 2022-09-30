@@ -7,12 +7,7 @@ function solve(input) {
 
             let process = {
                 add: () => result.push(value),
-                remove: () =>{ 
-                    let index = result.indexOf(value);
-                    if (index !== -1) {
-                    result.splice(result.indexOf(value), 1);                        
-                    }
-                },
+                remove: () =>result.splice(result.indexOf(value), 1),
                 print: () => console.log(result.join(',')),
             }
             process[command].call(value);
