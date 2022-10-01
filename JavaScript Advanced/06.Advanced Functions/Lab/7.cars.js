@@ -1,27 +1,52 @@
-// function solve(array) {
-//     let cars = {};
-//     let creator = {
-//         create: (name1) => cars[name1] = {},
-//        // inherit: (name1, name2) => create.bind(cars[name1]),
-//         set: (name1, prop, value) => cars[name1][prop] = value,
-//         print: () => console.log(cars),
-//     }
-
-//     for (const line of array) {
-//         let info = line.split(' ');
-//         let [cmd, name1, prop, value] = info;
-
-//         if (info.length == 4 && info[0] == 'create') {
-//             cmd = 'inherit';
-//             creator[cmd](name1, value);
-//         } else {
-//             creator[cmd](name1, prop, value);
-//         }
-
-//         console.log(cmd, name1, prop, value);
-//         console.log(cars);
-//     }
-// }
+function solve(input) {
+    let data = [];
+ 
+    let action = carsManipulator();
+ 
+    for (const task of input) {
+        let [cmd, name, key, value] = task.split(' ');
+ 
+        if (key == 'inherit') {
+            cmd += key;
+            key = value;
+        }
+ 
+        action[cmd](name, key, value);
+ 
+    }
+ 
+    function carsManipulator() {
+ 
+        let result = {
+            create: (name) => {
+                data[name] = {};
+            },
+ 
+            createinherit: (name, nameOfParent) => {
+                let newObj = Object.create(data[nameOfParent]);
+                data[name] = newObj;
+            },
+ 
+            set: (name, key, value) => {
+              data[name][key] = value;
+            },
+ 
+            print: (name) => {
+              let output = [];
+              
+              for (var prop in data[name]) {
+                output.push(`${prop}:${data[name][prop]}`);
+              }
+                
+                let s = output.join(',');
+ 
+                console.log(s);
+            }
+        }
+ 
+        return result;
+    }
+}
 
 solve(['create c1',
     'create c2 inherit c1',
