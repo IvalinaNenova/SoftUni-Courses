@@ -1,16 +1,69 @@
 function solve(e) {
-    document.getElementsByTagName('form')[0].addEventListener('submit', createTask);
+    document.querySelector('#add').addEventListener('click', createTask);
     let sections = document.getElementsByTagName('section');
-    let sectionsNodes = document.querySelectorAll('section'); 
+    let addSection = sections[0];
     let openSection = sections[1];
     let inProgress = sections[2];
     let complete = sections[3];
 
-    console.log(sections[2].children);
-    console.log(sectionsNodes[2].children);
-
     function createTask(e) {
         e.preventDefault();
+
+        let form = e.target.parentNode;
+        let data  = Array.from(form.elements).map(x => x.value).slice(0, 3);
+        let elements = ['h3', 'p', 'p'];
+        let buttons = {
+            open: {green: 'Start', red: 'Delete'},
+            inProgress: {red: 'Delete', orange: 'Finish'},
+        }
+        let article = generateArticle(elements, data, buttons);
+        console.log(article);
+        openSection.children[1].appendChild(article);
+        console.log(article.parentNode.parentNode);
+
+        let actions = eventDelegator();
+        article.addEventListener('click', eventDelegator);
+       
+    }
+
+    function eventDelegator(e){
+        if (e.target.tagName != 'BUTTON') {
+            return;
+        }
+        let functions = {
+            start: (e) => {
+                
+                console.log(e.currentTarget)
+                e.currentTarget.removeElement('div');
+                e.currentTarget.appendChild(generateButtons(buttons['inProgress']))
+            }
+        }
+
+        return functions;
+    }
+    function generateArticle(elements, data, buttons) {
+        let articleElement = document.createElement('article');
+
+        for(let i = 0; i < elements.length; i++) {
+            let cell = document.createElement(elements[i]);
+            cell.textContent = data[i];
+            articleElement.appendChild(cell);
+        }
+            articleElement.appendChild(generateButtons(buttons['open']));
+        return articleElement;
+    }
+
+    function generateButtons(obj) {
+        let buttonDiv = document.createElement('div');
+        buttonDiv.setAttribute('class', 'flex');
+
+        for (const attr in obj) {
+            let button = document.createElement('button');
+            button.setAttribute('class', attr);
+            button.textContent = obj[attr];
+            buttonDiv.appendChild(button);
+        }
+        return buttonDiv;
     }
 
     // let divsElement = document.querySelectorAll('section div:nth-of-type(2)');
