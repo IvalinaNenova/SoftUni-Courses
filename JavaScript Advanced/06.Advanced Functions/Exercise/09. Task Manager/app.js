@@ -1,9 +1,6 @@
 function solve(e) {
     document.querySelector('#add').addEventListener('click', createTask);
-    let sections = document.getElementsByTagName('section');
-    let openSection = sections[1];
-    let inProgress = sections[2];
-    let complete = sections[3];
+    let [addSection, openSection, inProgress, complete] = Array.from(document.getElementsByTagName('section'));
     let buttons = {
         open: { green: 'Start', red: 'Delete' },
         inProgress: { red: 'Delete', orange: 'Finish' },
@@ -28,33 +25,36 @@ function solve(e) {
 
         article.addEventListener('click', (ev) => {
             let actions = eventDelegator(buttons);
+            let button = ev.target.textContent;
+            let buttonsDiv = ev.target.parentNode;
+            let article = ev.currentTarget;
+
             if (ev.target.tagName != 'BUTTON') {
                 return;
             }
-            if (ev.target.textContent == 'Start') {
-                console.log(ev.target.parentNode);
-                ev.target.parentNode.remove();
-                actions['start'](ev);
-            } else if (ev.target.textContent == 'Finish') {
-                ev.target.parentNode.remove();
-                actions['finish'](ev);
-            } else if (ev.target.textContent == 'Delete') {
-                actions['delete'](ev)
+            if (button == 'Start') {
+                buttonsDiv.remove();
+                actions['start'](article);
+            } else if (button == 'Finish') {
+                buttonsDiv.remove();
+                actions['finish'](article);
+            } else if (button == 'Delete') {
+                actions['delete'](article)
             }
         });
     }
 
     function eventDelegator(buttons) {
         let functions = {
-            start: (e) => {
-                e.currentTarget.appendChild(generateButtons(buttons['inProgress']))
-                inProgress.children[1].appendChild(e.currentTarget);
+            start: (article) => {
+                article.appendChild(generateButtons(buttons['inProgress']))
+                inProgress.children[1].appendChild(article);
             },
-            finish: (e) => {
-                complete.children[1].appendChild(e.currentTarget);
+            finish: (article) => {
+                complete.children[1].appendChild(article);
             },
-            delete: (e) => {
-                e.currentTarget.remove();
+            delete: (article) => {
+                article.remove();
             }
         }
 
