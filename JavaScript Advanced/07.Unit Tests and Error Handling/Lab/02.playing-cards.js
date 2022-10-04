@@ -13,7 +13,7 @@ function solve(face, suit) {
     let card = {
         face,
         suit: suits[suit],
-        toString() { console.log(this.face + this.suit) }
+        toString() { return this.face + this.suit }
     }
     return card;
 }
