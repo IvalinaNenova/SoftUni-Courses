@@ -1,5 +1,5 @@
-let {lookupChar} = require('../03.char-lookup');
-let {expect} = require('chai');
+let { lookupChar } = require('../03.char-lookup');
+let { expect } = require('chai');
 
 describe('Test incorect input', () => {
 
