@@ -17,7 +17,7 @@ class Contact {
     }
 
     render(id) {
-        let parent = document.querySelector('#' + id);
+        let parent = document.getElementById(id);
         this.el.innerHTML = this.getContent();
         let title = this.el.querySelector('.title');
         this.title = title;
@@ -30,20 +30,18 @@ class Contact {
         let info = this.el.querySelector('.info');
 
         button.addEventListener('click', (e) => {
-            if (info.style.display == 'none') {
-                info.style.display = 'block'
-            } else {
-                info.style.display = 'none'
-            }
+            info.style.display = info.style.display == 'none'? 'block' : 'none';
         });
 
     }
     set online(value) {
         this._online = value;
-        if (value === true) {
-            this.title.classList.add('online');
-        } else {
-            this.title.classList.remove('online');
+        if (this.title) {
+            if (value === true) {
+                this.title.classList.add('online');
+            } else {
+                this.title.classList.remove('online');
+            }
         }
     }
 
@@ -61,4 +59,3 @@ contacts.forEach(c => c.render('main'));
 
 // After 1 second, change the online status to true
 setTimeout(() => contacts[1].online = true, 2000);
-console.log(contacts[1]);
