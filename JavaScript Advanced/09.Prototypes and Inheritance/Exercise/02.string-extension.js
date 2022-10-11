@@ -8,27 +8,22 @@
     String.prototype.isEmpty = function () {
         return this.length == 0 ? true : false;
     };
-    String.prototype.truncate = function (n) {
-
+    String.prototype.truncate = function(n) {
         if (this.length <= n) {
             return this.toString();
         }
         if (n < 4) {
             return '.'.repeat(n);
         }
-        let arr = []
-        let output = this;
-        while (output.length + 3 > n) {
-
-            if (output.includes(' ')) {
-                arr = this.split(' ');
-                arr.pop();
-                output = arr.join(' ').trim();
+        let words = this.split(' ');
+        while ((words.join(' ') + '...').length > n) {
+            if (words.length > 1) {
+                words.pop();
             } else {
-                output = output.substring(0, output.length - (n + 3));
+                words[0] = words[0].slice(0, n - 3)
             }
         }
-        return output + '...';
+        return words.join(' ').trim() + '...';
     };
     String.format = function (str, ...params) {
         params.forEach((w, i) => str = str.replace(`{${i}}`.toString(), w));
