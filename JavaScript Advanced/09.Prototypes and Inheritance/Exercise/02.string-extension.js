@@ -10,7 +10,7 @@
     };
     String.prototype.truncate = function (n) {
 
-        if (this.length < n) {
+        if (this.length <= n) {
             return this.toString();
         }
         if (n < 4) {
