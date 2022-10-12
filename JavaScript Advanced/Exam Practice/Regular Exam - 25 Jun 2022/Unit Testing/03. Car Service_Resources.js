@@ -44,3 +44,5 @@ const carService = {
     return totalSum;
   },
 };
+
+module.exports = carService;
