@@ -69,6 +69,8 @@
 5. [**DOM Manipulation and Events**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Advanced/05.DOM%20Manipulation%20and%20Events)
 6. [**Advanced Functions**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Advanced/06.Advanced%20Functions)
 7. [**Unit Testing and Error Handling**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Advanced/07.Unit%20Tests%20and%20Error%20Handling)
+8. [**Classes and Attributes**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Advanced/08.Classes%20and%20Attributes)
+9. [**Prototypes and Inheritance**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Advanced/09.Prototypes%20and%20Inheritance)
   </details>
   
 ***
