@@ -45,7 +45,7 @@ class CarDealership {
         return `${model} was sold for ${soldPrice.toFixed(2)}$`
     }
 
-    currentCar (){
+    currentCar() {
         if (this.availableCars.length === 0) {
             return 'There are no available cars';
         }
@@ -54,16 +54,16 @@ class CarDealership {
 
         return formatedCars.join('\n');
     }
-    
-    salesReport (criteria){
-        if(criteria != 'model' && criteria != 'horsepower'){
+
+    salesReport(criteria) {
+        if (criteria != 'model' && criteria != 'horsepower') {
             throw new Error('Invalid criteria!');
         }
 
-        let sorted = criteria == 'model'
-        ? this.soldCars.sort((a, b) => a.model.localeCompare(b.model))
-        :this.soldCars.sort((a, b) => b.horsepower - a.horsepower);
-        
+        criteria == 'model'
+            ? this.soldCars.sort((a, b) => a.model.localeCompare(b.model))
+            : this.soldCars.sort((a, b) => b.horsepower - a.horsepower);
+
         let output = [`-${this.name} has a total income of ${this.totalIncome.toFixed(2)}$`];
         output.push(`-${this.soldCars.length} cars sold:`);
 
@@ -80,7 +80,3 @@ dealership.addCar('Audi A3', 120, 4900, 240000);
 dealership.sellCar('Toyota Corolla', 230000);
 dealership.sellCar('Mercedes C63', 110000);
 console.log(dealership.salesReport('horsepower'));
-
-
-
-
