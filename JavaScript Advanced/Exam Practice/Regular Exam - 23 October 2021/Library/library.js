@@ -35,3 +35,6 @@ const library = {
     }
 
 };
+
+module.exports = library;
+module.export = library[this.findBook];
