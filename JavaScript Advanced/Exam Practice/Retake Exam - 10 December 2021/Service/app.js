@@ -16,17 +16,15 @@ function solve() {
         receivedDiv.appendChild(creator('h2', 'Product type for repair: ' + inputValues[0]));
         receivedDiv.appendChild(creator('h3', 'Client information: ' + `${inputValues[2]}, ${inputValues[3]}`));
         receivedDiv.appendChild(creator('h4', 'Description of the problem: ' + inputValues[1]));
+        let startButton = creator('button', 'Start repair', 'start-btn');
+        let finishButton = creator('button', 'Finish repair', 'finish-btn');
+        finishButton.disabled = true;
         receivedDiv.appendChild(startButton);
         receivedDiv.appendChild(finishButton);
 
         received.appendChild(receivedDiv);
 
-        let startButton = creator('button', 'Start repair', 'start-btn');
-        let finishButton = creator('button', 'Finish repair', 'finish-btn');
-        finishButton.disabled = true;
-
         let completed = document.querySelector('#completed-orders');
-        let completedDiv = creator('div', null, 'container');
         let clearButton = document.querySelector('.clear-btn');
 
         startButton.addEventListener('click', () =>{
@@ -35,14 +33,14 @@ function solve() {
         });
 
         finishButton.addEventListener('click', (e) =>{
-            e.target.parentNode.removeChild(startButton);
-            e.target.parentNode.removeChild(finishButton);
-            completedDiv.appendChild(receivedDiv);
-            completed.appendChild(completedDiv);
+            receivedDiv.removeChild(startButton);
+            receivedDiv.removeChild(finishButton);
+            completed.appendChild(receivedDiv);
         });
 
         clearButton.addEventListener('click', () =>{
             let allCompleted = completed.getElementsByClassName('container');
+            console.log(allCompleted);
             while(allCompleted[0]){
                 completed.removeChild(allCompleted[0]);
             }
