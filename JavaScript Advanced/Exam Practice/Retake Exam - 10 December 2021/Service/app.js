@@ -27,34 +27,34 @@ function solve() {
         let completed = document.querySelector('#completed-orders');
         let clearButton = document.querySelector('.clear-btn');
 
-        startButton.addEventListener('click', () =>{
+        startButton.addEventListener('click', () => {
             finishButton.disabled = false;
             startButton.disabled = true;
         });
 
-        finishButton.addEventListener('click', (e) =>{
+        finishButton.addEventListener('click', (e) => {
             receivedDiv.removeChild(startButton);
             receivedDiv.removeChild(finishButton);
             completed.appendChild(receivedDiv);
         });
 
-        clearButton.addEventListener('click', () =>{
+        clearButton.addEventListener('click', () => {
             let allCompleted = completed.getElementsByClassName('container');
-            console.log(allCompleted);
-            while(allCompleted[0]){
+            
+            while (allCompleted[0]) {
                 completed.removeChild(allCompleted[0]);
             }
         });
 
-        inputElements.forEach(el=> el.value = '');
+        inputElements.forEach(el => el.value = '');
     });
 
-    function creator(tag, text = null, className = null, id = null, type = null) { 
-        let el = document.createElement(tag); 
-        if (text) { el.textContent = text; } 
-        if (type) { el.type = type; } 
-        if (id) { el.id = id; } 
-        if (className) { el.className = className; } 
-        return el; 
-    } 
+    function creator(tag, text = null, className = null, id = null, type = null) {
+        let el = document.createElement(tag);
+        if (text) { el.textContent = text; }
+        if (type) { el.type = type; }
+        if (id) { el.id = id; }
+        if (className) { el.className = className; }
+        return el;
+    }
 }
