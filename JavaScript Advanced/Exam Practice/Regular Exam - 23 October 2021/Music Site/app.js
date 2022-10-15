@@ -44,6 +44,7 @@ function solve() {
             totalLikes.textContent = `Total Likes: ${currentTotal + 1}`;
             likeButton.disabled = true;
         });
+        
         deleteButton.addEventListener('click', () => {
             hitsDiv.remove();
         });
