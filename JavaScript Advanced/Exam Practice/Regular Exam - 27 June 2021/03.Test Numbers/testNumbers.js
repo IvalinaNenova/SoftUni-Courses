@@ -34,6 +34,7 @@ const testNumbers = {
         return arraySum / arr.length
     }
 };
+module.exports = {testNumbers};
 
 
 
