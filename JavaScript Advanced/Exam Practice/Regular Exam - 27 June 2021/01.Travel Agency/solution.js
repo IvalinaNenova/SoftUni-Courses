@@ -32,6 +32,7 @@ function solution() {
       }
 
       let allListItems = preview.getElementsByTagName('li');
+      
       while (allListItems[0]) {
         preview.removeChild(allListItems[0]);
       }
