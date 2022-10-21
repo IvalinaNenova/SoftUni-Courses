@@ -1,67 +1,61 @@
 window.addEventListener("load", solve)
 
 function solve() {
-    let form = document.querySelector("form");
-    let tableBodyElement = document.querySelector('#table-body');
-    let ulElement = document.querySelector('#cars-list');
-    let profitElement = document.querySelector('#profit');
-    let profitValue = 0;
+    let form = document.querySelector('form');
+    const tableBody = document.querySelector('#table-body');
+    const soldCars = document.querySelector('#cars-list');
+    const profit = document.querySelector('#profit');
 
-    form.addEventListener("submit", function (e) {
+    form.addEventListener('submit', (e) => {
         e.preventDefault();
+
         let inputElements = Array.from(form.elements).slice(1, -1);
-        let inputValues = inputElements.map(input => input.value);
+        let values = inputElements.map(e => e.value);
+        let [make, model, year, fuel, originalPrice, sellingPrice] = values;
 
-        let tableRow = createTag('tr', null, 'row');
+        if (values.includes('') || sellingPrice < originalPrice) return;
+
+        let row = createTag('tr', null, 'row');
+        let buttonCell = document.createElement('td');
         let editButton = createTag('button', 'Edit', 'action-btn edit');
+        editButton.addEventListener('click', onEdit);
         let sellButton = createTag('button', 'Sell', 'action-btn sell');
+        sellButton.addEventListener('click', onSell);
+        buttonCell.appendChild(editButton);
+        buttonCell.appendChild(sellButton);
+        values.forEach(e => row.appendChild(createTag('td', e)));
+        row.appendChild(buttonCell);
+        tableBody.appendChild(row);
 
-        if (inputValues.includes('') || inputValues[4] > inputValues[5]) {
-            return;
-        }
-
-        for (const value of inputValues) {
-            let dataCell = createTag('td', value);
-            tableRow.appendChild(dataCell);
-        }
-
-        editButton.addEventListener('click', (e) => {
-            for (let i = 0; i < inputValues.length; i++) {
-                inputElements[i].value = inputValues[i];
+        function onEdit() {
+            for (let i = 0; i < values.length; i++) {
+                inputElements[i].value = values[i];
             }
-            tableRow.remove();
-        });
+            row.remove();
+        };
+        function onSell() {
+            let carProfit = sellingPrice - originalPrice;
+            let currpentProfit = Number(profit.textContent);
 
-        sellButton.addEventListener('click', (e) => {
-            let [make, model, year, fuel, originalCost, sellingPrice] = inputValues;
+            let carRow = createTag('li', null, 'each-list');
 
-            let liElement = createTag('li', null, 'each-list');
-            liElement.appendChild(createTag('span', make + ' ' + model));
-            liElement.appendChild(createTag('span', year))
-            liElement.appendChild(createTag('span', sellingPrice - originalCost))
+            carRow.innerHTML = `<span>${make} ${model}</span>
+            <span>${year}</span>
+            <span>${sellingPrice - originalPrice}</span>`
 
-            ulElement.appendChild(liElement);
-            profitValue += sellingPrice - originalCost;
-            profitElement.textContent = profitValue.toFixed(2);
+            soldCars.appendChild(carRow);
+            row.remove();
+            profit.textContent = (currpentProfit + carProfit).toFixed(2);
+        };
 
-            tableRow.remove();
-        });
-
-        let buttonsCell = document.createElement('td');
-        buttonsCell.appendChild(editButton);
-        buttonsCell.appendChild(sellButton);
-        tableRow.appendChild(buttonsCell);
-        tableBodyElement.appendChild(tableRow);
-
-        inputElements.forEach(el => el.value = '');
-
-        function createTag(tag, text = null, className = null, id = null, type = null) {
-            let el = document.createElement(tag);
-            if (text) { el.textContent = text; }
-            if (type) { el.type = type; }
-            if (id) { el.id = id; }
-            if (className) { el.className = className; }
-            return el;
-        }
+        inputElements.forEach(e => e.value = '');
     });
+    function createTag(tag, text = null, className = null, id = null, type = null) {
+        let el = document.createElement(tag);
+        if (text) { el.textContent = text; }
+        if (type) { el.type = type; }
+        if (id) { el.id = id; }
+        if (className) { el.className = className; }
+        return el;
+    }
 }
