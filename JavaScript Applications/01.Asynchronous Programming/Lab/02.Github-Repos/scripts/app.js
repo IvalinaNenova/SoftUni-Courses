@@ -3,7 +3,7 @@ async function loadRepos() {
 	const list = document.getElementById('repos');
 
 	try {
-		const res = await fetch(`https://api.github.om/users/${username}/repos`);
+		const res = await fetch(`https://api.github.com/users/${username}/repos`);
 
 		if (res.ok == false) {
 			console.log(res);
