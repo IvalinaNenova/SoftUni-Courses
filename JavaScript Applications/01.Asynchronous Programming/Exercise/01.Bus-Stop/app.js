@@ -6,10 +6,6 @@ async function getInfo() {
     try {
         let result = await fetch(`http://localhost:3030/jsonstore/bus/businfo/${stopId}`);
 
-        if (result.ok == false || result.status != 200) {
-            throw new Error('Error')
-        }
-
         listOfStops.innerHTML = '';
         let data = await result.json();
 
@@ -20,7 +16,7 @@ async function getInfo() {
             listOfStops.appendChild(row);
         }
     } catch (error) {
-        stopName.textContent = error.message;
+        stopName.textContent = 'Error';
         listOfStops.innerHTML = '';
     }
 }
