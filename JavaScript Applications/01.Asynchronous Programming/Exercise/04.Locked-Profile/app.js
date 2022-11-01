@@ -31,11 +31,10 @@ async function lockedProfile() {
     for (let i = 0; i < buttonElements.length; i++) {
         let button = buttonElements[i];
         let profileElement = button.parentElement;
-        console.log(button.parentElement);
         let lockedElement = profileElement.querySelector('input[value="lock"]');
         let hiddenInfoElement = profileElement.querySelector(`#user1HiddenFields`);
 
-        button.addEventListener('click', (e) => {
+        button.addEventListener('click', () => {
 
             if (!lockedElement.checked && button.textContent == 'Show more') {
                 hiddenInfoElement.style.display = 'block';
