@@ -5,23 +5,24 @@ async function lockedProfile() {
     let result = await fetch('http://localhost:3030/jsonstore/advanced/profiles');
     let profileData = Object.values(await result.json());
 
-    profileData.forEach(user => {
+    profileData.forEach((user, i) => {
         let userCard = document.createElement('div');
         userCard.className = 'profile';
+        let idNumber = i+1;
         userCard.innerHTML = `<img src="./iconProfile2.png" class="userIcon" />
                               <label>Lock</label>
-                              <input type="radio" name="user${user._id}Locked" value="lock" checked>
+                              <input type="radio" name="user${idNumber}Locked" value="lock" checked>
                               <label>Unlock</label>
-                              <input type="radio" name="user${user._id}Locked" value="unlock"><br>
+                              <input type="radio" name="user${idNumber}Locked" value="unlock"><br>
                               <hr>
                               <label>Username</label>
-                              <input type="text" name="user${user._id}Username" value="${user.username}" disabled readonly />
+                              <input type="text" name="user${idNumber}Username" value="${user.username}" disabled readonly />
                               <div id="user1HiddenFields" style="display:none">
                                   <hr>
                                   <label>Email:</label>
-                                  <input type="email" name="user${user._id}Email" value="${user.email}" disabled readonly />
+                                  <input type="email" name="user${idNumber}Email" value="${user.email}" disabled readonly />
                                   <label>Age:</label>
-                                  <input type="email" name="user${user._id}Age" value="${user.age}" disabled readonly />
+                                  <input type="email" name="user${idNumber}Age" value="${user.age}" disabled readonly />
                               </div>
                               <button>Show more</button>`;
         mainDiv.appendChild(userCard);
