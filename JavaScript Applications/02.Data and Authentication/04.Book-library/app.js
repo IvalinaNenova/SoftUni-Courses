@@ -1,1 +1,5 @@
-console.log('My requests...')
+function solve() {
+
+}
+
+solve()
