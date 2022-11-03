@@ -74,6 +74,14 @@
   </details>
   
 ***
+<details>
+ <summary><h3>Javascript Applications Carriculum List</summary>
+ 
+ 1. [**Asynchronous Programming**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Applications/01.Asynchronous%20Programming)
+ 2. [**Data and Authentication**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Applications/02.Data%20and%20Authentication)
+ </details>
+ 
+ ***
  <details>
  <summary><h3>Exam Practice Problems</summary>
   
