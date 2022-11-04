@@ -4,7 +4,9 @@ function solve() {
     const tableBody = document.querySelector('tbody');
     tableBody.addEventListener('click', modify);
     const form = document.querySelector('form');
-    form.addEventListener('click', onSubmit)
+    form.addEventListener('click', onSubmit);
+
+    let editId = '';
 
     loadButton.addEventListener('click', onLoad);
 
@@ -13,6 +15,7 @@ function solve() {
         if (e.target.tagName !== 'BUTTON') return;
         if (e.target.textContent == 'Save') {
             onSave(e);
+            return;
         }
 
         let { title, author } = Object.fromEntries(new FormData(form).entries());
@@ -26,19 +29,22 @@ function solve() {
         document.querySelector('[name="author"]').value = '';
         onLoad();
     }
-    async function onSave(e) { 
-        document.querySelector('form h3').textContent = 'FORM';
-        document.querySelector('form button').textContent = 'Submit';
+    async function onSave(e) {
+
 
         let { title, author } = Object.fromEntries(new FormData(form).entries());
 
         console.log(title, author);
         if (title == '' || author == '') return;
-        await fetch(`${baseUrl}/${e.target.id}`, {
+        document.querySelector('form h3').textContent = 'FORM';
+        document.querySelector('form button').textContent = 'Submit';
+        await fetch(`${baseUrl}/${editId}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ title, author })
-        })
+        });
+        document.querySelector('[name="title"]').value = '';
+        document.querySelector('[name="author"]').value = '';
         onLoad();
     }
     async function onLoad() {
@@ -71,6 +77,7 @@ function solve() {
     }
 
     async function onEdit(e) {
+        editId = e.target.id;
         let title = e.target.parentNode.parentNode.children[0].textContent;
         let author = e.target.parentNode.parentNode.children[1].textContent;
 
