@@ -44,12 +44,13 @@ function topicTemplate(data) {
 function onSubmit(e) {
     e.preventDefault();
     if (e.submitter.innerHTML === "Cancel") {
-        return clearForm()
+        form.reset();
+        return;
     }
     const formData = new FormData(form);
-    const { title, username, content } = Object.fromEntries(formData);
+    const { topicName, username, postText } = Object.fromEntries(formData);
  
-    createPost({ title, username, content, date : new Date() })
+    createPost({ topicName, username, postText, date : new Date() })
     clearForm();
 }
  
