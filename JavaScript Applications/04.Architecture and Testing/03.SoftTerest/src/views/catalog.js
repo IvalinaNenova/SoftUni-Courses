@@ -1,8 +1,11 @@
 import { getAllIdeas } from '../api/data.js';
+import {showDetails} from './details.js';
 let section = document.querySelector('#dashboard-holder');
 section.remove();
 
+let ctx = null;
 export function showCatalog(context) {
+    ctx = context;
     context.showSection(section);
     loadIdeas();
 }
