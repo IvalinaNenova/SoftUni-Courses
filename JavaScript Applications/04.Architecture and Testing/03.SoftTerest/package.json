@@ -9,11 +9,10 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "chai": "4.3.3",
-    "http-server": "0.12.3",
-    "mocha": "8.3.0",
+    "http-server": "^14.1.1",
+    "mocha": "^10.1.0",
     "playwright-chromium": "1.9.1"
   }
 }
