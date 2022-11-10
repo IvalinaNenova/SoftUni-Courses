@@ -8,8 +8,8 @@ async function request(url, options){
                 //REMOVE THE TOKEN
                 sessionStorage.removeItem('userData');
             }
-            const error = await response.json();
-            throw new Error(error.message);
+            // const error = await response.json();
+            // throw new Error(error.message);
         }
 
         if (response.status === 204) {
@@ -19,7 +19,7 @@ async function request(url, options){
         }
     } catch (error) {
         alert(error.message);
-        //throw error;
+        throw error;
     }
 }
 
@@ -85,11 +85,11 @@ export async function register(email, password){
 
     sessionStorage.setItem('userData', JSON.stringify(userData));
 }
-window.api = {
-    request,
-    post,
-    put,
-    del,
-    login,
-    logout
-}
+// window.api = {
+//     request,
+//     post,
+//     put,
+//     del,
+//     login,
+//     logout
+// }

@@ -5,6 +5,7 @@ import { showRegister } from './src/views/register.js';
 import { showCatalog } from './src/views/catalog.js';
 import { showCreate } from './src/views/create.js';
 import { showDetails } from './src/views/details.js';
+import {logout} from './src/api/api.js';
 
 let main = document.querySelector('main');
 
@@ -30,26 +31,34 @@ let views = {
 let nav = document.querySelector('nav');
 nav.addEventListener('click', onNavigation);
 
+document.getElementById('logoutBtn').addEventListener('click', async (e) =>{
+    e.preventDefault();
+    await logout();
+    updateNav();
+    goTo('home');
+});
+
 function onNavigation(e) {
     e.preventDefault();
     let name = links[e.target.id];
     console.log(e.target.id);
-    goto(name);
+    goTo(name);
     console.log(name);
 }
 
-function goto(name, ...params) {
+function goTo(name, ...params) {
     let view = views[name];
     view(context, ...params);
 }
 let context = {
-    showSection
+    showSection,
+    updateNav,
+    goTo
 }
 
 function showSection(name) {
     main.replaceChildren(name);
 }
-updateNav()
 function updateNav() {
     let userData = JSON.parse(sessionStorage.getItem('userData'));
 
@@ -61,4 +70,4 @@ function updateNav() {
         [...nav.querySelectorAll('.guest')].forEach(l => l.style.display = 'block');
     }
 }
-
+updateNav()
