@@ -1,15 +1,15 @@
 const host = 'http://localhost:3030';
 async function request(url, options){
     try {
-        let response = await fetch(host + url, options);
+        let response = await fetch(`${host}${url}`, options);
 
         if (response.ok == false){
             if (response.status === 403) {
                 //REMOVE THE TOKEN
                 sessionStorage.removeItem('userData');
             }
-            // const error = await response.json();
-            // throw new Error(error.message);
+            const error = await response.json();
+            throw new Error(error.message);
         }
 
         if (response.status === 204) {
@@ -29,7 +29,7 @@ function createOptions(method = 'GET', data){
         headers: {}
     }
 
-    if (data) {
+    if (data != undefined) {
         options.headers['Content-Type'] = 'application/json';
         options.body = JSON.stringify(data);
     }
@@ -85,11 +85,3 @@ export async function register(email, password){
 
     sessionStorage.setItem('userData', JSON.stringify(userData));
 }
-// window.api = {
-//     request,
-//     post,
-//     put,
-//     del,
-//     login,
-//     logout
-// }

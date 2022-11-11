@@ -22,7 +22,14 @@ async function loadIdeas() {
         });
         section.replaceChildren(fragment);
     }
-    console.log(ideas);
+
+    Array.from(section.querySelectorAll('a')).forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log(e.target.dataset.id);
+            showDetails(ctx, e.target.dataset.id);
+        })
+    })
 }
 
 function createIdeaCard(idea) {
@@ -40,3 +47,5 @@ function createIdeaCard(idea) {
 
     return element;
 }
+
+

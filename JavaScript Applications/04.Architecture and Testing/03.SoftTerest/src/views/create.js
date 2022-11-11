@@ -23,5 +23,6 @@ async function onSubmit(e){
 
     createIdea({title, description, img});
     form.reset();
+    ctx.updateNav();
     ctx.goTo('catalog');
 }
