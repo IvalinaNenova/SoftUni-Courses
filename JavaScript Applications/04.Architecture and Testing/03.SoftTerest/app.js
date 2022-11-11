@@ -5,7 +5,7 @@ import { showRegister } from './src/views/register.js';
 import { showCatalog } from './src/views/catalog.js';
 import { showCreate } from './src/views/create.js';
 import { showDetails } from './src/views/details.js';
-import {logout} from './src/api/api.js';
+import { logout } from './src/api/api.js';
 
 let main = document.querySelector('main');
 
@@ -31,19 +31,22 @@ let views = {
 let nav = document.querySelector('nav');
 nav.addEventListener('click', onNavigation);
 
-document.getElementById('logoutBtn').addEventListener('click', async (e) =>{
-    e.preventDefault();
+async function onLogout(e) {
     await logout();
     updateNav();
     goTo('home');
-});
+}
 
 function onNavigation(e) {
     e.preventDefault();
-    let name = links[e.target.id];
-    console.log(e.target.id);
-    goTo(name);
-    console.log(name);
+    if (e.target.id == 'logoutBtn') {
+        onLogout();
+    } else {
+        let name = links[e.target.id];
+        console.log(e.target.id);
+        goTo(name);
+        console.log(name);
+    }
 }
 
 function goTo(name, ...params) {
