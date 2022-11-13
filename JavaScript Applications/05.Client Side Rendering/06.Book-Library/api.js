@@ -12,8 +12,19 @@ export async function post({author, title}){
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({author, title})
     });
+}
 
-    console.log(response);
+export async function put(id, data){
+    let response = await fetch(`${baseUrl}/${id}`, {
+        method: 'PUT',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    });
 
-    return response;
+}
+
+export async function del(id){
+    return await fetch(`${baseUrl}/${id}`, {
+        method: 'DELETE'
+    });
 }

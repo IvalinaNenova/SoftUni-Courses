@@ -1,5 +1,5 @@
 import { html, render } from './node_modules/lit-html/lit-html.js';
-import { get, post } from './api.js';
+import { get, post, put, del } from './api.js';
 import { initialTemplate } from './views/initial.js';
 import { createTableRows } from './views/table.js';
 const root = document.querySelector('body');
@@ -14,15 +14,18 @@ const body = document.querySelector('tbody');
 
 async function loadBooks() {
     render(await createTableRows(), body);
+    console.log([...document.querySelectorAll('button:nth-of-type(1)')])
+    body.querySelectorAll('button:nth-of-type(2)').forEach(b => b.addEventListener('click', onDelete));
+    body.querySelectorAll('button:nth-of-type(1)').forEach(b => b.addEventListener('click', onEdit));
 }
 
-const form = document.querySelector('#add-form');
-form.addEventListener('submit', onAdd);
+const addForm = document.querySelector('#add-form');
+addForm.addEventListener('submit', onAdd);
 
 async function onAdd(e) {
     e.preventDefault();
 
-    let formData = new FormData(form);
+    let formData = new FormData(addForm);
     let title = formData.get('title');
     let author = formData.get('author');
 
@@ -32,6 +35,36 @@ async function onAdd(e) {
         loadBooks();
     }
 }
+
+const editForm = document.querySelector('#edit-form');
+editForm.addEventListener('submit', onSave);
+async function onSave(e) {
+    e.preventDefault();
+
+    let formData = new FormData(editForm);
+    let title = formData.get('title');
+    let author = formData.get('author');
+
+    let response = await put({ title, author });
+
+    loadBooks();
+}
+async function onDelete(e) {
+    let response = await del(e.target.id);
+    loadBooks();
+}
+function onEdit(e) {
+    addForm.style.display = 'none';
+    editForm.style.display = 'block';
+    let author = e.target.parentNode.parentNode.children[1].textContent;
+    let title = e.target.parentNode.parentNode.children[0].textContent;
+    let [id, titleInput, authorInput] = editForm.querySelectorAll('input');
+    titleInput.value = title;
+    authorInput.value = author;
+}
+
+
+
 /*<button id="loadBooks">LOAD ALL BOOKS</button>
     <table>
         <thead>
