@@ -1,4 +1,5 @@
 const baseUrl = 'http://localhost:3030/jsonstore/collections/books'
+
 export async function get(){
     let response = await fetch(baseUrl);
     let result = await response.json();
@@ -15,7 +16,7 @@ export async function post({author, title}){
 }
 
 export async function put(id, data){
-    let response = await fetch(`${baseUrl}/${id}`, {
+    return await fetch(`${baseUrl}/${id}`, {
         method: 'PUT',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)

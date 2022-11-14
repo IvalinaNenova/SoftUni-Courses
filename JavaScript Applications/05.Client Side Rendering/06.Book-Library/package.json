@@ -8,12 +8,17 @@
   },
   "scripts": {
     "test": "mocha tests",
-    "start": "http-server -a localhost -p 3000 -P http://localhost:3000? -c-1"
+    "start": "http-server -a localhost -p 3000 -P http://localhost:3000? -c -1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lit-html": "^2.4.0"
+    "chai": "^4.3.7",
+    "lit-html": "^2.4.0",
+    "mocha": "^10.1.0"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.27.1"
   }
 }

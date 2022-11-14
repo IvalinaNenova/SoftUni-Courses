@@ -3,7 +3,7 @@ import { get } from '../api.js';
 
 export async function createTableRows() {
     let allBooks = await get();
-    console.log(allBooks);
+    
     let tableTemplate = html`
 ${allBooks.map(book => html`
 <tr .id=${book[0]}>
