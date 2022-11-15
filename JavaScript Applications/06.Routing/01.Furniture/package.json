@@ -1,0 +1,21 @@
+{
+  "name": "01.furniture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lit-html": "^2.4.0",
+    "lite-server": "^2.6.1",
+    "page": "^1.11.6"
+  }
+}
