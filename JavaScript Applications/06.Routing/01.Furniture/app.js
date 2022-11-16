@@ -5,12 +5,14 @@ import { registerView } from './views/register.js';
 import { onLogout } from './views/logout.js';
 import { createView } from './views/create.js';
 import { detailsView} from './views/details.js';
+import { myFurnitureView } from './views/my-furniture.js';
 
 page('/login', loginView);
 page('/catalog', catalogView);
 page('/register', registerView);
 page('/create', createView);
 page('/details/:detailsId', detailsView);
+page('/my-publications', myFurnitureView)
 page.start()
 
 document.querySelector('#logoutBtn').addEventListener('click', onLogout);
