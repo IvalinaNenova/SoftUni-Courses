@@ -3,10 +3,12 @@ import { loginView } from './views/login.js';
 import { catalogView } from './views/catalog.js';
 import { registerView } from './views/register.js';
 import { onLogout } from './views/logout.js';
+import { createView } from './views/create.js';
 
 page('/login', loginView);
 page('/catalog', catalogView);
 page('/register', registerView);
+page('/create', createView);
 page.start()
 
 document.querySelector('#logoutBtn').addEventListener('click', onLogout);
