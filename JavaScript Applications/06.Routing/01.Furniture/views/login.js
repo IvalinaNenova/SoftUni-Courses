@@ -39,6 +39,7 @@ async function onSubmit(e){
         method: 'POST',
         body: JSON.stringify({email, password})
     })
+    
     if(!response.ok) throw new Error('Invalid username or password');
 
     let result = await response.json();

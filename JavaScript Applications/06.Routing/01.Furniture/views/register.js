@@ -50,6 +50,11 @@ async function onSubmit(e) {
             body: JSON.stringify({ email, password })
         })
 
+        if (!response.ok) {
+            let result = await response.json();
+            throw new Error(result.message)
+        }
+
         let result = await response.json();
         sessionStorage.setItem('token', result.accessToken);
         sessionStorage.setItem('ownerId', result._id);
