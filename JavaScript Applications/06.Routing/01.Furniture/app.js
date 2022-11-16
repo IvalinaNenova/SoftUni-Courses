@@ -4,11 +4,13 @@ import { catalogView } from './views/catalog.js';
 import { registerView } from './views/register.js';
 import { onLogout } from './views/logout.js';
 import { createView } from './views/create.js';
+import { detailsView} from './views/details.js';
 
 page('/login', loginView);
 page('/catalog', catalogView);
 page('/register', registerView);
 page('/create', createView);
+page('/details/:detailsId', detailsView);
 page.start()
 
 document.querySelector('#logoutBtn').addEventListener('click', onLogout);
