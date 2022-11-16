@@ -1,21 +1,25 @@
 import page from './node_modules/page/page.mjs'
 import { loginView } from './views/login.js';
-import { catalogView} from './views/catalog.js';
+import { catalogView } from './views/catalog.js';
 import { registerView } from './views/register.js';
+import { onLogout } from './views/logout.js';
 
 page('/login', loginView);
 page('/catalog', catalogView);
 page('/register', registerView);
+page.start()
 
-updateNav();
+document.querySelector('#logoutBtn').addEventListener('click', onLogout);
 
-export function updateNav(){
+export function updateNav() {
     if (sessionStorage.getItem('token') != null) {
         document.querySelector('#user').style.display = 'inline';
         document.querySelector('#guest').style.display = 'none';
-    }else{
+    } else {
         document.querySelector('#user').style.display = 'none';
         document.querySelector('#guest').style.display = 'inline';
     }
 }
-page.start()
+updateNav();
+
+
