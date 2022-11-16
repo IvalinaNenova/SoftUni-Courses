@@ -24,26 +24,12 @@ function detailsTemplate(furniture){
         <p>Material: <span>${furniture.material}</span></p>
         <div>
             <a href="/edit/${furniture._id}" class="btn btn-info" style="display:${furniture._ownerId == sessionStorage.ownerId ?'inline' : 'none'}">Edit</a>
-            <a href="#" .id=${furniture._id} class="btn btn-red" style="display:${furniture._ownerId == sessionStorage.ownerId ?'inline' : 'none'}" @click=${onDelete}>Delete</a>
+            <a href="/delete/${furniture._id}" class="btn btn-red" style="display:${furniture._ownerId == sessionStorage.ownerId ?'inline' : 'none'}">Delete</a>
         </div>
     </div>
 </div>`
 }
 
-async function onDelete(e){
-    console.log(e.target.id);
-
-    let response = await fetch (`http://localhost:3030/data/catalog/${e.target.id}`, {
-        method: 'DELETE',
-        headers: {
-            'X-Authorization': sessionStorage.token
-        }
-    })
-
-    if (response.ok) {
-        page.redirect('/catalog')
-    }
-}
 async function getDetails(detailsId){
     let response = await fetch(`http://localhost:3030/data/catalog/${detailsId}`);
     let result = await response.json();
@@ -51,7 +37,5 @@ async function getDetails(detailsId){
 }
 export async function detailsView(ctx){
     let furniture = await getDetails(ctx.params.detailsId);
-    console.log(ctx);
-    console.log(furniture);
     render(detailsTemplate(furniture), document.querySelector('.container'))
 }

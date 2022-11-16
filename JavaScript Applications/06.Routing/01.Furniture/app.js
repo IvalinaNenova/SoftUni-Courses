@@ -6,6 +6,8 @@ import { onLogout } from './views/logout.js';
 import { createView } from './views/create.js';
 import { detailsView} from './views/details.js';
 import { myFurnitureView } from './views/my-furniture.js';
+import { editView } from './views/edit.js';
+import { deleteView } from './views/delete.js';
 
 page('/login', loginView);
 page('/catalog', catalogView);
@@ -13,10 +15,17 @@ page('/register', registerView);
 page('/create', createView);
 page('/details/:detailsId', detailsView);
 page('/my-publications', myFurnitureView)
+page('/edit/:detailsId', editView);
+page('/delete/:detailsId', deleteView);
 page.start()
 
 document.querySelector('#logoutBtn').addEventListener('click', onLogout);
+onLoad()
+updateNav();
 
+function onLoad(){
+    page.redirect('/catalog');
+}
 export function updateNav() {
     if (sessionStorage.getItem('token') != null) {
         document.querySelector('#user').style.display = 'inline';
@@ -26,6 +35,3 @@ export function updateNav() {
         document.querySelector('#guest').style.display = 'inline';
     }
 }
-updateNav();
-
-
