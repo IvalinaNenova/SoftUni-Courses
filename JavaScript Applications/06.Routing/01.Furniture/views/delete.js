@@ -3,7 +3,7 @@ import page from '../node_modules/page/page.mjs';
 
 export async function deleteView(ctx){
     let confirmation = confirm('Are you sure you want to delete?');
-    //if (!confirmation) return;
+    if (!confirmation) return;
 
     let response = await fetch (`http://localhost:3030/data/catalog/${ctx.params.detailsId}`, {
         method: 'DELETE',

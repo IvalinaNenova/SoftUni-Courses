@@ -31,7 +31,10 @@ function detailsTemplate(furniture){
 }
 
 async function getDetails(detailsId){
-    let response = await fetch(`http://localhost:3030/data/catalog/${detailsId}`);
+    let response = await fetch(`http://localhost:3030/data/catalog/${detailsId}`,{
+        method: 'GET',
+        headers: {'X-Authorization': sessionStorage.token}
+    });
     let result = await response.json();
     return result;
 }

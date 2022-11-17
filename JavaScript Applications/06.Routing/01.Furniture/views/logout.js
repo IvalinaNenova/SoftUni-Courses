@@ -1,7 +1,8 @@
 import page from '../node_modules/page/page.mjs';
 import { updateNav } from '../app.js';
 
-export async function onLogout(event){
+export async function onLogout(e){
+    e.preventDefault();
     await fetch('http://localhost:3030/users/logout', {
         method: 'GET',
         headers: {

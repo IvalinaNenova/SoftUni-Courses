@@ -32,7 +32,12 @@ function myFurnitureTemplate(catalog) {
 
 async function getMyFurniture() {
     let userId = sessionStorage.getItem('ownerId');
-    let response = await fetch(`http://localhost:3030/data/catalog?where=_ownerId%3D%22${userId}%22`)
+    let response = await fetch(`http://localhost:3030/data/catalog?where=_ownerId%3D%22${userId}%22`, {
+        method: 'GET',
+        headers: {
+            'X-Authorization': sessionStorage.token
+        }
+    })
     if (response.ok) {
         let myCatalog = await response.json();
         return Object.values(myCatalog);
