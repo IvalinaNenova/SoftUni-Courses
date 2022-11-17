@@ -51,8 +51,10 @@ function createTemplate() {
 
 async function onSubmit(e) {
     e.preventDefault();
+
     let [make, model, year, description, price, image, material] = [...e.currentTarget.elements].slice(0, -1);
     let isValid = true;
+    
     make.value.length >= 4 ? decorate(make, true) : decorate(make, false);
     model.value.length >= 4 ? decorate(model, true) : decorate(model, false);
     description.value.length > 10 ? decorate(description, true) : decorate(description, false);
