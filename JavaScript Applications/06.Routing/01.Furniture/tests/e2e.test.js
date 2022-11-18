@@ -589,7 +589,7 @@ const { expect } = require('chai');
 
 const userApplicationHttpPort = '#userApplicationHttpPort#';
 
-const host = 'http://localhost:3000'; // Application host (NOT service host - that can be anything)
+const host = 'http://localhost:3000' //+ userApplicationHttpPort; // Application host (NOT service host - that can be anything
 
 const interval = 300;
 const timeout = 6000;

@@ -1,4 +1,4 @@
-import page from '../node_modules/page/page.mjs';
+import { getAllFurnitures } from '../api.js';
 import { html, render } from '../node_modules/lit-html/lit-html.js';
 
 function catalogTemplate(catalog) {
@@ -32,14 +32,8 @@ function itemCard(item) {
         </div>
     </div>`
 }
-async function getCatalog() {
-    let response = await fetch('http://localhost:3030/data/catalog');
-    let result = await response.json();
-
-    return Object.values(result);
-}
 
 export async function catalogView(ctx) {
-    let catalog = await getCatalog();
+    let catalog = await getAllFurnitures();
     render(catalogTemplate(catalog), document.querySelector('.container'));
 }

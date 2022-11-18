@@ -1,4 +1,6 @@
 import { html, render } from '../node_modules/lit-html/lit-html.js';
+import { validator } from '../validate.js';
+import { onUpdate, onDetails } from '../api.js';
 import page from '../node_modules/page/page.mjs';
 
 function editTemplate(furniture) {
@@ -22,11 +24,13 @@ function editTemplate(furniture) {
                 </div>
                 <div class="form-group has-danger">
                     <label class="form-control-label" for="new-year">Year</label>
-                    <input class="form-control is-invalid" id="new-year" type="number" name="year" value="${furniture.year}">
+                    <input class="form-control is-invalid" id="new-year" type="number" name="year"
+                        value="${furniture.year}">
                 </div>
                 <div class="form-group">
                     <label class="form-control-label" for="new-description">Description</label>
-                    <input class="form-control" id="new-description" type="text" name="description" value="${furniture.description}">
+                    <input class="form-control" id="new-description" type="text" name="description"
+                        value="${furniture.description}">
                 </div>
             </div>
             <div class="col-md-4">
@@ -51,57 +55,21 @@ function editTemplate(furniture) {
 
 async function onSubmit(e) {
     e.preventDefault();
-    let [make, model, year, description, price, image, material] = [...e.currentTarget.elements].slice(0, -1);
-    let isValid = true;
-    make.value.length >= 4 ? decorate(make, true) : decorate(make, false);
-    model.value.length >= 4 ? decorate(model, true) : decorate(model, false);
-    description.value.length > 10 ? decorate(description, true) : decorate(description, false);
-    Number(year.value) > 1950 && Number(year.value) < 2050 ? decorate(year, true) : decorate(year, false);
-    Number(price.value) > 0 ? decorate(price, true) : decorate(price, false);
-    image.value != '' ? decorate(image, true) : decorate(image, false);
+    let data = [...e.currentTarget.elements].slice(0, -1);
 
-    function decorate(element, bool) {
-        if (bool) {
-            element.classList.add('is-valid');
-            element.classList.remove('is-invalid');
-        } else {
-            isValid = false;
-            element.classList.add('is-invalid');
-            element.classList.remove('is-valid');
-        }
+    let info = validator(data);
+
+    if (info == false) {
+        return alert('Invalid fields');
     }
 
-    if (!isValid) return;
     let id = e.currentTarget.querySelector('input[type="submit"]').id;
-    let response = await fetch('http://localhost:3030/data/catalog/' + id, {
-        method: 'PUT',
-        headers: {
-            'X-Authorization': sessionStorage.token
-        },
-        body: JSON.stringify({
-            make: make.value,
-            model: model.value,
-            description: description.value,
-            year: year.value,
-            price: price.value,
-            img: image.value,
-            material: material.value,
-        })
-    })
-    if (response.ok) {
-        page.redirect('/catalog');
-    }
 
-}
-async function getData(id){
-    let response = await fetch(`http://localhost:3030/data/catalog/${id}`);
-    if (response.ok) {
-        let result = await response.json();
-        return result;
-    }
+    await onUpdate(info, id);
+    page.redirect('/catalog');
 }
 
-export async function editView(ctx){
-    let furniture = await getData(ctx.params.detailsId);
+export async function editView(ctx) {
+    let furniture = await onDetails(ctx.params.detailsId);
     render(editTemplate(furniture), document.querySelector('.container'));
 }

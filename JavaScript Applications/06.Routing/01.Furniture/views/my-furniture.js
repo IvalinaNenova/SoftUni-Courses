@@ -1,5 +1,5 @@
 import { html, render } from '../node_modules/lit-html/lit-html.js';
-import page from '../node_modules/page/page.mjs';
+import { getMyFurnitures } from '../api.js';
 
 function myFurnitureTemplate(catalog) {
     return html`
@@ -30,21 +30,8 @@ function myFurnitureTemplate(catalog) {
     `
 }
 
-async function getMyFurniture() {
+export async function myFurnitureView(ctx) {
     let userId = sessionStorage.getItem('ownerId');
-    let response = await fetch(`http://localhost:3030/data/catalog?where=_ownerId%3D%22${userId}%22`, {
-        method: 'GET',
-        headers: {
-            'X-Authorization': sessionStorage.token
-        }
-    })
-    if (response.ok) {
-        let myCatalog = await response.json();
-        return Object.values(myCatalog);
-    }
-}
-
-export async function myFurnitureView(ctx){
-    let catalog = await getMyFurniture();
+    let catalog = await getMyFurnitures(userId);
     render(myFurnitureTemplate(catalog), document.querySelector('.container'))
 }

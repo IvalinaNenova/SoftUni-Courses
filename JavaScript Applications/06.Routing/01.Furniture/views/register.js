@@ -1,6 +1,7 @@
 import page from '../node_modules/page/page.mjs';
 import { html, render } from '../node_modules/lit-html/lit-html.js';
 import { updateNav } from '../app.js';
+import { onRegister } from '../api.js';
 
 function registerTemplate() {
     return html`
@@ -34,36 +35,24 @@ function registerTemplate() {
 
 async function onSubmit(e) {
     e.preventDefault();
+
     let formData = new FormData(e.currentTarget);
     let email = formData.get('email');
     let password = formData.get('password');
     let repeatPassword = formData.get('rePass');
 
-
-    try {
-        if (password != repeatPassword) {
-            throw new Error('Passwords must match');
-        }
-
-        let response = await fetch('http://localhost:3030/users/register', {
-            method: 'POST',
-            body: JSON.stringify({ email, password })
-        })
-
-        if (!response.ok) {
-            let result = await response.json();
-            throw new Error(result.message)
-        }
-
-        let result = await response.json();
-        sessionStorage.setItem('token', result.accessToken);
-        sessionStorage.setItem('ownerId', result._id);
-        updateNav();
-        page.redirect('/catalog')
-
-    } catch (error) {
-        alert(error.message)
+    if (email == "" && password == "") {
+        return alert("All fields required!");
     }
+    if (password != repeatPassword) {
+        return alert("Password doesn't match! Please try again!");
+    }
+
+    let result = await onRegister({ email, password });
+    sessionStorage.setItem('token', result.accessToken);
+    sessionStorage.setItem('ownerId', result._id);
+    updateNav();
+    page.redirect('/catalog');
 }
 
 export function registerView(ctx) {

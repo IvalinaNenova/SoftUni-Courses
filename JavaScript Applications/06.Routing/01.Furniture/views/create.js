@@ -1,4 +1,6 @@
 import { html, render } from '../node_modules/lit-html/lit-html.js';
+import { onCreate } from '../api.js';
+import { validator } from '../validate.js';
 import page from '../node_modules/page/page.mjs';
 
 function createTemplate() {
@@ -51,50 +53,16 @@ function createTemplate() {
 
 async function onSubmit(e) {
     e.preventDefault();
+    let data = [...e.currentTarget.elements].slice(0, -1);
 
-    let [make, model, year, description, price, image, material] = [...e.currentTarget.elements].slice(0, -1);
-    let isValid = true;
-    
-    make.value.length >= 4 ? decorate(make, true) : decorate(make, false);
-    model.value.length >= 4 ? decorate(model, true) : decorate(model, false);
-    description.value.length > 10 ? decorate(description, true) : decorate(description, false);
-    Number(year.value) > 1950 && Number(year.value) < 2050 ? decorate(year, true) : decorate(year, false);
-    Number(price.value) > 0 ? decorate(price, true) : decorate(price, false);
-    image.value != '' ? decorate(image, true) : decorate(image, false);
+    let info = validator(data);
 
-    function decorate(element, bool) {
-        if (bool) {
-            element.classList.add('is-valid');
-            element.classList.remove('is-invalid');
-        } else {
-            isValid = false;
-            element.classList.add('is-invalid');
-            element.classList.remove('is-valid');
-        }
+    if (info == false) {
+        return alert('Invalid fields');
     }
 
-    if (!isValid) return;
-
-    let response = await fetch('http://localhost:3030/data/catalog', {
-        method: 'POST',
-        headers: {
-            'X-Authorization': sessionStorage.token
-        },
-        body: JSON.stringify({
-            make: make.value,
-            model: model.value,
-            description: description.value,
-            year: year.value,
-            price: price.value,
-            img: image.value,
-            material: material.value,
-        })
-    })
-    if (response.ok) {
-        let result = await response.json();
-        page.redirect('/catalog');
-    }
-
+    await onCreate(info);
+    page.redirect('/catalog');
 }
 
 export function createView() {
