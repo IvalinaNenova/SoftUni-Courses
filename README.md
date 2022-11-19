@@ -79,6 +79,10 @@
  
  1. [**Asynchronous Programming**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Applications/01.Asynchronous%20Programming)
  2. [**Data and Authentication**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Applications/02.Data%20and%20Authentication)
+ 3. [**Single Page Applications**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Applications/03.SPA)
+ 4. [**Architecture and Testing**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Applications/04.Architecture%20and%20Testing)
+ 5. [**Client Side Rendering**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Applications/05.Client%20Side%20Rendering)
+ 6. [**Routing**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Applications/06.Routing/01.Furniture)
  </details>
  
  ***
