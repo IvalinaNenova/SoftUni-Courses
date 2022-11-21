@@ -204,6 +204,8 @@ describe('E2E tests', function () {
 
     it('Check cancel button', async () => {
       const data = mockData.posts[0];
+      //const { get } = await handle(endpoints.catalog);
+      //get(data);
       await page.goto(host);
 
       await page.waitForSelector('form');
