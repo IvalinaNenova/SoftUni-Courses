@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha tests",
     "start": "http-server -a localhost -p 3000 -P http://localhost:3000? -c-1",
-    "dev": "lite-server"
+    "dev": "lite-server",
+    "server": "cd ./server && node ./server.js"
   },
   "author": "",
   "license": "ISC",
