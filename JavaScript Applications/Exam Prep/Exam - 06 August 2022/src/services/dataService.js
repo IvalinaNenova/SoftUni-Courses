@@ -1,12 +1,14 @@
 import * as request from './requester.js';
 
 const endpoints = {
-    getAllData: '/data/shoes?sortBy=_createdOn%20desc',
-    create: '/data/shoes',
-    details: (id) =>  `/data/shoes/${id}`,
-    edit: (id) =>  `/data/shoes/${id}`,
-    delete: (id) =>  `/data/shoes/${id}`,
-    filter: (query) => `/data/shoes?where=brand%20LIKE%20%22${query}%22`
+    getAllData: '/data/offers?sortBy=_createdOn%20desc',
+    create: '/data/offers',
+    details: (id) =>  `/data/offers/${id}`,
+    edit: (id) =>  `/data/offers/${id}`,
+    delete: (id) =>  `/data/offers/${id}`,
+    addApplication: `/data/applications`,
+    getCountApplications: (offerId) => `/data/applications?where=offerId%3D%22${offerId}%22&distinct=_ownerId&count`,
+    getUserApplications: (offerId, userId) => `/data/applications?where=offerId%3D%22${offerId}%22%20and%20_ownerId%3D%22${userId}%22&count`
 }
 
 export const getData = async () => {
@@ -29,6 +31,13 @@ export const deleteItem = async (id) => {
     return await request.del(endpoints.delete(id));
 }
 
-export const filter = async (query) => {
-    return await request.get(endpoints.filter(query));
+export const addApplication = async (data) => {
+    return await request.post(endpoints.addApplication, data);
+}
+export const getCount = async (offerId) => {
+    return await request.get(endpoints.getCountApplications(offerId));
+}
+
+export const getUserApplications = async (offerId, userId ) => {
+    return await request.get(endpoints.getUserApplications(offerId, userId));
 }

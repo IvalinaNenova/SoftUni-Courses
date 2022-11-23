@@ -15,15 +15,14 @@ const guestLinks = html`
 `
 
 const navigationTemplate = (user) => html`
-<!-- Navigation -->
-<a id="logo" href="/" ><img id="logo-img" src="./images/logo.jpg" alt="" /></a>
+<a id="logo" href="/"><img id="logo-img" src="./images/logo.jpg" alt="" /></a>
 <nav>
     <div>
         <a href="/catalog">Dashboard</a>
     </div>
     ${user
-        ? userLinks
-        : guestLinks
+    ? userLinks
+    : guestLinks
     }
 </nav>
 `

@@ -10,7 +10,6 @@ import { registerView } from './views/registerView.js';
 import {createView } from './views/createView.js';
 import { editView } from './views/editView.js';
 import { deleteView } from './views/deleteView.js';
-import { searchView } from './views/searchView.js';
 
 page(saveUserStatus);
 page(displayNavigation);
@@ -25,5 +24,4 @@ page('/details/:id', detailsView);
 page('/create', createView);
 page('/edit/:id', editView);
 page('/delete/:id', deleteView);
-page('/search', searchView);
 page.start();
