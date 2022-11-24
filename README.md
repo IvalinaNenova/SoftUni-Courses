@@ -95,6 +95,7 @@ Here you can find exam problems I used for practice:
 3. [**Advanced**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/Exam%20Practice)
 4. [**OOP**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/Exam%20Practice)
 5. [**JavaScript Advanced**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Advanced/Exam%20Practice)
+6. [**JavaScript Applications**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Applications/Exam%20Prep)
   </details>
   
 ***
