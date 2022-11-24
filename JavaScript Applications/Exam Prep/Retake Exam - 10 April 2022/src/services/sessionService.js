@@ -1,5 +1,10 @@
 export const getUser = () => {
-    return JSON.parse(sessionStorage.getItem('userData'));
+    let user = sessionStorage.getItem('userData');
+    if(user) {
+        return JSON.parse(user);
+    } else {
+        return undefined;
+    }
 };
 
 export const setUser = (data) => {

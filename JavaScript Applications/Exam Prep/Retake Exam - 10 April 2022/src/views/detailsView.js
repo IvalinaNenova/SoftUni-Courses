@@ -16,21 +16,18 @@ const detailsTemplate = (post, user, onDonate, count, userDonations ) => html`
                 <p class="post-address">Address: ${post.address}</p>
                 <p class="post-number">Phone number: ${post.phone}</p>
                 <p class="donate-Item">Donate Materials: ${count}</p>
-
+                <div class="btns"></div>
                 <!--Edit and Delete are only for creator-->
                 ${user && user._id == post._ownerId
-                    ? html`<div class="btns">
+                    ? html`
                     <a href="/edit/${post._id}" class="edit-btn btn">Edit</a>
-                    <a href="/delete/${post._id}" class="delete-btn btn">Delete</a>
-                    </div>`
+                    <a href="/delete/${post._id}" class="delete-btn btn">Delete</a>`
                     : null}
 
                 ${userDonations == 0 && user._id != post._ownerId 
-                ? html`<div class="btns">
-                    <a @click=${onDonate} href="#" class="donate-btn btn">Donate</a>
-                </div>`
+                ? html`<a @click=${onDonate} href=" javascript:void(0)" class="donate-btn btn">Donate</a>`
                 : null}
-
+                </div>
             </div>
         </div>
     </div>

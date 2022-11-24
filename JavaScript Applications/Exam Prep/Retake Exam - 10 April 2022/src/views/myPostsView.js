@@ -1,9 +1,6 @@
 import { html } from '../../node_modules/lit-html/lit-html.js';
 import { myPosts } from '../services/dataService.js';
 import {cardTemplate} from './catalogView.js';
-const resultCard = (r, user) => html`
-
-`
 
 const myPostsTemplate = (myPosts) => html`
 <section id="my-posts-page">
