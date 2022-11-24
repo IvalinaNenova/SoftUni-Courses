@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Orphanage help</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <div id="box">
+        <header>
+            <!-- Navigation -->
+            <h1><a href="/">Orphelp</a></h1>
+
+            <nav>
+                <a href="/">Dashboard</a>
+
+                <!-- Logged-in users -->
+                <div id="user">
+                    <a href="#">My Posts</a>
+                    <a href="#">Create Post</a>
+                    <a href="#">Logout</a>
+                </div>
+
+                <!-- Guest users -->
+                <div id="guest">
+                    <a href="#">Login</a>
+                    <a href="#">Register</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main-content">
+
+        </main>
+
+        <!-- Dashboard -->
+        <section id="dashboard-page">
+            <h1 class="title">All Posts</h1>
+
+            <!-- Display a div with information about every post (if any)-->
+            <div class="all-posts">
+                <div class="post">
+                    <h2 class="post-title">Clothes</h2>
+                    <img class="post-image" src="./images/clothes.jpeg" alt="Material Image">
+                    <div class="btn-wrapper">
+                        <a href="#" class="details-btn btn">Details</a>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <h2 class="post-title">Toys</h2>
+                    <img class="post-image" src="./images/toys.jpeg" alt="Kids clothes">
+                    <div class="btn-wrapper">
+                        <a href="#" class="details-btn btn">Details</a>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <h2 class="post-title">School Supplies</h2>
+                    <img class="post-image" src="./images/school-supplies.jpeg" alt="Kids clothes">
+                    <div class="btn-wrapper">
+                        <a href="#" class="details-btn btn">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Display an h1 if there are no posts -->
+            <h1 class="title no-posts-title">No posts yet!</h1>
+        </section>
+
+        <!-- Login Page (Only for Guest users) -->
+        <section id="login-page" class="auth">
+            <form id="login">
+                <h1 class="title">Login</h1>
+
+                <article class="input-group">
+                    <label for="login-email">Email: </label>
+                    <input type="email" id="login-email" name="email">
+                </article>
+
+                <article class="input-group">
+                    <label for="password">Password: </label>
+                    <input type="password" id="password" name="password">
+                </article>
+
+                <input type="submit" class="btn submit-btn" value="Log In">
+            </form>
+        </section>
+
+        <!-- Register Page (Only for Guest users) -->
+        <section id="register-page" class="auth">
+            <form id="register">
+                <h1 class="title">Register</h1>
+
+                <article class="input-group">
+                    <label for="register-email">Email: </label>
+                    <input type="email" id="register-email" name="email">
+                </article>
+
+                <article class="input-group">
+                    <label for="register-password">Password: </label>
+                    <input type="password" id="register-password" name="password">
+                </article>
+
+                <article class="input-group">
+                    <label for="repeat-password">Repeat Password: </label>
+                    <input type="password" id="repeat-password" name="repeatPassword">
+                </article>
+
+                <input type="submit" class="btn submit-btn" value="Register">
+            </form>
+        </section>
+
+        <!-- Create Page (Only for logged-in users) -->
+        <section id="create-page" class="auth">
+            <form id="create">
+                <h1 class="title">Create Post</h1>
+
+                <article class="input-group">
+                    <label for="title">Post Title</label>
+                    <input type="title" name="title" id="title">
+                </article>
+
+                <article class="input-group">
+                    <label for="description">Description of the needs </label>
+                    <input type="text" name="description" id="description">
+                </article>
+
+                <article class="input-group">
+                    <label for="imageUrl"> Needed materials image </label>
+                    <input type="text" name="imageUrl" id="imageUrl">
+                </article>
+
+                <article class="input-group">
+                    <label for="address">Address of the orphanage</label>
+                    <input type="text" name="address" id="address">
+                </article>
+
+                <article class="input-group">
+                    <label for="phone">Phone number of orphanage employee</label>
+                    <input type="text" name="phone" id="phone">
+                </article>
+
+                <input type="submit" class="btn submit" value="Create Post">
+            </form>
+        </section>
+
+        <!-- Details Page -->
+        <section id="details-page">
+            <h1 class="title">Post Details</h1>
+
+            <div id="container">
+                <div id="details">
+                    <div class="image-wrapper">
+                        <img src="./images/clothes.jpeg" alt="Material Image" class="post-image">
+                    </div>
+                    <div class="info">
+                        <h2 class="title post-title">Clothes</h2>
+                        <p class="post-description">Description: We need warm winter clothes. The sizes are for children from 2 to 14 years old. If possible, made from cotton materials, no superficial ones.</p>
+                        <p class="post-address">Address: ul. Hristo Smirnenski 18, Sofia</p>
+                        <p class="post-number">Phone number: 0888222345</p>
+                        <p class="donate-Item">Donate Materials: 0</p>
+
+                        <!--Edit and Delete are only for creator-->
+                        <div class="btns">
+                            <a href="#" class="edit-btn btn">Edit</a>
+                            <a href="#" class="delete-btn btn">Delete</a>
+
+                            <!--Bonus - Only for logged-in users ( not authors )-->
+                            <a href="#" class="donate-btn btn">Donate</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Edit Page (Only for logged-in users) -->
+        <section id="edit-page" class="auth">
+            <form id="edit">
+                <h1 class="title">Edit Post</h1>
+
+                <article class="input-group">
+                    <label for="title">Post Title</label>
+                    <input type="title" name="title" id="title" value="">
+                </article>
+
+                <article class="input-group">
+                    <label for="description">Description of the needs </label>
+                    <input type="text" name="description" id="description" value="">
+                </article>
+
+                <article class="input-group">
+                    <label for="imageUrl"> Needed materials image </label>
+                    <input type="text" name="imageUrl" id="imageUrl" value="">
+                </article>
+
+                <article class="input-group">
+                    <label for="address">Address of the orphanage</label>
+                    <input type="text" name="address" id="address" value="">
+                </article>
+
+                <article class="input-group">
+                    <label for="phone">Phone number of orphanage employee</label>
+                    <input type="text" name="phone" id="phone" value="">
+                </article>
+
+                <input type="submit" class="btn submit" value="Edit Post">
+            </form>
+        </section>
+
+        <!-- My Posts -->
+        <section id="my-posts-page">
+            <h1 class="title">My Posts</h1>
+
+            <!-- Display a div with information about every post (if any)-->
+            <div class="my-posts">
+                <div class="post">
+                    <h2 class="post-title">Clothes</h2>
+                    <img class="post-image" src="./images/clothes.jpeg" alt="Material Image">
+                    <div class="btn-wrapper">
+                        <a href="#" class="details-btn btn">Details</a>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <h2 class="post-title">Toys</h2>
+                    <img class="post-image" src="./images/toys.jpeg" alt="Material Image">
+                    <div class="btn-wrapper">
+                        <a href="#" class="details-btn btn">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Display an h1 if there are no posts -->
+            <h1 class="title no-posts-title">You have no posts yet!</h1>
+        </section>
+    </div>
+</body>
+
+</html>
