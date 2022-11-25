@@ -1,51 +1,67 @@
 function attachEvents() {
-    const postsUrl = 'http://localhost:3030/jsonstore/blog/posts';
-    const commentsUrl = 'http://localhost:3030/jsonstore/blog/comments';
-    const selectMenu = document.querySelector('#posts');
-    const titleElement = document.querySelector('#post-title');
-    const pElement = document.querySelector('#post-body');
-    const commentsUl = document.querySelector('#post-comments');
+    //Get DOM elements
+    let postsSelect = document.querySelector('select#posts');
+    let btnLoadPosts = document.getElementById('btnLoadPosts');
+    let btnViewPost = document.getElementById('btnViewPost');
+    let postTitle = document.getElementById('post-title');
+    let postContent = document.getElementById('post-body');
 
-    const loadButton = document.querySelector('#btnLoadPosts');
-    loadButton.addEventListener('click', onLoad);
-    const viewButton = document.querySelector('#btnViewPost');
-    viewButton.addEventListener('click', onView);
 
-    async function onLoad() {
-        let result = await fetch(postsUrl);
-        let data = Object.values(await result.json());
-        selectMenu.innerHTML = '';
-        data.forEach(post => {
-            let option = document.createElement('option');
-            option.value = post.id;
-            option.textContent = post.title;
+    //Add event listeners
+    btnLoadPosts.addEventListener('click', handleLoadPosts);
+    btnViewPost.addEventListener('click', handleViewPost);
+    let commonData;
 
-            selectMenu.appendChild(option);
-        })
+    function handleLoadPosts() {
+        //Get posts
+        fetch('http://localhost:3030/jsonstore/blog/posts')
+        .then(res => res.json())
+        .then(data => addPosts(data));
 
-        //onView();
+        function addPosts(data) {
+            commonData = data;
+
+            postsSelect.innerHTML = '';
+            
+            for (let [id, postInfo] of Object.entries(data)) {
+                //Create option
+                let option = document.createElement('option');
+                option.value = id;
+                option.textContent = postInfo.title;
+                option.dataset.body = postInfo.body;
+                postsSelect.appendChild(option);
+            }
+        }
     }
 
-    async function onView() {
-        commentsUl.innerHTML = '';
-        let selectedId = selectMenu.value;
-        let postResult = await fetch(`${postsUrl}/${selectedId}`);
-        let postData = await postResult.json();
+    function handleViewPost() {
+        //Get post id
+        let selectedPostId = document.getElementById('posts').value;
 
-        titleElement.textContent = postData.title;
-        pElement.textContent = postData.body;
+        postTitle.textContent = commonData[selectedPostId].title;
+        postContent.textContent = commonData[selectedPostId].body;
 
-        let commentsResult = await fetch(commentsUrl);
-        let commentsData = Object.values(await commentsResult.json());
 
-        commentsData.forEach(comment => {
-            if (comment.postId === selectedId) {
-                let listElement = document.createElement('li');
-                listElement.id = comment.id;
-                listElement.textContent = comment.text;
-                commentsUl.appendChild(listElement);
+        //Fetch comments
+        fetch('http://localhost:3030/jsonstore/blog/comments')
+        .then(res => res.json())
+        .then(data => handleComments(data));
+
+        //Handle comments
+        function handleComments(data) {
+            let commentsUl = document.getElementById('post-comments');
+            commentsUl.innerHTML = '';
+            
+            for (let [commentInfo] of Object.entries(data)) {
+                if (commentInfo.postId == selectedPostId) {
+                    //Create comment li
+                    let li = document.createElement('li');
+                    li.id = commentInfo.id
+                    li.textContent = commentInfo.text;
+                    commentsUl.appendChild(li);
+                }
             }
-        })
+        }
     }
 }
 
