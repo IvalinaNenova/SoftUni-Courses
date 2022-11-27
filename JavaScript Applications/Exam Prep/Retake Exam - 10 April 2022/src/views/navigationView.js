@@ -15,7 +15,7 @@ const guestLinks = html`
 </div>
 `
 
-const navigationTemplate = (user) => html`
+export const navigationTemplate = (user) => html`
 <!-- Navigation -->
 <h1><a href="/">Orphelp</a></h1>
 
@@ -28,7 +28,3 @@ const navigationTemplate = (user) => html`
     }
 </nav>
 `
-
-export const navigationView = (ctx) => {
-    return navigationTemplate(ctx.user);
-}
