@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meme Lounge</title>
+    <link rel="stylesheet" href="/style/styles.css">
+</head>
+
+<body>
+    <div id="container">
+
+        <!-- Notifications -->
+        <section id="notifications">
+            <div id="errorBox" class="notification">
+                <span>MESSAGE</span>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#">All Memes</a>
+             <!-- Logged users -->
+            <div class="user">
+                <a href="#">Create Meme</a>
+                <div class="profile">
+                    <span>Welcome, {email}</span>
+                    <a href="#">My Profile</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <!-- Guest users -->
+            <div class="guest">
+                <div class="profile">
+                    <a href="#">Login</a>
+                    <a href="#">Register</a>
+                </div>
+                <a class="active" href="#">Home Page</a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+        </main>
+
+        <!-- Welcome Page ( Only for guest users ) -->
+        <section id="welcome">
+            <div id="welcome-container">
+                <h1>Welcome To Meme Lounge</h1>
+                <img src="/images/welcome-meme.jpg" alt="meme">
+                <h2>Login to see our memes right away!</h2>
+                <div id="button-div">
+                    <a href="#" class="button">Login</a>
+                    <a href="#" class="button">Register</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Page ( Only for guest users ) -->
+        <section id="login">
+            <form id="login-form">
+                <div class="container">
+                    <h1>Login</h1>
+                    <label for="email">Email</label>
+                    <input id="email" placeholder="Enter Email" name="email" type="text">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" placeholder="Enter Password" name="password">
+                    <input type="submit" class="registerbtn button" value="Login">
+                    <div class="container signin">
+                        <p>Dont have an account?<a href="#">Sign up</a>.</p>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Register Page ( Only for guest users ) -->
+        <section id="register">
+            <form id="register-form">
+                <div class="container">
+                    <h1>Register</h1>
+                    <label for="username">Username</label>
+                    <input id="username" type="text" placeholder="Enter Username" name="username">
+                    <label for="email">Email</label>
+                    <input id="email" type="text" placeholder="Enter Email" name="email">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" placeholder="Enter Password" name="password">
+                    <label for="repeatPass">Repeat Password</label>
+                    <input id="repeatPass" type="password" placeholder="Repeat Password" name="repeatPass">
+                    <div class="gender">
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="male" value="male" checked>
+                        <label for="male">Male</label>
+                    </div>
+                    <input type="submit" class="registerbtn button" value="Register">
+                    <div class="container signin">
+                        <p>Already have an account?<a href="#">Sign in</a>.</p>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- All Memes Page ( for Guests and Users )-->
+        <section id="meme-feed">
+            <h1>All Memes</h1>
+            <div id="memes">
+				<!-- Display : All memes in database ( If any ) -->
+                <div class="meme">
+                    <div class="card">
+                        <div class="info">
+                            <p class="meme-title">Debugging</p>
+                            <img class="meme-image" alt="meme-img" src="/images/2.png">
+                        </div>
+                        <div id="data-buttons">
+                            <a class="button" href="#">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="meme">
+                    <div class="card">
+                        <div class="info">
+                            <p class="meme-title">Java Script</p>
+                            <img class="meme-image" alt="meme-img" src="/images/4.png">
+                        </div>
+                        <div id="data-buttons">
+                            <a class="button" href="#">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="meme">
+                    <div class="card">
+                        <div class="info">
+                            <p class="meme-title">Yes, arrays are objects</p>
+                            <img class="meme-image" alt="meme-img" src="/images/6.png">
+                        </div>
+                        <div id="data-buttons">
+                            <a class="button" href="#">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="meme">
+                    <div class="card">
+                        <div class="info">
+                            <p class="meme-title">Java Script joke</p>
+                            <img class="meme-image" alt="meme-img" src="/images/1.png">
+                        </div>
+                        <div id="data-buttons">
+                            <a class="button" href="#">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="meme">
+                    <div class="card">
+                        <div class="info">
+                            <p class="meme-title">Bad code can present some problems</p>
+                            <img class="meme-image" alt="meme-img" src="/images/3.png">
+                        </div>
+                        <div id="data-buttons">
+                            <a class="button" href="#">Details</a>
+                        </div>
+                    </div>
+                </div>
+				<!-- Display : If there are no memes in database -->
+				<p class="no-memes">No memes in database.</p>
+			</div>
+        </section>
+
+        <!-- Create Meme Page ( Only for logged users ) -->
+        <section id="create-meme">
+            <form id="create-form">
+                <div class="container">
+                    <h1>Create Meme</h1>
+                    <label for="title">Title</label>
+                    <input id="title" type="text" placeholder="Enter Title" name="title">
+                    <label for="description">Description</label>
+                    <textarea id="description" placeholder="Enter Description" name="description"></textarea>
+                    <label for="imageUrl">Meme Image</label>
+                    <input id="imageUrl" type="text" placeholder="Enter meme ImageUrl" name="imageUrl">
+                    <input type="submit" class="registerbtn button" value="Create Meme">
+                </div>
+            </form>
+        </section>
+
+        <!-- Edit Meme Page ( Only for logged user and creator to this meme )-->
+        <section id="edit-meme">
+            <form id="edit-form">
+                <h1>Edit Meme</h1>
+                <div class="container">
+                    <label for="title">Title</label>
+                    <input id="title" type="text" placeholder="Enter Title" name="title">
+                    <label for="description">Description</label>
+                    <textarea id="description" placeholder="Enter Description" name="description">
+                            Programming is often touted as a smart and lucrative career path.
+                            It's a job that (sometimes) offers flexibility and great benefits.
+                            But it's far from sunshine and Nyan Cat rainbows. The hours are long.
+                            The mistakes are frustrating. And your eyesight is almost guaranteed to suffer.
+                            These memes cover most of the frustration (and funny moments) of programming.
+                            At least we can laugh through the pain. 
+                        </textarea>
+                    <label for="imageUrl">Image Url</label>
+                    <input id="imageUrl" type="text" placeholder="Enter Meme ImageUrl" name="imageUrl">
+                    <input type="submit" class="registerbtn button" value="Edit Meme">
+                </div>
+            </form>
+        </section>
+
+        <!-- Details Meme Page (for guests and logged users) -->
+        <section id="meme-details">
+            <h1>Meme Title: Bad code can present some problems
+
+            </h1>
+            <div class="meme-details">
+                <div class="meme-img">
+                    <img alt="meme-alt" src="/images/3.png">
+                </div>
+                <div class="meme-description">
+                    <h2>Meme Description</h2>
+                    <p>
+                        Being a programmer is a fun job. And many funny incidents occur throughout a
+                        programmer’s career.
+                        Here are a few jokes that can be relatable to you as a programmer.
+                    </p>
+
+                    <!-- Buttons Edit/Delete should be displayed only for creator of this meme  -->
+                    <a class="button warning" href="#">Edit</a>
+                    <button class="button danger">Delete</button>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Page ( Only for logged users ) -->
+        <section id="user-profile-page" class="user-profile">
+            <article class="user-info">
+                <img id="user-avatar-url" alt="user-profile" src="/images/female.png">
+                <div class="user-content">
+                    <p>Username: Mary</p>
+                    <p>Email: mary@abv.bg</p>
+                    <p>My memes count: 2</p>
+                </div>
+            </article>
+            <h1 id="user-listings-title">User Memes</h1>
+            <div class="user-meme-listings">
+                <!-- Display : All created memes by this user (If any) --> 
+                <div class="user-meme">
+                    <p class="user-meme-title">Java Script joke</p>
+                    <img class="userProfileImage" alt="meme-img" src="/images/1.png">
+                    <a class="button" href="#">Details</a>
+                </div>
+                <div class="user-meme">
+                    <p class="user-meme-title">Bad code can present some problems</p>
+                    <img class="userProfileImage" alt="meme-img" src="/images/3.png">
+                    <a class="button" href="#">Details</a>
+                </div>
+
+                <!-- Display : If user doesn't have own memes  --> 
+                <p class="no-memes">No memes in database.</p>
+            </div>
+        </section>
+
+        <!-- Footer  -->
+        <footer class="footer">
+            <p>Created by SoftUni Delivery Team</p>
+        </footer>
+    </div>
+</body>
+
+</html>
