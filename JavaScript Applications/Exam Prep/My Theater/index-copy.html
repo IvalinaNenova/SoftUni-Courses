@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Theater</title>
+    <link href="../styles/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="container">
+
+        <!--Navigation-->
+        <header>
+            <nav>
+                <a href="#">Theater</a>
+                <ul>
+                    <!--Only users-->
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Create Event</a></li>
+                    <li><a href="#">Logout</a></li>
+                    <!--Only guest-->
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="content"></main>
+
+        <!--Home Page-->
+        <section class="welcomePage">
+            <div id="welcomeMessage">
+                <h1>My Theater</h1>
+                <p>Since 1962 World Theatre Day has been celebrated by ITI Centres, ITI Cooperating Members, theatre
+                    professionals, theatre organizations, theatre universities and theatre lovers all over the world on
+                    the 27th of March. This day is a celebration for those who can see the value and importance of the
+                    art
+                    form “theatre”, and acts as a wake-up-call for governments, politicians and institutions which have
+                    not
+                    yet recognised its value to the people and to the individual and have not yet realised its potential
+                    for
+                    economic growth.</p>
+            </div>
+            <div id="events">
+                <h1>Future Events</h1>
+                <div class="theaters-container">
+
+                    <!--Created Events-->
+                    <div class="eventsInfo">
+                        <div class="home-image">
+                            <img src="./images/Pretty-Woman.jpg">
+                        </div>
+                        <div class="info">
+                            <h4 class="title">Pretty Woman - The Musical</h4>
+                            <h6 class="date">March 13, 2018</h6>
+                            <h6 class="author">J. F. Lawton, Garry Marshall</h6>
+                            <div class="info-buttons">
+                                <a class="btn-details" href="#">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="eventsInfo">
+                        <div class="home-image">
+                            <img src="./images/Moulin-Rouge!-The-Musical.jpg">
+                        </div>
+                        <div class="info">
+                            <h4 class="title">Moulin Rouge! - The Musical</h4>
+                            <h6 class="date">July 10, 2018</h6>
+                            <h6 class="author">Baz Luhrmann, Craig Pearce</h6>
+                            <div class="info-buttons">
+                                <a class="btn-details" href="#">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="eventsInfo">
+                        <div class="home-image">
+                            <img src="./images/To-kill-a-mockingbird.jpg">
+                        </div>
+                        <div class="info">
+                            <h4 class="title">To Kill A Mockingbird</h4>
+                            <h6 class="date">December 13, 2018</h6>
+                            <h6 class="author">Aaron Sorkin, Fred Fordham</h6>
+                            <div class="info-buttons">
+                                <a class="btn-details" href="#">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--No Theaters-->
+                    <h4 class="no-event">No Events Yet...</h4>
+                </div>
+            </div>
+        </section>
+
+        <!--Login Page-->
+        <section id="loginaPage">
+            <form class="loginForm">
+                <h2>Login</h2>
+                <div>
+                    <label for="email">Email:</label>
+                    <input id="email" name="email" type="text" placeholder="steven@abv.bg" value="">
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input id="password" name="password" type="password" placeholder="********" value="">
+                </div>
+
+                <button class="btn" type="submit">Login</button>
+
+                <p class="field">
+                    <span>If you don't have profile click <a href="#">here</a></span>
+                </p>
+            </form>
+        </section>
+
+        <!--Register Page-->
+        <section id="registerPage">
+            <form class="registerForm">
+                <h2>Register</h2>
+                <div class="on-dark">
+                    <label for="email">Email:</label>
+                    <input id="email" name="email" type="text" placeholder="steven@abv.bg" value="">
+                </div>
+
+                <div class="on-dark">
+                    <label for="password">Password:</label>
+                    <input id="password" name="password" type="password" placeholder="********" value="">
+                </div>
+
+                <div class="on-dark">
+                    <label for="repeatPassword">Repeat Password:</label>
+                    <input id="repeatPassword" name="repeatPassword" type="password" placeholder="********" value="">
+                </div>
+
+                <button class="btn" type="submit">Register</button>
+
+                <p class="field">
+                    <span>If you have profile click <a href="#">here</a></span>
+                </p>
+            </form>
+        </section>
+
+        <!--Create Page-->
+        <section id="createPage">
+            <form class="create-form">
+                <h1>Create Theater</h1>
+                <div>
+                    <label for="title">Title:</label>
+                    <input id="title" name="title" type="text" placeholder="Theater name" value="">
+                </div>
+                <div>
+                    <label for="date">Date:</label>
+                    <input id="date" name="date" type="text" placeholder="Month Day, Year">
+                </div>
+                <div>
+                    <label for="author">Author:</label>
+                    <input id="author" name="author" type="text" placeholder="Author">
+                </div>
+                <div>
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" placeholder="Description"></textarea>
+                </div>
+                <div>
+                    <label for="imageUrl">Image url:</label>
+                    <input id="imageUrl" name="imageUrl" type="text" placeholder="Image Url" value="">
+                </div>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!--Edit Page-->
+        <section id="editPage">
+            <form class="theater-form">
+                <h1>Edit Theater</h1>
+                <div>
+                    <label for="title">Title:</label>
+                    <input id="title" name="title" type="text" placeholder="Theater name" value="To Kill A Mockingbird">
+                </div>
+                <div>
+                    <label for="date">Date:</label>
+                    <input id="date" name="date" type="text" placeholder="Month Day, Year" value="December 13, 2018">
+                </div>
+                <div>
+                    <label for="author">Author:</label>
+                    <input id="author" name="author" type="text" placeholder="Author"
+                        value="Aaron Sorkin, Fred Fordham">
+                </div>
+                <div>
+                    <label for="description">Theater Description:</label>
+                    <textarea id="description" name="description"
+                        placeholder="Description">To Kill a Mockingbird is a 2018 play based on the 1960 novel of the same name by Harper Lee, adapted for the stage by Aaron Sorkin. It opened on Broadway at the Shubert Theatre on December 13, 2018. The play is set to transfer to London's West End at the Gielgud Theatre in March 2022.</textarea>
+                </div>
+                <div>
+                    <label for="imageUrl">Image url:</label>
+                    <input id="imageUrl" name="imageUrl" type="text" placeholder="Image Url"
+                        value="./images/Moulin-Rouge!-The-Musical.jpg">
+                </div>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!--Details Page-->
+        <section id="detailsPage">
+            <div id="detailsBox">
+                <div class="detailsInfo">
+                    <h1>Title: Moulin Rouge! - The Musical</h1>
+                    <div>
+                        <img src="./images/Moulin-Rouge!-The-Musical.jpg" />
+                    </div>
+                </div>
+
+                <div class="details">
+                    <h3>Theater Description</h3>
+                    <p>The Musical is a jukebox musical with a book by John Logan. The musical is based on the 2001 film
+                        Moulin Rouge! directed by Baz Luhrmann and written by Luhrmann and Craig Pearce. The musical
+                        premiered on July 10, 2018, at the Emerson Colonial Theatre in Boston.</p>
+                    <h4>Date: July 10, 2018</h4>
+                    <h4>Author: Baz Luhrmann, Craig Pearce</h4>
+                    <div class="buttons">
+                        <a class="btn-delete" href="#">Delete</a>
+                        <a class="btn-edit" href="#">Edit</a>
+                        <a class="btn-like" href="#">Like</a>
+                    </div>
+                    <p class="likes">Likes: 0</p>
+                </div>
+            </div>
+        </section>
+
+        <!--Profile Page-->
+        <section id="profilePage">
+            <div class="userInfo">
+                <div class="avatar">
+                    <img src="./images/profilePic.png">
+                </div>
+                <h2>steven@abv.bg</h2>
+            </div>
+            <div class="board">
+                <!--If there are event-->
+                <div class="eventBoard">
+                    <div class="event-info">
+                        <img src="./images/Moulin-Rouge!-The-Musical.jpg">
+                        <h2>Moulin Rouge! - The Musical</h2>
+                        <h6>July 10, 2018</h6>
+                        <a href="#" class="details-button">Details</a>
+                    </div>
+                </div>
+
+                <!--If there are no event-->
+                <div class="no-events">
+                    <p>This user has no events yet!</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div>© 2021
+                <h3>JS Application</h3>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
