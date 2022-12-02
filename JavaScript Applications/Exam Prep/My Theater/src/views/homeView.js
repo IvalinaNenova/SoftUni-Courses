@@ -1,7 +1,7 @@
 import { html } from '../../node_modules/lit-html/lit-html.js';
 import { getData } from '../services/dataService.js';
 
-const eventTemplate = (event) => html`
+const theaterCard = (event) => html`
 <div class="eventsInfo">
     <div class="home-image">
         <img src="${event.imageUrl}">
@@ -16,7 +16,7 @@ const eventTemplate = (event) => html`
     </div>
 </div>
 `
-const home = (catalog) => html`
+const homeTemplate = (catalog) => html`
 <section class="welcomePage">
     <div id="welcomeMessage">
         <h1>My Theater</h1>
@@ -32,20 +32,17 @@ const home = (catalog) => html`
     </div>
     <div id="events">
         <h1>Future Events</h1>
-
         <div class="theaters-container">
 
-        ${catalog.length > 0 
-        ? catalog.map(eventTemplate)
-        : html`<h4 class="no-event">No Events Yet...</h4>`}
-            
+            ${catalog.length > 0 
+            ? catalog.map(theaterCard)
+            : html`<h4 class="no-event">No Events Yet...</h4>`}
+
         </div>
     </div>
 </section>
 `
-
 export const homeView = async (ctx) => {
-    const catalog = await getData();
-    console.log(catalog);
-    ctx.display(home(catalog));
+    let catalog = await getData();
+    ctx.display(homeTemplate(catalog));
 }

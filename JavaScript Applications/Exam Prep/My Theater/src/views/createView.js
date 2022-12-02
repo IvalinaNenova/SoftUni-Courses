@@ -1,5 +1,6 @@
 import { html } from '../../node_modules/lit-html/lit-html.js';
 import { createItem } from '../services/dataService.js';
+import { formHandler } from '../utils/util.js';
 
 const createTemplate = (onSubmit) => html`
 <section id="createPage">
@@ -32,15 +33,15 @@ const createTemplate = (onSubmit) => html`
 
 export const createView = (ctx) => {
     const onSubmit = async (e) => {
-        e.preventDefault();
 
-        let data = Object.fromEntries(new FormData(e.target));
-        let values = Object.values(data);
+        try {
+            let data = formHandler(e);
+            await createItem(data);
+            ctx.page.redirect('/')
 
-        if (values.includes('')) return alert('All fields are required')
-
-        await createItem(data);
-        ctx.page.redirect('/home')
+        } catch (error) { 
+            alert(error.message)
+        }
     }
 
     ctx.display(createTemplate(onSubmit))

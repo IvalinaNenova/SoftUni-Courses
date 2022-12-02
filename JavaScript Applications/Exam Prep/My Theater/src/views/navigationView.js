@@ -1,6 +1,5 @@
 import { html } from '../../node_modules/lit-html/lit-html.js';
-
-const userLinks = html`
+const userLinks  = html`
 <li><a href="/myProfile">Profile</a></li>
 <li><a href="/create">Create Event</a></li>
 <li><a href="/logout">Logout</a></li>
@@ -11,17 +10,18 @@ const guestLinks = html`
 <li><a href="/register">Register</a></li>
 `
 
-const navigationTemplate = (user) => html`
+const navigationTemplate = (ctx) => html`
 <nav>
-    <a href="/home">Theater</a>
+    <a href="/">Theater</a>
     <ul>
-        ${user? userLinks : guestLinks}
+
+    ${ctx.user? userLinks : guestLinks}
 
     </ul>
 </nav>
 `
 
 export const navigationView = (ctx, next) => {
-    ctx.display(navigationTemplate(ctx.user), 'header');
+    ctx.display(navigationTemplate(ctx), 'header');
     next();
 }

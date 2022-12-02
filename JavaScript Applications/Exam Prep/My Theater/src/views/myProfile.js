@@ -1,7 +1,6 @@
 import { html } from '../../node_modules/lit-html/lit-html.js';
-import { getMyItems } from '../services/dataService.js';
 
-const eventCard = (event, user) => html`
+const eventTemplate = (event) => html`
 <div class="eventBoard">
     <div class="event-info">
         <img src="${event.imageUrl}">
@@ -12,31 +11,27 @@ const eventCard = (event, user) => html`
 </div>
 `
 
-const profileTemplate = (events, user) => html`
+const myProfileTemplate = (ctx) => html`
 <section id="profilePage">
     <div class="userInfo">
         <div class="avatar">
             <img src="./images/profilePic.png">
         </div>
-        <h2>${user.email}</h2>
+        <h2>${ctx.user.email}</h2>
     </div>
-
     <div class="board">
-        <!--If there are event-->
-        ${
-        events.length > 0 
-        ? events.map(eventCard)
+        
+        ${ctx.data.length > 0 
+        ? ctx.data.map(eventTemplate)
         : html`
         <div class="no-events">
             <p>This user has no events yet!</p>
-        </div>`
-    }
+        </div>`}
+        
     </div>
 </section>
 `
 
-export const myProfileView = async (ctx) => {
-    let myEvents = await getMyItems(ctx.user._id);
-
-    ctx.display(profileTemplate(myEvents, ctx.user));
+export const myProfileView = (ctx) => {
+    ctx.display(myProfileTemplate(ctx))
 }

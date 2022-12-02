@@ -1,10 +1,11 @@
 import { html } from '../../node_modules/lit-html/lit-html.js';
 import { login } from '../services/userService.js';
+import { formHandler } from '../utils/util.js';
 
 
-const loginTemplate = (onSubmit) => html`
+const loginTemplate = (submitHandler) => html`
 <section id="loginaPage">
-    <form class="loginForm" @submit=${onSubmit}>
+    <form class="loginForm" @submit=${submitHandler}>
         <h2>Login</h2>
         <div>
             <label for="email">Email:</label>
@@ -25,17 +26,16 @@ const loginTemplate = (onSubmit) => html`
 `
 
 export const loginView = (ctx) => {
+
     const submitHandler = async (e) => {
-        e.preventDefault();
-
-        let { email, password } = Object.fromEntries(new FormData(e.target));
-
-        if (email == '' || password == '') {
-            return alert('All fields are required');
-        }
-
-        await login(email, password);
-        ctx.page.redirect('/home');
+        console.log('log');
+        try {
+            let data = formHandler(e);
+            await login(data.email, data.password);
+            ctx.page.redirect('/');
+        } catch (err) {
+            alert(err.message);
+         }
     }
 
     ctx.display(loginTemplate(submitHandler))
