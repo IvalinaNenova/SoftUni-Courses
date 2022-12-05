@@ -106,5 +106,7 @@ Here you can find exam problems I used for practice:
  2. [**Fundamentals**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Fundamentals/Exam)
  3. [**Advanced**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/Advanced/Exam/Exam%20-%2025%20June%202022)
  4. [**OOP**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/OOP/Exam)
+ 5. [**Javascript Advanced**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Advanced/Exam)
+ 6. [**Javascript Applications**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/JavaScript%20Applications/Exam)
  </details>
 
