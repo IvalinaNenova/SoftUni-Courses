@@ -29,7 +29,8 @@ ALTER TABLE Minions
 ADD FOREIGN KEY (TownId) REFERENCES Towns(Id)
 
 --4. Populate both tables with sample records
---Minions		                       Towns
+
+--       Minions		                 Towns
 --Id	Name	Age	  TownId		  Id	Name
 --1	    Kevin	22	   1		       1	Sofia
 --2	    Bob	    15	   3		       2	Plovdiv
