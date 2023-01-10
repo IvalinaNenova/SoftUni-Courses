@@ -1,5 +1,8 @@
+--1. Create Database
 CREATE DATABASE Minions
 USE Minions
+
+-- 2.Create Tables
 --add table Minions (Id, Name, Age)
 
 CREATE TABLE Minions 
@@ -16,7 +19,7 @@ CREATE TABLE Towns
 	[Name] NVARCHAR(85)
 )
 
---Minions table to have a new column TownId that would be of the same type as the Id column in Towns table.
+--3. Minions table to have a new column TownId that would be of the same type as the Id column in Towns table.
 --Add a new constraint that makes TownId foreign key and references to Id column in Towns table.
 
 ALTER TABLE Minions
@@ -25,7 +28,7 @@ ADD TownId INT
 ALTER TABLE Minions
 ADD FOREIGN KEY (TownId) REFERENCES Towns(Id)
 
---Populate both tables with sample records
+--4. Populate both tables with sample records
 --Minions		                       Towns
 --Id	Name	Age	  TownId		  Id	Name
 --1	    Kevin	22	   1		       1	Sofia
@@ -41,3 +44,12 @@ INSERT INTO Minions (Id, Name, Age, TownId) VALUES
 (1, 'Kevin', 22, 1),
 (2, 'Bob', 15, 3),
 (3, 'Steward', NULL, 2)
+
+--5. Delete all the data from the Minions table using SQL query
+
+DELETE FROM Minions
+
+--6. Delete all tables from the Minions database using SQL query.
+
+DROP TABLE Minions
+DROP TABLE Towns
