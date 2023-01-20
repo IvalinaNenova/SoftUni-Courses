@@ -87,6 +87,16 @@
  
  ***
  <details>
+ <summary><h3>MS SQL</summary>
+ 
+ 1. [**Databases Introduction**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/MS%20SQL/01.%20Databases%20Introduction)
+ 2. [**CRUD**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/MS%20SQL/02.%20CRUD)
+ 3. [**Table Relations**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/MS%20SQL/03.%20Table%20Relations)
+ 4. [**BuIt-In functions**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/MS%20SQL/04.%20BuIt-In%20functions)
+ </details>
+ 
+ ***
+ <details>
  <summary><h3>Exam Practice Problems</summary>
   
 Here you can find exam problems I used for practice:
