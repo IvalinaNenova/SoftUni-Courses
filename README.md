@@ -93,6 +93,10 @@
  2. [**CRUD**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/MS%20SQL/02.%20CRUD)
  3. [**Table Relations**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/MS%20SQL/03.%20Table%20Relations)
  4. [**BuIt-In functions**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/MS%20SQL/04.%20BuIt-In%20functions)
+ 5. [**Subqueries and Joins**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/MS%20SQL/05.%20Subqueries%20and%20Joins)
+ 6. [**Indices and Data Aggregation**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/MS%20SQL/06.%20Indices%20and%20Data%20Aggregation)
+ 7. [**Functions and Stored Procedures**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/MS%20SQL/07.Functions%20and%20Stored%20Procedures)
+ 8. [**Triggers and Transactions**](https://github.com/IvalinaNenova/SoftUni-Courses/tree/main/MS%20SQL/08.Triggers%20and%20Transactions)
  </details>
  
  ***
