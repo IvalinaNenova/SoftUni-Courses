@@ -81,8 +81,7 @@ RETURN (SELECT COUNT(*)
 	FROM ClientsCigars AS cc
 	JOIN Clients AS c
 	  ON c.Id = cc.ClientId
-	WHERE c.FirstName = @name
-	GROUP BY cc.ClientId)
+	WHERE c.FirstName = @name)
 END
 GO
 
