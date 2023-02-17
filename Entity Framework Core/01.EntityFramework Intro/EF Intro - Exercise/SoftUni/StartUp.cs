@@ -102,5 +102,12 @@ namespace SoftUni
 
             return output.ToString().TrimEnd();
         }
+
+        //Problem 6
+
+        public static string AddNewAddressToEmployee(SoftUniContext context)
+        {
+
+        }
     }
 }
