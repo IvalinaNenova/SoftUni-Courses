@@ -30,7 +30,10 @@ namespace SoftUni
             //string result = GetAddressesByTown(dbContext);
             //Console.WriteLine(result);
 
-            string result = GetEmployee147(dbContext);
+            //string result = GetEmployee147(dbContext);
+            //Console.WriteLine(result);
+
+            string result = GetDepartmentsWithMoreThan5Employees(dbContext);
             Console.WriteLine(result);
         }
 
@@ -251,6 +254,48 @@ namespace SoftUni
                 foreach (var project in e.Projects)
                 {
                     output.AppendLine(project.Name);
+                }
+            }
+
+            return output.ToString().TrimEnd();
+        }
+
+        //Problem 10
+
+        public static string GetDepartmentsWithMoreThan5Employees(SoftUniContext context)
+        {
+            StringBuilder output = new StringBuilder();
+
+            var departments = context
+                .Departments
+                .Where(d => d.Employees.Count > 5)
+                .OrderBy(d => d.Employees.Count)
+                .ThenBy(d => d.Name)
+                .Select(d => new
+                {
+                    d.Name,
+                    ManagerFirstName = d.Manager.FirstName,
+                    ManagerLastName = d.Manager.LastName,
+                    DepartmentEmployees = d.Employees
+                        .Select(de => new
+                        {
+                            de.FirstName,
+                            de.LastName,
+                            de.JobTitle
+                        })
+                        .OrderBy(de => de.FirstName)
+                        .ThenBy(de => de.LastName)
+                        .ToArray()
+                })
+                .ToArray();
+
+            foreach (var d in departments)
+            {
+                output.AppendLine($"{d.Name} – {d.ManagerFirstName} {d.ManagerLastName}");
+
+                foreach (var de in d.DepartmentEmployees)
+                {
+                    output.AppendLine($"{de.FirstName} {de.LastName} - {de.JobTitle}");
                 }
             }
 
