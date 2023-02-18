@@ -21,7 +21,10 @@ namespace SoftUni
             //string result = GetEmployeesFromResearchAndDevelopment(dbContext);
             //Console.WriteLine(result);
 
-            string result = AddNewAddressToEmployee(dbContext);
+            //string result = AddNewAddressToEmployee(dbContext);
+            //Console.WriteLine(result);
+
+            string result = GetEmployeesInPeriod(dbContext);
             Console.WriteLine(result);
         }
 
@@ -143,7 +146,44 @@ namespace SoftUni
 
         public static string GetEmployeesInPeriod(SoftUniContext context)
         {
+            StringBuilder output = new StringBuilder();
 
+            var employeesWithProjects = context
+                .Employees
+                .Where(e => e.EmployeesProjects.Any(ep => ep.Project.StartDate.Year >= 2001 &&
+                                                          ep.Project.StartDate.Year <= 2003))
+                .Take(10)
+                .Select(e => new
+                {
+                    e.FirstName,
+                    e.LastName,
+                    ManagerFirstName = e.Manager.FirstName,
+                    ManagerLastName = e.Manager.LastName,
+                    EmployeeProjects = e.EmployeesProjects
+                        .Select(ep => new
+                        {
+                            ProjectName = ep.Project.Name,
+                            ProjectStartDate = ep.Project.StartDate.ToString("M/d/yyyy h:mm:ss tt"),
+                            ProjectEndDate = ep.Project.EndDate.HasValue
+                                ? ep.Project.EndDate.Value.ToString("M/d/yyyy h:mm:ss tt")
+                                : "not finished"
+                        })
+                        .ToArray()
+                })
+                .ToArray();
+
+            foreach (var employee in employeesWithProjects)
+            {
+                output.AppendLine(
+                    $"{employee.FirstName} {employee.LastName} - Manager: {employee.ManagerFirstName} {employee.ManagerLastName}");
+
+                foreach (var project in employee.EmployeeProjects)
+                {
+                    output.AppendLine($"--{project.ProjectName} - {project.ProjectStartDate} - {project.ProjectEndDate}");
+                }
+            }
+
+            return output.ToString().TrimEnd();
         }
     }
 }
