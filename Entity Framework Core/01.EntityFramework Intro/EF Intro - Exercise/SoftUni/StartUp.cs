@@ -33,7 +33,13 @@ namespace SoftUni
             //string result = GetEmployee147(dbContext);
             //Console.WriteLine(result);
 
-            string result = GetDepartmentsWithMoreThan5Employees(dbContext);
+            //string result = GetDepartmentsWithMoreThan5Employees(dbContext);
+            //Console.WriteLine(result);
+
+            //string result = GetLatestProjects(dbContext);
+            //Console.WriteLine(result);
+
+            string result = IncreaseSalaries(dbContext);
             Console.WriteLine(result);
         }
 
@@ -297,6 +303,68 @@ namespace SoftUni
                 {
                     output.AppendLine($"{de.FirstName} {de.LastName} - {de.JobTitle}");
                 }
+            }
+
+            return output.ToString().TrimEnd();
+        }
+
+        //Problem 11
+
+        public static string GetLatestProjects(SoftUniContext context)
+        {
+            StringBuilder output = new StringBuilder();
+
+            var latestProjects = context
+                .Projects
+                .OrderByDescending(p => p.StartDate)
+                .Select(p => new
+                {
+                    p.Name,
+                    p.Description,
+                    StartDate = p.StartDate.ToString("M/d/yyyy h:mm:ss tt")
+                })
+                .Take(10)
+                .ToArray()
+                .OrderBy(p => p.Name);
+
+            foreach (var p in latestProjects)
+            {
+                output
+                    .AppendLine(p.Name)
+                    .AppendLine(p.Description)
+                    .AppendLine(p.StartDate);
+            }
+
+            return output.ToString().TrimEnd();
+        }
+
+        //Problem 12
+
+        public static string IncreaseSalaries(SoftUniContext context)
+        {
+            StringBuilder output = new StringBuilder();
+
+            var employeesForSalaryIncrease = context
+                .Employees
+                .Where(employee => employee.Department.Name == "Engineering" ||
+                                   employee.Department.Name == "Tool Design" ||
+                                   employee.Department.Name == "Marketing" ||
+                                   employee.Department.Name == "Information Services")
+                .OrderBy(employee => employee.FirstName)
+                .ThenBy(employee => employee.LastName)
+                .ToList();
+
+            foreach (var em in employeesForSalaryIncrease)
+            {
+                em.Salary += em.Salary * 0.12m;
+            }
+
+            context.SaveChanges();
+
+
+            foreach (var em in employeesForSalaryIncrease)
+            {
+                output.AppendLine($"{em.FirstName} {em.LastName} (${em.Salary:F2})");
             }
 
             return output.ToString().TrimEnd();
