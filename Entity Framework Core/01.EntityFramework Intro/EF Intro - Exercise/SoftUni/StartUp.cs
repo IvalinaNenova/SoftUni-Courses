@@ -27,7 +27,10 @@ namespace SoftUni
             //string result = GetEmployeesInPeriod(dbContext);
             //Console.WriteLine(result);
 
-            string result = GetAddressesByTown(dbContext);
+            //string result = GetAddressesByTown(dbContext);
+            //Console.WriteLine(result);
+
+            string result = GetEmployee147(dbContext);
             Console.WriteLine(result);
         }
 
@@ -212,6 +215,43 @@ namespace SoftUni
             foreach (var a in allAddresses)
             {
                 output.AppendLine($"{a.AddressText}, {a.AddressTown} - {a.CountEmployees} employees");
+            }
+
+            return output.ToString().TrimEnd();
+        }
+
+        //Problem 09
+
+        public static string GetEmployee147(SoftUniContext context)
+        {
+            StringBuilder output = new StringBuilder();
+
+            var employee147 = context
+                .Employees
+                .Where(e => e.EmployeeId == 147)
+                .Select(e => new
+                {
+                    e.FirstName,
+                    e.LastName,
+                    e.JobTitle,
+                    Projects = e.EmployeesProjects
+                        .Select(ep => new
+                        {
+                            ep.Project.Name
+                        })
+                        .OrderBy(ep => ep.Name)
+                        .ToArray()
+                })
+                .ToArray();
+
+            foreach (var e in employee147)
+            {
+                output.AppendLine($"{e.FirstName} {e.LastName} - {e.JobTitle}");
+
+                foreach (var project in e.Projects)
+                {
+                    output.AppendLine(project.Name);
+                }
             }
 
             return output.ToString().TrimEnd();
