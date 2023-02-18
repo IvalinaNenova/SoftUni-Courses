@@ -1,9 +1,8 @@
 ﻿using SoftUni.Data;
+using SoftUni.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SoftUni.Models;
 
 namespace SoftUni
 {
@@ -19,7 +18,10 @@ namespace SoftUni
             //string result = GetEmployeesWithSalaryOver50000(dbContext);
             //Console.WriteLine(result);
 
-            string result = GetEmployeesFromResearchAndDevelopment(dbContext);
+            //string result = GetEmployeesFromResearchAndDevelopment(dbContext);
+            //Console.WriteLine(result);
+
+            string result = AddNewAddressToEmployee(dbContext);
             Console.WriteLine(result);
         }
 
@@ -106,6 +108,40 @@ namespace SoftUni
         //Problem 6
 
         public static string AddNewAddressToEmployee(SoftUniContext context)
+        {
+            Address newAddress = new Address()
+            {
+                AddressText = "Vitoshka 15",
+                TownId = 4
+            };
+
+            Employee nakov = context
+                .Employees
+                .First(e => e.LastName == "Nakov");
+
+            nakov.Address = newAddress;
+            context.SaveChanges();
+
+            StringBuilder output = new StringBuilder();
+
+            string[] addresses = context
+                .Employees
+                .OrderByDescending(e => e.AddressId)
+                .Take(10)
+                .Select(e => e.Address.AddressText)
+                .ToArray();
+
+            foreach (var addressText in addresses)
+            {
+                output.AppendLine(addressText);
+            }
+
+            return output.ToString().TrimEnd();
+        }
+
+        //Problem 07
+
+        public static string GetEmployeesInPeriod(SoftUniContext context)
         {
 
         }
