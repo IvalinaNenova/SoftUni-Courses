@@ -26,7 +26,8 @@ namespace BookShop
             //string result = GetBookTitlesContaining(db, command);
             //string result = GetBooksByAuthor(db, command);
             //int result = CountBooks(db, command);
-            //Console.WriteLine($"There are {result} books with longer title than {command} symbols");
+            //string result = CountCopiesByAuthor(db);
+            //Console.WriteLine(result);
         }
 
         //Problem 02
@@ -201,6 +202,29 @@ namespace BookShop
                 .Length;
 
             return count;
+        }
+
+        //Problem 12
+        public static string CountCopiesByAuthor(BookShopContext context)
+        {
+            StringBuilder output = new StringBuilder();
+
+            var copiesByAuthor = context
+                .Authors
+                .Select(a => new
+                {
+                    AuthorName = $"{a.FirstName} {a.LastName}",
+                    TotalCopies = a.Books.Sum(x => x.Copies)
+                })
+                .OrderByDescending(x => x.TotalCopies)
+                .ToList();
+
+            foreach (var a in copiesByAuthor)
+            {
+                output.AppendLine($"{a.AuthorName} - {a.TotalCopies}");
+            }
+
+            return output.ToString().TrimEnd();
         }
     }
 }
