@@ -16,6 +16,9 @@ namespace BookShop
 
             //string result = GetBooksByAgeRestriction(db, command);
             //Console.WriteLine(result);
+
+            //string result = GetGoldenBooks(db);
+            //Console.WriteLine(result);
         }
 
         //Problem 02
@@ -44,7 +47,15 @@ namespace BookShop
 
         public static string GetGoldenBooks(BookShopContext context)
         {
+            string[] goldenBooks = context
+                .Books
+                .Where(b => b.EditionType == EditionType.Gold &&
+                                 b.Copies < 5000)
+                .OrderBy(b => b.BookId)
+                .Select(b => b.Title)
+                .ToArray();
 
+            return string.Join(Environment.NewLine, goldenBooks);
         }
     }
 }
