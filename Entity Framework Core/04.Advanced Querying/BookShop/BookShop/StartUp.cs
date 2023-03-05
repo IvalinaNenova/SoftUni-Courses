@@ -13,14 +13,14 @@ namespace BookShop
             using var db = new BookShopContext();
             //DbInitializer.ResetDatabase(db);
 
-            //int command = int.Parse(Console.ReadLine());
+            string command = Console.ReadLine();
 
             //string result = GetBooksByAgeRestriction(db, command);
             //string result = GetGoldenBooks(db);
             //string result = GetBooksByPrice(db);
             //string result = GetBooksNotReleasedIn(db, command);
-
-            //Console.WriteLine(result);
+            string result = GetBooksByCategory(db, command);
+            Console.WriteLine(result);
         }
 
         //Problem 02
@@ -102,7 +102,18 @@ namespace BookShop
         //Problem 06
         public static string GetBooksByCategory(BookShopContext context, string input)
         {
+            string[] categories = input
+                .ToLower()
+                .Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            
+            var books = context
+                .Books
+                .Where(b => b.BookCategories.Any(c => categories.Contains(c.Category.Name.ToLower())))
+                .Select(b => b.Title)
+                .OrderBy(t => t)
+                .ToArray();
 
+            return string.Join(Environment.NewLine, books);
         }
     }
 }
