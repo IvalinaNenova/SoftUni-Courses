@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Globalization;
+using System.Text;
 using BookShop.Models.Enums;
 
 namespace BookShop
@@ -13,14 +14,15 @@ namespace BookShop
             using var db = new BookShopContext();
             //DbInitializer.ResetDatabase(db);
 
-            string command = Console.ReadLine();
+            //string command = Console.ReadLine();
 
             //string result = GetBooksByAgeRestriction(db, command);
             //string result = GetGoldenBooks(db);
             //string result = GetBooksByPrice(db);
             //string result = GetBooksNotReleasedIn(db, command);
-            string result = GetBooksByCategory(db, command);
-            Console.WriteLine(result);
+            //string result = GetBooksByCategory(db, command);
+            //string result = GetBooksReleasedBefore(db, command);
+            //Console.WriteLine(result);
         }
 
         //Problem 02
@@ -114,6 +116,35 @@ namespace BookShop
                 .ToArray();
 
             return string.Join(Environment.NewLine, books);
+        }
+
+        //Problem 07
+
+        public static string GetBooksReleasedBefore(BookShopContext context, string date)
+        {
+            StringBuilder output = new StringBuilder();
+
+            var parsedDate = DateTime.ParseExact(date, "dd-MM-yyyy", CultureInfo.InvariantCulture);
+
+            var books = context
+                .Books
+                .Where(b => b.ReleaseDate < parsedDate)
+                .OrderByDescending(b => b.ReleaseDate)
+                .Select(b => new
+                {
+                    Title = b.Title,
+                    EditionType = b.EditionType.ToString(),
+                    Price = b.Price,
+                })
+                .ToArray();
+
+            foreach (var b in books)
+            {
+                output
+                    .AppendLine($"{b.Title} - {b.EditionType} - ${b.Price:f2}");
+            }
+
+            return output.ToString().TrimEnd();
         }
     }
 }
