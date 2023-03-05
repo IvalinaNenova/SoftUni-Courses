@@ -1,4 +1,5 @@
-﻿using BookShop.Models.Enums;
+﻿using System.Text;
+using BookShop.Models.Enums;
 
 namespace BookShop
 {
@@ -15,9 +16,10 @@ namespace BookShop
             //string command = Console.ReadLine();
 
             //string result = GetBooksByAgeRestriction(db, command);
-            //Console.WriteLine(result);
-
             //string result = GetGoldenBooks(db);
+            //string result = GetBooksByPrice(db);
+
+
             //Console.WriteLine(result);
         }
 
@@ -56,6 +58,31 @@ namespace BookShop
                 .ToArray();
 
             return string.Join(Environment.NewLine, goldenBooks);
+        }
+
+        //Problem 04
+        public static string GetBooksByPrice(BookShopContext context)
+        {
+            StringBuilder output = new StringBuilder();
+
+            var booksByPrice = context
+                .Books
+                .Where(b => b.Price > 40)
+                .Select(b => new
+                {
+                    BookTitle = b.Title,
+                    Price = b.Price
+                })
+                .OrderByDescending(b => b.Price)
+                .ToArray();
+
+            foreach (var b in booksByPrice)
+            {
+                output
+                    .AppendLine($"{b.BookTitle} - ${b.Price:f2}");
+            }
+
+            return output.ToString().TrimEnd();
         }
     }
 }
