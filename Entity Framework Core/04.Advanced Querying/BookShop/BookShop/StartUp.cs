@@ -13,12 +13,12 @@ namespace BookShop
             using var db = new BookShopContext();
             //DbInitializer.ResetDatabase(db);
 
-            //string command = Console.ReadLine();
+            //int command = int.Parse(Console.ReadLine());
 
             //string result = GetBooksByAgeRestriction(db, command);
             //string result = GetGoldenBooks(db);
             //string result = GetBooksByPrice(db);
-
+            //string result = GetBooksNotReleasedIn(db, command);
 
             //Console.WriteLine(result);
         }
@@ -83,6 +83,26 @@ namespace BookShop
             }
 
             return output.ToString().TrimEnd();
+        }
+
+        //Problem 05
+
+        public static string GetBooksNotReleasedIn(BookShopContext context, int year)
+        {
+            var books = context
+                .Books
+                .Where(b => b.ReleaseDate.Value.Year != year)
+                .OrderBy(b => b.BookId)
+                .Select(b => b.Title)
+                .ToArray();
+
+            return string.Join(Environment.NewLine, books);
+        }
+
+        //Problem 06
+        public static string GetBooksByCategory(BookShopContext context, string input)
+        {
+
         }
     }
 }
