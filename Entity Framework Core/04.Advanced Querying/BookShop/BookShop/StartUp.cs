@@ -14,7 +14,7 @@ namespace BookShop
             using var db = new BookShopContext();
             //DbInitializer.ResetDatabase(db);
 
-            //string command = Console.ReadLine();
+            //int command = int.Parse(Console.ReadLine());
 
             //string result = GetBooksByAgeRestriction(db, command);
             //string result = GetGoldenBooks(db);
@@ -25,7 +25,8 @@ namespace BookShop
             //string result = GetAuthorNamesEndingIn(db, command);
             //string result = GetBookTitlesContaining(db, command);
             //string result = GetBooksByAuthor(db, command);
-            //Console.WriteLine(result);
+            //int result = CountBooks(db, command);
+            //Console.WriteLine($"There are {result} books with longer title than {command} symbols");
         }
 
         //Problem 02
@@ -188,6 +189,18 @@ namespace BookShop
                 .ToArray();
 
             return string.Join(Environment.NewLine, result);
+        }
+
+        //Problem 11
+        public static int CountBooks(BookShopContext context, int lengthCheck)
+        {
+            var count = context
+                .Books
+                .Where(b => b.Title.Length > lengthCheck)
+                .ToArray()
+                .Length;
+
+            return count;
         }
     }
 }
