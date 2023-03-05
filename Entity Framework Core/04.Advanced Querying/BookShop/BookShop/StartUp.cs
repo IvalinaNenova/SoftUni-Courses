@@ -14,7 +14,7 @@ namespace BookShop
             using var db = new BookShopContext();
             //DbInitializer.ResetDatabase(db);
 
-            string command = Console.ReadLine();
+            //string command = Console.ReadLine();
 
             //string result = GetBooksByAgeRestriction(db, command);
             //string result = GetGoldenBooks(db);
@@ -23,8 +23,9 @@ namespace BookShop
             //string result = GetBooksByCategory(db, command);
             //string result = GetBooksReleasedBefore(db, command);
             //string result = GetAuthorNamesEndingIn(db, command);
-            string result = GetBookTitlesContaining(db, command);
-            Console.WriteLine(result);
+            //string result = GetBookTitlesContaining(db, command);
+            //string result = GetBooksByAuthor(db, command);
+            //Console.WriteLine(result);
         }
 
         //Problem 02
@@ -174,6 +175,19 @@ namespace BookShop
                 .ToArray();
 
             return string.Join(Environment.NewLine, titles);
+        }
+
+        //Problem 10
+        public static string GetBooksByAuthor(BookShopContext context, string input)
+        {
+            var result = context
+                .Books
+                .Where(b => b.Author.LastName.ToLower().StartsWith(input.ToLower()))
+                .OrderBy(b => b.BookId)
+                .Select(b => $"{b.Title} ({b.Author.FirstName} {b.Author.LastName})")
+                .ToArray();
+
+            return string.Join(Environment.NewLine, result);
         }
     }
 }
