@@ -1,6 +1,7 @@
 ﻿using System.Globalization;
 using System.Text;
 using BookShop.Models.Enums;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookShop
 {
@@ -27,7 +28,8 @@ namespace BookShop
             //string result = GetBooksByAuthor(db, command);
             //int result = CountBooks(db, command);
             //string result = CountCopiesByAuthor(db);
-            //Console.WriteLine(result);
+            string result = GetTotalProfitByCategory(db);
+            Console.WriteLine(result);
         }
 
         //Problem 02
@@ -222,6 +224,31 @@ namespace BookShop
             foreach (var a in copiesByAuthor)
             {
                 output.AppendLine($"{a.AuthorName} - {a.TotalCopies}");
+            }
+
+            return output.ToString().TrimEnd();
+        }
+
+        //Problem 13
+        public static string GetTotalProfitByCategory(BookShopContext context)
+        {
+            StringBuilder output = new StringBuilder();
+
+            var profitsByCategory = context
+                .Categories
+                .Select(c => new
+                {
+                    CategoryName = c.Name,
+                    Profit = c.CategoryBooks.Sum(cb => cb.Book.Copies * cb.Book.Price)
+
+                })
+                .OrderByDescending(c => c.Profit)
+                .ThenBy(c => c.CategoryName)
+                .ToArray();
+
+            foreach (var c in profitsByCategory)
+            {
+                output.AppendLine($"{c.CategoryName} ${c.Profit:f2}");
             }
 
             return output.ToString().TrimEnd();
