@@ -30,7 +30,8 @@ namespace BookShop
             //int result = CountBooks(db, command);
             //string result = CountCopiesByAuthor(db);
             //string result = GetTotalProfitByCategory(db);
-            string result = GetMostRecentBooks(db);
+            //string result = GetMostRecentBooks(db);
+            int result = RemoveBooks(db);
             Console.WriteLine(result);
         }
 
@@ -291,7 +292,7 @@ namespace BookShop
             return output.ToString().TrimEnd();
         }
 
-        //problem 15
+        //Problem 15
         public static void IncreasePrices(BookShopContext context)
         {
             var booksBefore2010 = context
@@ -304,6 +305,21 @@ namespace BookShop
             }
 
             context.SaveChanges();
+        }
+
+        //Problem 16
+        public static int RemoveBooks(BookShopContext context)
+        {
+            var booksToDelete = context
+                .Books
+                .Where(b => b.Copies < 4200);
+
+            int bookCount = booksToDelete.Count();
+
+            context.Books.RemoveRange(booksToDelete);
+            context.SaveChanges();
+
+            return bookCount;
         }
     }
 }
