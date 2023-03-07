@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using System.Text;
+using BookShop.Models;
 using BookShop.Models.Enums;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,7 +29,8 @@ namespace BookShop
             //string result = GetBooksByAuthor(db, command);
             //int result = CountBooks(db, command);
             //string result = CountCopiesByAuthor(db);
-            string result = GetTotalProfitByCategory(db);
+            //string result = GetTotalProfitByCategory(db);
+            string result = GetMostRecentBooks(db);
             Console.WriteLine(result);
         }
 
@@ -253,5 +255,43 @@ namespace BookShop
 
             return output.ToString().TrimEnd();
         }
+
+        //Problem 14
+        public static string GetMostRecentBooks(BookShopContext context)
+        {
+            StringBuilder output = new StringBuilder();
+
+            var mostRecentBooks = context
+                .Categories
+                .Select(c => new
+                {
+                    CategoryName = c.Name,
+                    MostRecentBooks = c.CategoryBooks
+                        .OrderByDescending(c => c.Book.ReleaseDate)
+                        .Select(cb => new
+                        {
+                            BookName = cb.Book.Title,
+                            YearPublished = cb.Book.ReleaseDate.Value.Year
+                        })
+                       .Take(3)
+                })
+                .OrderBy(c => c.CategoryName)
+                .ToArray();
+
+            foreach (var category in mostRecentBooks)
+            {
+                output.AppendLine($"--{category.CategoryName}");
+
+                foreach (var book in category.MostRecentBooks)
+                {
+                    output.AppendLine($"{book.BookName} ({book.YearPublished})");
+                }
+            }
+
+            return output.ToString().TrimEnd();
+        }
+
+        //problem 15
+
     }
 }
