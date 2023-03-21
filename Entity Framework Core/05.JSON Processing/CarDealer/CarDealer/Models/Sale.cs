@@ -7,9 +7,9 @@
         public decimal Discount { get; set; }
 
         public int CarId { get; set; }
-        public Car Car { get; set; } = null!;    
+        public virtual Car Car { get; set; } = null!;    
 
         public int CustomerId { get; set; }
-        public Customer Customer { get; set; } = null!; 
+        public virtual Customer Customer { get; set; } = null!; 
     }
 }
