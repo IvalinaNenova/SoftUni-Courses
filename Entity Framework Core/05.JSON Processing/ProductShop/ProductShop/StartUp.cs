@@ -189,29 +189,33 @@ namespace ProductShop
         //Problem 08
         public static string GetUsersWithProducts(ProductShopContext context)
         {
-            var users = context.Users
-                .Where(u => u.ProductsSold.Any(ps => ps.Buyer != null))
+            var users = context
+                .Users
+                .Where(u => u.ProductsSold.Any(p => p.Buyer != null))
                 .Select(u => new
                 {
+                    //UserDto
+                    firstName = u.FirstName,
                     lastName = u.LastName,
                     age = u.Age,
-                    soldProducts = u.ProductsSold.Select(ps => new
+                    soldProducts = new
                     {
+                        //ProductWrapperDto
                         count = u.ProductsSold.Count(p => p.Buyer != null),
                         products = u.ProductsSold
                             .Where(p => p.Buyer != null)
-                            .Select(p => new
-                            {
-                                name = p.Name,
-                                price = p.Price
-                            })
+                           .Select(p => new
+                           {
+                               //productDto
+                               name = p.Name,
+                               price = p.Price,
+                           })
                             .ToArray()
-                    })
+                    }
                 })
-                .OrderByDescending(u => u.soldProducts.Count())
+                .OrderByDescending(u => u.soldProducts.count)
                 .AsNoTracking()
                 .ToArray();
-
             var userWrapperDto = new
             {
                 usersCount = users.Length,
