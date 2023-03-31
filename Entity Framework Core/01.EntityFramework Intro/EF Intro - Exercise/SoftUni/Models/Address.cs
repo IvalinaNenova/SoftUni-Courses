@@ -10,11 +10,11 @@ namespace SoftUni.Models
     {
         public Address()
         {
-            Employees = new HashSet<Employee>();
+            this.Employees = new HashSet<Employee>();
         }
 
         public int AddressId { get; set; }
-        public string AddressText { get; set; }
+        public string AddressText { get; set; } = null!;
         public int? TownId { get; set; }
 
         public virtual Town Town { get; set; }

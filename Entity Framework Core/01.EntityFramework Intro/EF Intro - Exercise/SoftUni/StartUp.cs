@@ -1,6 +1,7 @@
 ﻿using SoftUni.Data;
 using SoftUni.Models;
 using System;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 
@@ -24,8 +25,8 @@ namespace SoftUni
             //string result = AddNewAddressToEmployee(dbContext);
             //Console.WriteLine(result);
 
-            //string result = GetEmployeesInPeriod(dbContext);
-            //Console.WriteLine(result);
+            string result = GetEmployeesInPeriod(dbContext);
+            Console.WriteLine(result);
 
             //string result = GetAddressesByTown(dbContext);
             //Console.WriteLine(result);
@@ -48,8 +49,8 @@ namespace SoftUni
             //string result = DeleteProjectById(dbContext);
             //Console.WriteLine(result);
 
-            string result = RemoveTown(dbContext);
-            Console.WriteLine(result);
+            //string result = RemoveTown(dbContext);
+            //Console.WriteLine(result);
         }
 
         //Problem 03
@@ -170,44 +171,41 @@ namespace SoftUni
 
         public static string GetEmployeesInPeriod(SoftUniContext context)
         {
-            StringBuilder output = new StringBuilder();
-
-            var employeesWithProjects = context
-                .Employees
-                .Where(e => e.EmployeesProjects.Any(ep => ep.Project.StartDate.Year >= 2001 &&
-                                                          ep.Project.StartDate.Year <= 2003))
+            StringBuilder sb = new StringBuilder();
+            var employeesWithProjects = context.Employees
+                //.Where(e => e.EmployeesProjects
+                //    .Any(ep => ep.Project.StartDate.Year >= 2001 &&
+                //               ep.Project.StartDate.Year <= 2003))
                 .Take(10)
                 .Select(e => new
                 {
                     e.FirstName,
                     e.LastName,
-                    ManagerFirstName = e.Manager.FirstName,
-                    ManagerLastName = e.Manager.LastName,
-                    EmployeeProjects = e.EmployeesProjects
+                    ManagerFirstName = e.Manager!.FirstName,
+                    ManagerLastName = e.Manager!.LastName,
+                    Projects = e.EmployeesProjects
+                        .Where(ep => ep.Project.StartDate.Year >= 2001 &&
+                                     ep.Project.StartDate.Year <= 2003)
                         .Select(ep => new
                         {
                             ProjectName = ep.Project.Name,
-                            ProjectStartDate = ep.Project.StartDate.ToString("M/d/yyyy h:mm:ss tt"),
-                            ProjectEndDate = ep.Project.EndDate.HasValue
-                                ? ep.Project.EndDate.Value.ToString("M/d/yyyy h:mm:ss tt")
+                            StartDate = ep.Project.StartDate.ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture),
+                            EndDate = ep.Project.EndDate.HasValue
+                                ? ep.Project.EndDate.Value.ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture)
                                 : "not finished"
                         })
                         .ToArray()
                 })
                 .ToArray();
-
-            foreach (var employee in employeesWithProjects)
+            foreach (var e in employeesWithProjects)
             {
-                output.AppendLine(
-                    $"{employee.FirstName} {employee.LastName} - Manager: {employee.ManagerFirstName} {employee.ManagerLastName}");
-
-                foreach (var project in employee.EmployeeProjects)
+                sb.AppendLine($"{e.FirstName} {e.LastName} - Manager: {e.ManagerFirstName} {e.ManagerLastName}");
+                foreach (var p in e.Projects)
                 {
-                    output.AppendLine($"--{project.ProjectName} - {project.ProjectStartDate} - {project.ProjectEndDate}");
+                    sb.AppendLine($"--{p.ProjectName} - {p.StartDate} - {p.EndDate}");
                 }
             }
-
-            return output.ToString().TrimEnd();
+            return sb.ToString().TrimEnd();
         }
 
         //Problem 08
@@ -454,7 +452,7 @@ namespace SoftUni
 
             foreach (var e in context.Employees)
             {
-                if (referencedAddresses.Any(a=> a.AddressId == e.AddressId))
+                if (referencedAddresses.Any(a => a.AddressId == e.AddressId))
                 {
                     e.AddressId = null;
                 }

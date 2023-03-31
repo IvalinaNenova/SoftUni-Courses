@@ -15,11 +15,11 @@
         {
         }
 
-        public DbSet<Course> Courses { get; set; }
-        public DbSet<Homework> Homeworks { get; set; }
-        public DbSet<Resource> Resources { get; set; }
-        public DbSet<Student> Students { get; set; }
-        public DbSet<StudentCourse> StudentsCourses { get; set; }
+        public DbSet<Course> Courses { get; set; } = null!;
+        public DbSet<Homework> Homeworks { get; set; } = null!;
+        public DbSet<Resource> Resources { get; set; } = null!; 
+        public DbSet<Student> Students { get; set; } = null!;
+        public DbSet<StudentCourse> StudentsCourses { get; set; } = null!;
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
